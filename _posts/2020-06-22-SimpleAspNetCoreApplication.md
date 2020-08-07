@@ -39,7 +39,7 @@ dotnet run
 
 To see, that your server is working, go to `http://localhost:5000` from your browser, and you'll see this text.
 
-![Hello world from a browser](https://github.com/rafaelldi/rafaelldi.github.io/blob/master/images/hello-world-app.png)
+![Hello world from a browser](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/hello-world-app.png)
 
 Congratulations, you've created a web server.
 
