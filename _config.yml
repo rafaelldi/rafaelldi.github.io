@@ -1,3 +1,5 @@
 theme: minima
 title: rafaelldi.github.io
 author: Rival Abdrakhmanov
+
+show_excerpts: true
