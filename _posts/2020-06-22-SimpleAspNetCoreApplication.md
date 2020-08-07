@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Simple ASP.NET Core Application
+title: "Simple ASP.NET Core Application"
 date: 2020-06-22
 categories: misc
 ---
