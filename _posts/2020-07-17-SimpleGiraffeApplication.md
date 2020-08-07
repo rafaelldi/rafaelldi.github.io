@@ -6,7 +6,7 @@ categories: misc
 
 Last time we talked about the simplest ASP.NET Core application in C#. Today we'll create the same project in a functional way.
 
-![Title image](https://github.com/rafaelldi/rafaelldi.github.io/blob/master/images/simple-giraffe-application-img.jpg)
+![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/simple-giraffe-application-img.jpg)
 
 Recently, I've been interested in functional programming because it's a totally different approach with intriguing challenges. Also, I think you noticed that C# sometimes looks functional, so I was wondered how much differences between two elementary web servers would be. Hence, I decided to make a post with a "Hello world" example in F#.
 
