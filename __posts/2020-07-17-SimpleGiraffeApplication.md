@@ -2,6 +2,7 @@
 layout: post
 title: Simple Giraffe Application
 date: 2020-07-17
+categories: misc
 ---
 
 Last time we talked about the simplest ASP.NET Core application in C#. Today we'll create the same project in a functional way.
