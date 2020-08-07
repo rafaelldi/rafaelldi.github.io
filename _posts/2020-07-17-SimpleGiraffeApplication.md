@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Simple Giraffe Application"
-date: 2020-07-17
 categories: misc
 ---
 

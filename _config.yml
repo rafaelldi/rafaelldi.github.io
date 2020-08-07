@@ -1,5 +1,10 @@
-theme: minima
 title: rafaelldi.github.io
-author: Rival Abdrakhmanov
+author:
+  name: Rival Abdrakhmanov
 
 show_excerpts: true
+
+theme: minima
+
+plugins:
+  - jekyll-feed
