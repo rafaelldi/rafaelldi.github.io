@@ -2,6 +2,7 @@
 layout: post
 title: Simple ASP.NET Core Application
 date: 2020-06-22
+categories: misc
 ---
 
 Hello! I recently wondered what the simple ASP.NET Core application should look like. What if I'm a beginner and I want to write my first Hello world application. What is the first step? 
