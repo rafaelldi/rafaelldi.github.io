@@ -29,7 +29,40 @@ https://github.com/rafaelldi/SimpleAspNetCoreProject
 
 Now, you need to modify `Program.cs` file. 
 
-<script src="https://gist.github.com/rafaelldi/a86794ccd95991baf4541ae59bd8dad9.js"></script>
+```
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Hosting;
+
+namespace SimpleAspNetCoreProject
+{
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            await Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.Configure(builder =>
+                    {
+                        builder.UseRouting();
+                        builder.UseEndpoints(endpoints =>
+                        {
+                            endpoints.MapGet("/", async context =>
+                            {
+                                await context.Response.WriteAsync("Hello World!");
+                            });
+                        });
+                    });
+                })
+                .Build()
+                .RunAsync();
+        }
+    }
+}
+```
 
 Finally, start your web server with the console command.
 
@@ -61,13 +94,49 @@ https://github.com/featherhttp/framework
 
 We need to add a new `nuget.config` file and modify `Server.csproj` to include this package in the project.
 
-<script src="https://gist.github.com/rafaelldi/73c522f33f929693e0e84fd49d2db6d3.js"></script>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <packageSources>
+        <clear />
+        <add key="featherhttp" value="https://f.feedz.io/davidfowl/featherhttp/nuget/index.json" />
+        <add key="NuGet.org" value="https://api.nuget.org/v3/index.json" />
+    </packageSources>
+</configuration>
+```
 
-<script src="https://gist.github.com/rafaelldi/e49176eb25f96958c6fb15bea82cf32a.js"></script>
+```
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FeatherHttp" Version="0.1.59-alpha.g2c306f941a" />
+  </ItemGroup>
+</Project>
+```
 
 After that, we are possible to improve our `Program.cs` file. In the next code block, you'll see that we reduce the amount of code to three lines. Moreover, it's more descriptive with these changes. 
 
-<script src="https://gist.github.com/rafaelldi/d5d912df399d8b913cdaaa4d3e82c5b0.js"></script>
+```
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+
+namespace Temp
+{
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            var app = WebApplication.Create(args);
+            app.MapGet("/", async context => await context.Response.WriteAsync("Hello World!"));
+            await app.RunAsync();
+        }
+    }
+}
+```
 
 # Conclusion
 In this article, I showed how to create your first elementary web server. I hope that was helpful :)
