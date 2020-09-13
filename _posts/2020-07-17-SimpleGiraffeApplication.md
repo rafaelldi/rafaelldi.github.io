@@ -30,11 +30,53 @@ https://github.com/giraffe-fsharp/Giraffe
 
 To add this package to the project let's modify `.fsproj` file. It's similar to the ordinary C# project files.
 
-<script src="https://gist.github.com/rafaelldi/ce4b1c048d67c7ea5436a259aaba0884.js"></script>
+```
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Giraffe" Version="4.1.0" />
+  </ItemGroup>
+
+</Project>
+```
 
 Now, alter a code from the `Program.fs`. 
 
-<script src="https://gist.github.com/rafaelldi/9e9a7ca61a7c3f3d89331b0f3153e64c.js"></script>
+```
+namespace SimpleGiraffeApplication
+
+open Giraffe
+open Microsoft.AspNetCore.Hosting
+open Microsoft.Extensions.Hosting
+
+module Program =
+    let webApp =
+        choose [
+            route "/" >=> text "Hello World!"
+            ]
+
+    [<EntryPoint>]
+    let main args =
+        Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(
+                fun webBuilder ->
+                    webBuilder
+                        .ConfigureServices(fun services -> services.AddGiraffe() |> ignore)
+                        .Configure(fun builder -> builder.UseGiraffe webApp)
+                        |> ignore)
+            .Build()
+            .Run()
+
+        0
+```
 
 In the beginning, we describe our routes. Here we have only one endpoint. The rest of this file will be familiar to you, compare it to the previous example.
 
