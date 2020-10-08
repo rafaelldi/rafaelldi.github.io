@@ -6,7 +6,7 @@ categories: misc
 
 Hello! I recently wondered what the simple ASP.NET Core application should look like. What if I'm a beginner and I want to write my first Hello world application. What is the first step? 
 
-![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/simple-asp-net-core-application-img.jpg)
+![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-06-22-SimpleAspNetCoreApplication/simple-asp-net-core-application-img.jpg)
 
 In this article, I want to demonstrate a web server with a few lines of code and one file. If you have any experience with ASP.NET Core, this article, probably, will not be of any use to you.
 
@@ -29,7 +29,7 @@ https://github.com/rafaelldi/SimpleAspNetCoreProject
 
 Now, you need to modify `Program.cs` file. 
 
-```
+```c#
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -72,7 +72,7 @@ dotnet run
 
 To see, that your server is working, go to `http://localhost:5000` from your browser, and you'll see this text.
 
-![Hello world from a browser](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/hello-world-app.png)
+![Hello world from a browser](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-06-22-SimpleAspNetCoreApplication/hello-world-app.png)
 
 Congratulations, you've created a web server.
 
@@ -94,7 +94,7 @@ https://github.com/featherhttp/framework
 
 We need to add a new `nuget.config` file and modify `Server.csproj` to include this package in the project.
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
     <packageSources>
@@ -105,7 +105,7 @@ We need to add a new `nuget.config` file and modify `Server.csproj` to include t
 </configuration>
 ```
 
-```
+```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -119,7 +119,7 @@ We need to add a new `nuget.config` file and modify `Server.csproj` to include t
 
 After that, we are possible to improve our `Program.cs` file. In the next code block, you'll see that we reduce the amount of code to three lines. Moreover, it's more descriptive with these changes. 
 
-```
+```c#
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;

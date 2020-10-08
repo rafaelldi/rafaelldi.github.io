@@ -6,7 +6,7 @@ categories: misc
 
 Last time we talked about the simplest ASP.NET Core application in C#. Today we'll create the same project in a functional way.
 
-![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/simple-giraffe-application-img.jpg)
+![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-07-17-SimpleGiraffeApplication/simple-giraffe-application-img.jpg)
 
 Recently, I've been interested in functional programming because it's a totally different approach with intriguing challenges. Also, I think you noticed that C# sometimes looks functional, so I was wondered how much differences between two elementary web servers would be. Hence, I decided to make a post with a "Hello world" example in F#.
 
@@ -30,7 +30,7 @@ https://github.com/giraffe-fsharp/Giraffe
 
 To add this package to the project let's modify `.fsproj` file. It's similar to the ordinary C# project files.
 
-```
+```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
@@ -50,7 +50,7 @@ To add this package to the project let's modify `.fsproj` file. It's similar to 
 
 Now, alter a code from the `Program.fs`. 
 
-```
+```f#
 namespace SimpleGiraffeApplication
 
 open Giraffe
