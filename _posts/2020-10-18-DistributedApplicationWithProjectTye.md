@@ -262,11 +262,11 @@ $ tye run
 
 After that, your entire distributed system will start. You can find a beautiful dashboard at this address `http://127.0.0.1:8000/`.
 
-![Tye services dashboard]()
+![Tye services dashboard](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-18-DistributedApplicationWithProjectTye/tye-dashboard.png)
 
 And four connections at the RabbitMQ dashboard `http://localhost:15672`.
 
-![RabbitMQ dashboard]()
+![RabbitMQ dashboard](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-18-DistributedApplicationWithProjectTye/rabbit-dashboard.png)
 
 Eventually, you can send a message and get the log.
 
@@ -281,7 +281,7 @@ Content-Type: application/json
 }
 ```
 
-![Message log]()
+![Message log](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-18-DistributedApplicationWithProjectTye/message-log.png)
 
 ## Competing consumers
 
