@@ -20,13 +20,17 @@ You can send a text or binary data over WebSocket.
 
 Often, this protocol is used by browsers to interact with users in chat apps, online games or analytics tools. But we'll create a console client.
 
+The communication consists of two parts: handshake and bidirectional messaging.
+
+![WebSocket schema](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-08-WebSocketsInDotNet/websocket.png)
+
 # WebSocket handshake
 
 Let's take a look at the protocol handshake.
 
 To establish a WebSocket connection, the client sends an HTTP request with the Upgrade header.
 
-```
+```http request
 GET /?encoding=text HTTP/1.1
 Host: echo.websocket.org
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:81.0) Gecko/20100101 Firefox/81.0
@@ -45,7 +49,7 @@ Upgrade: websocket
 
 If the server is able to establish a WebSocket connection, he responses with the Upgrade header and communication switches to the new protocol over the underlying TCP connection.
 
-```
+```http request
 HTTP/1.1 101 Web Socket Protocol Handshake
 Access-Control-Allow-Credentials: true
 Access-Control-Allow-Headers: content-type
@@ -159,6 +163,12 @@ public class Startup
     }
 }
 ```
+
+Now, let's test our server with [echo tool](https://www.websocket.org/echo.html).
+
+![Echo tool](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-08-WebSocketsInDotNet/echo-tool.png)
+
+![Messages in WebSocket](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-08-WebSocketsInDotNet/messages-in-websocket.png)
 
 ## Client
 
