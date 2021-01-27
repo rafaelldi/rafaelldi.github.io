@@ -30,7 +30,7 @@ Let's take a look at the protocol handshake.
 
 To establish a WebSocket connection, the client sends an HTTP request with the Upgrade header.
 
-```http request
+```http
 GET /?encoding=text HTTP/1.1
 Host: echo.websocket.org
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:81.0) Gecko/20100101 Firefox/81.0
@@ -49,7 +49,7 @@ Upgrade: websocket
 
 If the server is able to establish a WebSocket connection, he responses with the Upgrade header and communication switches to the new protocol over the underlying TCP connection.
 
-```http request
+```http
 HTTP/1.1 101 Web Socket Protocol Handshake
 Access-Control-Allow-Credentials: true
 Access-Control-Allow-Headers: content-type
