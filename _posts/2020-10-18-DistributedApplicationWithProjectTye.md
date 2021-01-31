@@ -3,8 +3,7 @@ layout: post
 title: "Distributed application with Project Tye"
 categories: misc
 ---
-In this post, I want to take a look at the new tool from the ASP team called Project Tye. It helps you to create and manage distributed applications locally. I'm going to show you an example of such applications. 
-
+In this post, I want to take a look at the new tool from the ASP team called Project Tye. It helps you to create and manage distributed applications locally. I'm going to show you an example of such applications.
 
 ![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-18-DistributedApplicationWithProjectTye/cover_distributed_app_with_project_tye.jpg)
 
