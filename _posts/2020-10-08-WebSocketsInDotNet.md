@@ -3,7 +3,6 @@ layout: post
 title: "WebSockets in .NET"
 categories: misc
 ---
-
 In this article, I want to discuss a WebSocket protocol. I'm going to tell you the purposes of this protocol, the differences between HTTP. Finally, we'll create a basic example in .NET to demonstrate how it works. 
 
 ![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-08-WebSocketsInDotNet/web-sockets-in-dot-net-img.jpg)
