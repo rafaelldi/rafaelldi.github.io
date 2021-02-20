@@ -195,7 +195,13 @@ public class DeliverOrderConsumer : IConsumer<DeliverOrder>
 }
 ```
 
-Notice that consumers perform their actions in response to the messages they receive. Next, register them and the library itself. For testing purposes, I'm using in-memory message bus.
+Notice that consumers perform their actions in response to the messages they receive. 
+
+Possible implementations of consumers in different services are shown in the diagram below.
+
+![Multiple services schema](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-02-18-Orchestration/food-delivery-services.png)
+
+Next, register the consumers and the library itself. For testing purposes, I'm using in-memory message bus.
 
 ```c#
 services.AddMassTransit(x =>
