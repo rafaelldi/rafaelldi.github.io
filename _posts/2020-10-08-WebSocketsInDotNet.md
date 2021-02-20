@@ -78,7 +78,7 @@ Disclaimer: if you want to create a real-time application for the production, th
 Create an ASP.NET Core project:
 
 ```
-dotnet new web
+$ dotnet new web
 ```
 
 Remove everything except project file, `Program.cs` and `Startup.cs`.
@@ -174,17 +174,17 @@ Now, let's test our server with [echo tool](https://www.websocket.org/echo.html)
 To build a client, create a new console application.
 
 ```
-dotnet new console
+$ dotnet new console
 ```
 
 I'm going to use external nuget package `Websocket.Client`.
 
-https://github.com/Marfusios/websocket-client
+[Websocket .NET client](https://github.com/Marfusios/websocket-client)
 
 Install this package with the following command.
 
 ```
-dotnet add package Websocket.Client --version 4.3.21
+$ dotnet add package Websocket.Client --version 4.3.21
 ```
 
 And modify the Program class.
@@ -218,7 +218,7 @@ Today we've looked at the WebSocket protocol. I've shown you some details about 
 
 Here you can find a sample project.
 
-https://github.com/rafaelldi/WebSockets
+[Link to GitHub Project](https://github.com/rafaelldi/WebSockets)
 
 # References
 
@@ -226,3 +226,5 @@ https://github.com/rafaelldi/WebSockets
 * https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
 * https://github.com/Marfusios/websocket-client
 * https://www.websocket.org/echo.html
+
+Image: Photo by Brina Blum on Unsplash

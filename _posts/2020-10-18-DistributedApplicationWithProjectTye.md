@@ -269,7 +269,7 @@ And four connections at the RabbitMQ dashboard `http://localhost:15672`.
 
 Eventually, you can send a message and get the log.
 
-```
+```http
 POST http://localhost:5000/api/library
 Content-Type: application/json
 
@@ -286,7 +286,7 @@ Content-Type: application/json
 
 [Competing consumers](https://docs.microsoft.com/en-us/azure/architecture/patterns/competing-consumers) is a pattern that increases the performance and availability of your application. If your application is under heavy load, you can run new consumers which will process messages from the queue in parallel. As you saw, we've already started three instances of our worker project. Let's send three requests and see what happens.
 
-```
+```http
 POST http://localhost:5000/api/library
 Content-Type: application/json
 
@@ -393,7 +393,7 @@ I hope it was interesting and fun.
 
 Example you can find here:
 
-https://github.com/rafaelldi/DistributedLibrary
+[Link to GitHub Project](https://github.com/rafaelldi/DistributedLibrary)
 
 # References
 * https://github.com/dotnet/tye
@@ -401,3 +401,5 @@ https://github.com/rafaelldi/DistributedLibrary
 * https://masstransit-project.com/platform/
 * https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/communication-in-microservice-architecture
 * https://docs.microsoft.com/en-us/azure/architecture/patterns/competing-consumers
+
+Image: Photo by Regine Tholen on Unsplash

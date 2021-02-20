@@ -15,7 +15,7 @@ Recently, I've been interested in functional programming because it's a totally 
 First of all, create an application from the ASP.NET template.
 
 ```
-dotnet new web -lang F#
+$ dotnet new web -lang F#
 ```
 
 We need only `Server.fsproj` and `Program.fs`, other generated files you can safely delete.
@@ -26,7 +26,7 @@ There is a library for creating web applications in a functional approach. We'll
 
 > A native functional ASP.NET Core web framework for F# developers. 
 
-https://github.com/giraffe-fsharp/Giraffe
+[Giraffe](https://github.com/giraffe-fsharp/Giraffe)
 
 To add this package to the project let's modify `.fsproj` file. It's similar to the ordinary C# project files.
 
@@ -86,4 +86,6 @@ That's all! Finally, we have a functional web server. You can run it and test wi
 
 In this post, I described a straightforward example of a functional web server. With .NET, it's effortlessy to switch to F# and spend some time learning functional style. Maybe in the future, I'll publish some new posts about F#.
 
-https://github.com/rafaelldi/SimpleGiraffeApplication
+[Link to GitHub Project](https://github.com/rafaelldi/SimpleGiraffeApplication)
+
+Image: Photo by Zdeněk Macháček on Unsplash
