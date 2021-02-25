@@ -374,7 +374,23 @@ x.AddSagaStateMachine<OrderStateMachine, OrderState>()
     .InMemoryRepository();
 ```
 
-After all this work, you can finally test our project. Send `POST` request to the controller and watch all the steps in our process proceed.
+After all this work, you can finally test our project. Send `POST` request to the controller and follow all the steps of our process. In the logs you will see the next entries.
+
+```
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost:5000/orchestration/orders application/json 55
+info: CommunicationFoodDelivery.Consumers.OrderPlacedConsumer[0]
+      Order with id = 99271053-7720-43de-a2fa-74a7b4d61e48 and details = Details was placed
+info: CommunicationFoodDelivery.Consumers.OrderPlacedConsumer[0]
+      Sending notification to the manager...
+
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost:5000/orchestration/orders/99271053-7720-43de-a2fa-74a7b4d61e48/accept application/json 3
+info: CommunicationFoodDelivery.Consumers.CookDishConsumer[0]
+      Dish for order with id = 99271053-7720-43de-a2fa-74a7b4d61e48 was cooked
+info: CommunicationFoodDelivery.Consumers.DeliverOrderConsumer[0]
+      Order with id = 99271053-7720-43de-a2fa-74a7b4d61e48 was delivered
+```
 
 I didn't show all the code because the post is long enough as it is. You can find the project on GitHub.
 
