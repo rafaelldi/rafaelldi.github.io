@@ -20,7 +20,7 @@ Let's pretend we're developing an application for the restaurant. As you may not
 The whole process will be consists of four steps:
 1. A user places online order from the website; 
 2. The manager receives a notification about the new order and accepts (or denies) it;
-3. The kitchen gets the order details and starts cooking;
+3. The kitchen gets the order details and cooks it;
 4. The courier delivers food to the user's address.
 
 # Application
@@ -151,6 +151,8 @@ public class OrderPlacedConsumer : IConsumer<OrderPlaced>
 
     public async Task Consume(ConsumeContext<OrderPlaced> context)
     {
+        _logger.LogInformation($"{nameof(OrderPlaced)} event received");
+
         await Task.Delay(500);
 
         _logger.LogInformation("Order with id = {id} and details = {details} was placed",
@@ -171,11 +173,13 @@ public class CookDishConsumer : IConsumer<CookDish>
 
     public async Task Consume(ConsumeContext<CookDish> context)
     {
+        _logger.LogInformation($"{nameof(CookDish)} command received");
+
         await Task.Delay(500);
 
         var orderId = context.Message.OrderId;
         _logger.LogInformation("Dish for order with id = {id} was cooked", orderId.ToString());
-        await context.Publish(new DishCooked {OrderId = orderId});
+        await context.RespondAsync(new DishCooked {OrderId = orderId});
     }
 }
 ```
@@ -191,11 +195,13 @@ public class DeliverOrderConsumer : IConsumer<DeliverOrder>
 
     public async Task Consume(ConsumeContext<DeliverOrder> context)
     {
+        _logger.LogInformation($"{nameof(DeliverOrder)} command received");
+
         await Task.Delay(500);
 
         var orderId = context.Message.OrderId;
         _logger.LogInformation("Order with id = {id} was delivered", orderId.ToString());
-        await context.Publish(new OrderDelivered {OrderId = orderId});
+        await context.RespondAsync(new OrderDelivered {OrderId = orderId});
     }
 }
 ```
@@ -385,21 +391,31 @@ After all this work, you can finally test our project. Send `POST` request to th
 
 ```
 info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
-      Request starting HTTP/1.1 POST http://localhost:5000/orchestration/orders application/json 55
+      Request starting HTTP/1.1 POST http://localhost:5000/orders application/json 63
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost:5000/orders application/json 63 - 200 0 - 563.1161ms
 info: CommunicationFoodDelivery.Consumers.OrderPlacedConsumer[0]
-      Order with id = 99271053-7720-43de-a2fa-74a7b4d61e48 and details = Burger was placed
+      OrderPlaced event received
+info: CommunicationFoodDelivery.Consumers.OrderPlacedConsumer[0]
+      Order with id = 423c53af-0e3f-4659-820b-75b1c6bac2ba and details = Burger was placed
 info: CommunicationFoodDelivery.Consumers.OrderPlacedConsumer[0]
       Sending notification to the manager...
 
 info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
-      Request starting HTTP/1.1 POST http://localhost:5000/orchestration/orders/99271053-7720-43de-a2fa-74a7b4d61e48/accept application/json 3
+      Request starting HTTP/1.1 POST http://localhost:5000/orders/423c53af-0e3f-4659-820b-75b1c6bac2ba/accept application/json 3
+iinfo: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost:5000/orders/423c53af-0e3f-4659-820b-75b1c6bac2ba/accept application/json 3 - 200 0 - 43.5609ms
 info: CommunicationFoodDelivery.Consumers.CookDishConsumer[0]
-      Dish for order with id = 99271053-7720-43de-a2fa-74a7b4d61e48 was cooked
+      CookDish command received
+info: CommunicationFoodDelivery.Consumers.CookDishConsumer[0]
+      Dish for order with id = 423c53af-0e3f-4659-820b-75b1c6bac2ba was cooked
 info: CommunicationFoodDelivery.Consumers.DeliverOrderConsumer[0]
-      Order with id = 99271053-7720-43de-a2fa-74a7b4d61e48 was delivered
+      DeliverOrder command received
+info: CommunicationFoodDelivery.Consumers.DeliverOrderConsumer[0]
+      Order with id = 423c53af-0e3f-4659-820b-75b1c6bac2ba was delivered
 ```
 
-It is worth noting that you don't wait for the process to complete inside the controller (like we did) in real systems. Mostly, long-running processes are handled asynchronously. I'm going to show you how to do it in future posts.
+It is worth noting that you don't wait for the process to complete inside the controller. The web request was processed faster than the end of the state machine. Mostly, long-running processes are handled asynchronously. I'm going to show you how to proper handle it in future posts.
 
 I didn't show all the code because the post is long enough as it is. You can find the project on GitHub.
 
