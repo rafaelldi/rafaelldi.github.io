@@ -149,12 +149,13 @@ public class OrderPlacedConsumer : IConsumer<OrderPlaced>
         _logger = logger;
     }
 
-    public Task Consume(ConsumeContext<OrderPlaced> context)
+    public async Task Consume(ConsumeContext<OrderPlaced> context)
     {
+        await Task.Delay(500);
+
         _logger.LogInformation("Order with id = {id} and details = {details} was placed",
             context.Message.OrderId.ToString(), context.Message.OrderDetails);
         _logger.LogInformation("Sending notification to the manager...");
-        return Task.CompletedTask;
     }
 }
 ```
@@ -170,6 +171,8 @@ public class CookDishConsumer : IConsumer<CookDish>
 
     public async Task Consume(ConsumeContext<CookDish> context)
     {
+        await Task.Delay(500);
+
         var orderId = context.Message.OrderId;
         _logger.LogInformation("Dish for order with id = {id} was cooked", orderId.ToString());
         await context.Publish(new DishCooked {OrderId = orderId});
@@ -188,6 +191,8 @@ public class DeliverOrderConsumer : IConsumer<DeliverOrder>
 
     public async Task Consume(ConsumeContext<DeliverOrder> context)
     {
+        await Task.Delay(500);
+
         var orderId = context.Message.OrderId;
         _logger.LogInformation("Order with id = {id} was delivered", orderId.ToString());
         await context.Publish(new OrderDelivered {OrderId = orderId});
@@ -374,13 +379,15 @@ x.AddSagaStateMachine<OrderStateMachine, OrderState>()
     .InMemoryRepository();
 ```
 
+The whole process is as follows. The user sends a request to create an order. The controller transforms this request into a `PlaceOrder` command and sends it to the message bus. The state machine receives the command, sets itself to `Placed` status and sends the `OrderPlaced` event. The corresponding `OrderPlacedConsumer` responds to this event and sends a notification to the manager about the new order. At this point, the state machine pauses and waits for action from the user. After the manager approves the order with a request, the controller sends an `AcceptOrder` command. The state machine responds, sends a `CookDish` command, waits for a message from the `DishCookedConsumer` and sends a `DeliverOrder` command to deliver the order. After the order is delivered, the message `OrderDelivered` comes, the state machine passes to the final state.
+
 After all this work, you can finally test our project. Send `POST` request to the controller and follow all the steps of our process. In the logs you will see the next entries.
 
 ```
 info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
       Request starting HTTP/1.1 POST http://localhost:5000/orchestration/orders application/json 55
 info: CommunicationFoodDelivery.Consumers.OrderPlacedConsumer[0]
-      Order with id = 99271053-7720-43de-a2fa-74a7b4d61e48 and details = Details was placed
+      Order with id = 99271053-7720-43de-a2fa-74a7b4d61e48 and details = Burger was placed
 info: CommunicationFoodDelivery.Consumers.OrderPlacedConsumer[0]
       Sending notification to the manager...
 
@@ -391,6 +398,8 @@ info: CommunicationFoodDelivery.Consumers.CookDishConsumer[0]
 info: CommunicationFoodDelivery.Consumers.DeliverOrderConsumer[0]
       Order with id = 99271053-7720-43de-a2fa-74a7b4d61e48 was delivered
 ```
+
+It is worth noting that you don't wait for the process to complete inside the controller (like we did) in real systems. Mostly, long-running processes are handled asynchronously. I'm going to show you how to do it in future posts.
 
 I didn't show all the code because the post is long enough as it is. You can find the project on GitHub.
 
