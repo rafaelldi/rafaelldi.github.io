@@ -353,7 +353,7 @@ Eventually, modify controllers to send corresponding commands and register state
 // ...
 private readonly IPublishEndpoint _publishEndpoint;
 
-public OrdersOrchestrationController(IPublishEndpoint publishEndpoint)
+public OrdersController(IPublishEndpoint publishEndpoint)
 {
     _publishEndpoint = publishEndpoint;
 }
