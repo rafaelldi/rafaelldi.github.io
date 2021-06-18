@@ -4,6 +4,7 @@ title: "Choreography"
 categories: post
 author: Rival Abdrakhmanov
 date: 2021-03-01
+tags: ["Distributed application", "Choreography", "MassTransit", "Messaging", "ASP.NET Core"]
 ---
 This post shows you an example of the choreography pattern to coordinate services in a system. 
 

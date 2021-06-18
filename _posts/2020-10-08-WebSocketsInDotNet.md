@@ -4,6 +4,7 @@ title: "WebSockets in .NET"
 categories: post
 author: Rival Abdrakhmanov
 date: 2020-10-08
+tags: ["ASP.NET Core", "WebSocket"]
 ---
 In this article, I want to discuss a WebSocket protocol. I'm going to tell you the purposes of this protocol, the differences between HTTP. Finally, we'll create a basic example in .NET to demonstrate how it works. 
 

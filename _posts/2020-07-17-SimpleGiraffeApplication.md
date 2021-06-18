@@ -4,6 +4,7 @@ title: "Simple Giraffe Application"
 categories: post
 author: Rival Abdrakhmanov
 date: 2020-07-17
+tags: ["Giraffe", "Tutorial", "Beginning", "Web Server", "F#", "Functional Programming"]
 ---
 
 Last time we talked about the simplest ASP.NET Core application in C#. Today we'll create the same project in a functional way.
