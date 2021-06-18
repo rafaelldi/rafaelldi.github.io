@@ -5,7 +5,7 @@ categories: misc
 ---
 In this article, I want to discuss a WebSocket protocol. I'm going to tell you the purposes of this protocol, the differences between HTTP. Finally, we'll create a basic example in .NET to demonstrate how it works. 
 
-![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-08-WebSocketsInDotNet/web-sockets-in-dot-net-img.jpg)
+![Title image](/images/2020-10-08-WebSocketsInDotNet/web-sockets-in-dot-net-img.jpg)
 
 # Overview
 
@@ -21,7 +21,7 @@ Often, this protocol is used by browsers to interact with users in chat apps, on
 
 The communication consists of two parts: handshake and bidirectional messaging.
 
-![WebSocket schema](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-08-WebSocketsInDotNet/websocket.png)
+![WebSocket schema](/images/2020-10-08-WebSocketsInDotNet/websocket.png)
 
 # WebSocket handshake
 
@@ -165,9 +165,9 @@ public class Startup
 
 Now, let's test our server with [echo tool](https://www.websocket.org/echo.html).
 
-![Echo tool](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-08-WebSocketsInDotNet/echo-tool.png)
+![Echo tool](/images/2020-10-08-WebSocketsInDotNet/echo-tool.png)
 
-![Messages in WebSocket](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2020-10-08-WebSocketsInDotNet/messages-in-websocket.png)
+![Messages in WebSocket](/images/2020-10-08-WebSocketsInDotNet/messages-in-websocket.png)
 
 ## Client
 

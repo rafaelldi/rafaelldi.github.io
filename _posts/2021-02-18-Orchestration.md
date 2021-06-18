@@ -5,7 +5,7 @@ categories: misc
 ---
 In this post, I want to show you an example of how to apply an orchestration pattern in your system. 
 
-![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-02-18-Orchestration/cover_orchestration.jpg)
+![Title image](/images/2021-02-18-Orchestration/cover_orchestration.jpg)
 
 The previous post was about two main patterns for coordinating services in a distributed system. So, today we'll take a look at the straightforward application for food delivery. Within this system, we'll try to connect different parts with orchestration pattern.
 
@@ -15,7 +15,7 @@ _Spoiler: this post has a lot of code. If you want to look at the project yourse
 
 Let's pretend we're developing an application for the restaurant. As you may notice, food delivery is popular nowadays, so we want to implement this functionality in the app.
 
-![Food delivery schema](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-02-18-Orchestration/food-delivery.png)
+![Food delivery schema](/images/2021-02-18-Orchestration/food-delivery.png)
 
 The whole process will be consists of four steps:
 1. A user places online order from the website; 
@@ -210,7 +210,7 @@ Notice that consumers perform their actions in response to the messages they rec
 
 Possible implementations of consumers in different services are shown in the diagram below.
 
-![Multiple services schema](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-02-18-Orchestration/food-delivery-services.png)
+![Multiple services schema](/images/2021-02-18-Orchestration/food-delivery-services.png)
 
 Next, register the consumers and the library itself. For testing purposes, I'm using in-memory message bus.
 

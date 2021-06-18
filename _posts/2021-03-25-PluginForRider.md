@@ -5,7 +5,7 @@ categories: misc
 ---
 In this post, I describe my experience with plugin creation for JetBrains Rider
 
-![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-03-25-PluginForRider/cover_plugin_for_rider.jpg)
+![Title image](/images/2021-03-25-PluginForRider/cover_plugin_for_rider.jpg)
 
 It was always interesting for me is it difficult to build your plugin for IDE. Recently, I've decided to try. It turns out it's not that complicated, and I would like to share my experience.
 
@@ -51,7 +51,7 @@ $ tye run
 
 Tye starts your projects, and you can find them on the dashboard `http://127.0.0.1:8000/`.
 
-![Tye dashboard](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-03-25-PluginForRider/tye-dashboard.png)
+![Tye dashboard](/images/2021-03-25-PluginForRider/tye-dashboard.png)
 
 # Run Configuration
 
@@ -160,7 +160,7 @@ class TyeSettingsEditor : SettingsEditor<TyeRunConfiguration>() {
 
 Pretty straightforward implementation. I won't go into detail about each file. As I said before, you can find their description in the documentation. Eventually, if you run the plugin, you would see the new `Run Configuration` type. For now, it doesn't do anything; let's go to the next section and add some behaviour.
 
-![Tye run configuration](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-03-25-PluginForRider/tye-run-config.png)
+![Tye run configuration](/images/2021-03-25-PluginForRider/tye-run-config.png)
 
 # Tye run command
 
@@ -186,7 +186,7 @@ override fun startProcess(): ProcessHandler {
 
 Start the plugin again, select `TyeExperiments` solution folder and run the new tye configuration type. You'll see the same logs as before when we ran tye independently.
 
-![Tye logs](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-03-25-PluginForRider/tye-logs.png)
+![Tye logs](/images/2021-03-25-PluginForRider/tye-logs.png)
 
 # Conclusion
 

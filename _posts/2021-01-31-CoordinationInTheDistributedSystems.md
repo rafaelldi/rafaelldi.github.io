@@ -5,7 +5,7 @@ categories: misc
 ---
 Recently, I had a talk about distributed systems. This type of architecture is popular nowadays. In this post, I want to discuss one of such systems' main problems: how to coordinate different parts. 
 
-![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-01-31-CoordinationInTheDistributedSystems/cover_coordination_in_the_distributed_systems.jpg)
+![Title image](/images/2021-01-31-CoordinationInTheDistributedSystems/cover_coordination_in_the_distributed_systems.jpg)
 
 Some user requests might be handled by a group of services in your system. For example, you take an order, process payment and ship that order. And these steps might be located in different parts of your application because each service is responsible for a small piece of the domain. Of course, these services must process the order in a certain sequence. Let's take a look at how to organize this interservice communication.
 
@@ -13,7 +13,7 @@ There are two main patterns: choreography and orchestration.
 
 # Choreography
 
-![Choreography schema](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-01-31-CoordinationInTheDistributedSystems/choreography.png)
+![Choreography schema](/images/2021-01-31-CoordinationInTheDistributedSystems/choreography.png)
 
 In this pattern, each service subscribes to events from the others. When an event comes, the service executes its action and produces a new event. Eventually, you have a chain of the services which handles the request sequentially.
 
@@ -31,7 +31,7 @@ Also, it's challenging to recover from failure. If a service falls and doesn't s
 
 # Orchestration
 
-![Orchestration schema](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-01-31-CoordinationInTheDistributedSystems/orchestration.png)
+![Orchestration schema](/images/2021-01-31-CoordinationInTheDistributedSystems/orchestration.png)
 
 In this pattern, you have one central service called a conductor. It knows the workflow and sends commands to the other services. In its turn, the service executes the command and responds to the conductor.
 
@@ -51,7 +51,7 @@ In short, the saga is a sequence of steps, and all steps have compensating trans
 
 Also, each action affects only one service. Therefore, within a step, we can use a local transaction. In summary, we might say, that saga is a sequence of local transactions with appropriate compensating transactions.
 
-![Saga schema](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-01-31-CoordinationInTheDistributedSystems/saga.png)
+![Saga schema](/images/2021-01-31-CoordinationInTheDistributedSystems/saga.png)
 
 In some situations, it's impossible to revert some actions. For example, sending an email, you can't return it back. You should send a new email with excuses. So, compensating transactions might be tricky.
 

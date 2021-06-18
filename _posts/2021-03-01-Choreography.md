@@ -5,7 +5,7 @@ categories: misc
 ---
 This post shows you an example of the choreography pattern to coordinate services in a system. 
 
-![Title image](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-03-01-Choreography/cover_choreography.jpg)
+![Title image](/images/2021-03-01-Choreography/cover_choreography.jpg)
 
 In the previous post, we created a food delivery application and applied the orchestration pattern. In this one, I'm going to modify that solution to follow the choreography pattern.
 
@@ -17,7 +17,7 @@ Let me remind the process:
 3. The kitchen gets the order details and starts cooking;
 4. The courier delivers food to the user's address.
 
-![Food delivery schema](https://raw.githubusercontent.com/rafaelldi/rafaelldi.github.io/master/images/2021-03-01-Choreography/food-delivery.png)
+![Food delivery schema](/images/2021-03-01-Choreography/food-delivery.png)
 
 # Routing slip
 
