@@ -8,7 +8,7 @@ tags: ["ASP.NET Core", "Project Tye", "MassTransit", "Distributed application"]
 ---
 In this post, I want to take a look at the new tool from the ASP team called Project Tye. It helps you to create and manage distributed applications locally. I'm going to show you an example of such applications.
 
-![Title image](/images/2020-10-18-DistributedApplicationWithProjectTye/cover_distributed_app_with_project_tye.jpg)
+![Title image](/images/2020-10-18-distributed-application-with-project-tye/cover_distributed_app_with_project_tye.jpg)
 
 # Application
 
@@ -264,11 +264,11 @@ $ tye run
 
 After that, your entire distributed system will start. You can find a beautiful dashboard at this address `http://127.0.0.1:8000/`.
 
-![Tye services dashboard](/images/2020-10-18-DistributedApplicationWithProjectTye/tye-dashboard.png)
+![Tye services dashboard](/images/2020-10-18-distributed-application-with-project-tye/tye-dashboard.png)
 
 And four connections at the RabbitMQ dashboard `http://localhost:15672`.
 
-![RabbitMQ dashboard](/images/2020-10-18-DistributedApplicationWithProjectTye/rabbit-dashboard.png)
+![RabbitMQ dashboard](/images/2020-10-18-distributed-application-with-project-tye/rabbit-dashboard.png)
 
 Eventually, you can send a message and get the log.
 
@@ -283,7 +283,7 @@ Content-Type: application/json
 }
 ```
 
-![Message log](/images/2020-10-18-DistributedApplicationWithProjectTye/message-log.png)
+![Message log](/images/2020-10-18-distributed-application-with-project-tye/message-log.png)
 
 ## Competing consumers
 

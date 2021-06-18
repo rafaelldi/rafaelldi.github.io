@@ -8,11 +8,11 @@ tags: ["Distributed application", "Choreography", "MassTransit", "Messaging", "A
 ---
 This post shows you an example of the choreography pattern to coordinate services in a system. 
 
-![Title image](/images/2021-03-01-Choreography/cover_choreography.jpg)
+![Title image](/images/2021-03-01-choreography/cover_choreography.jpg)
 
 In the previous post, we created a food delivery application and applied the orchestration pattern. In this one, I'm going to modify that solution to follow the choreography pattern.
 
-[Orchestration](/post/2021/02/18/Orchestration.html)
+[Orchestration](/post/2021/02/18/orchestration.html)
 
 Let me remind the process:
 1. A user places online order from the website;
@@ -20,13 +20,13 @@ Let me remind the process:
 3. The kitchen gets the order details and starts cooking;
 4. The courier delivers food to the user's address.
 
-![Food delivery schema](/images/2021-03-01-Choreography/food-delivery.png)
+![Food delivery schema](/images/2021-03-01-choreography/food-delivery.png)
 
 # Routing slip
 
 Sometimes you don't want to couple to one central service (orchestrator) as we did in the previous post. In that case, it's possible to connect your services via pub/sub mechanism. It's not so complicated and has some pitfalls, especially if you want to add compensating transactions. So, today I'll additionally apply a routing slip pattern. I described it in the post about coordination. In short, you put all steps (and compensations if needed) in a routing slip and attach it to the message. Hence, every service knows where to send this message next.
 
-[Coordination in the distributed systems](/post/2021/01/31/CoordinationInTheDistributedSystems.html)
+[Coordination in the distributed systems](/post/2021/01/31/coordination-in-the-distributed-systems.html)
 
 # Modify application
 
@@ -202,7 +202,7 @@ Today, we've transformed the application with a choreography approach to reduce 
 
 # References
 
-* [Coordination in the distributed systems](/post/2021/01/31/CoordinationInTheDistributedSystems.html)
+* [Coordination in the distributed systems](/post/2021/01/31/coordination-in-the-distributed-systems.html)
 * https://masstransit-project.com/
 * https://masstransit-project.com/advanced/courier/
 

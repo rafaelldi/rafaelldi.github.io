@@ -8,7 +8,7 @@ tags: ["Distributed application", "Project Tye", "Plugin", "JetBrains Rider", "A
 ---
 In this post, I describe my experience with plugin creation for JetBrains Rider
 
-![Title image](/images/2021-03-25-PluginForRider/cover_plugin_for_rider.jpg)
+![Title image](/images/2021-03-25-plugin-for-rider/cover_plugin_for_rider.jpg)
 
 It was always interesting for me is it difficult to build your plugin for IDE. Recently, I've decided to try. It turns out it's not that complicated, and I would like to share my experience.
 
@@ -28,7 +28,7 @@ After that, you'll have a new repository for your plugin. Let's clone it and add
 
 Lately, I published a post about [Project Tye](https://github.com/dotnet/tye). It's an experimental tool from Microsoft to develop distributed applications locally and deploy them to the Kubernetes cluster. So, I want to add support for this tool to the Rider.
 
-[Distributed application with Project Tye](/post/2020/10/18/DistributedApplicationWithProjectTye.html)
+[Distributed application with Project Tye](/post/2020/10/18/distributed-application-with-project-tye.html)
 
 I'll briefly remind you how this tool works. First of all, let's create a test solution for our experiments.
 
@@ -54,7 +54,7 @@ $ tye run
 
 Tye starts your projects, and you can find them on the dashboard `http://127.0.0.1:8000/`.
 
-![Tye dashboard](/images/2021-03-25-PluginForRider/tye-dashboard.png)
+![Tye dashboard](/images/2021-03-25-plugin-for-rider/tye-dashboard.png)
 
 # Run Configuration
 
@@ -163,7 +163,7 @@ class TyeSettingsEditor : SettingsEditor<TyeRunConfiguration>() {
 
 Pretty straightforward implementation. I won't go into detail about each file. As I said before, you can find their description in the documentation. Eventually, if you run the plugin, you would see the new `Run Configuration` type. For now, it doesn't do anything; let's go to the next section and add some behaviour.
 
-![Tye run configuration](/images/2021-03-25-PluginForRider/tye-run-config.png)
+![Tye run configuration](/images/2021-03-25-plugin-for-rider/tye-run-config.png)
 
 # Tye run command
 
@@ -189,7 +189,7 @@ override fun startProcess(): ProcessHandler {
 
 Start the plugin again, select `TyeExperiments` solution folder and run the new tye configuration type. You'll see the same logs as before when we ran tye independently.
 
-![Tye logs](/images/2021-03-25-PluginForRider/tye-logs.png)
+![Tye logs](/images/2021-03-25-plugin-for-rider/tye-logs.png)
 
 # Conclusion
 
