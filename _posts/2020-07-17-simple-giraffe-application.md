@@ -9,7 +9,7 @@ tags: ["Giraffe", "Tutorial", "Beginning", "Web Server", "F#", "Functional Progr
 
 Last time we talked about the simplest ASP.NET Core application in C#. Today we'll create the same project in a functional way.
 
-![Title image](/images/2020-07-17-simple-giraffe-application/simple-giraffe-application-img.jpg)
+![Title image](/images/2020-07-17-simple-giraffe-application/cover_simple_giraffe_application.jpg)
 
 Recently, I've been interested in functional programming because it's a totally different approach with intriguing challenges. Also, I think you noticed that C# sometimes looks functional, so I was wondered how much differences between two elementary web servers would be. Hence, I decided to make a post with a "Hello world" example in F#.
 
