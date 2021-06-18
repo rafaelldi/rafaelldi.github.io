@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Coordination in the distributed systems"
-categories: misc
+categories: post
+author: Rival Abdrakhmanov
+date: 2021-01-31
 ---
 Recently, I had a talk about distributed systems. This type of architecture is popular nowadays. In this post, I want to discuss one of such systems' main problems: how to coordinate different parts. 
 

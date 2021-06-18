@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Orchestration"
-categories: misc
+categories: post
+author: Rival Abdrakhmanov
+date: 2021-02-18
 ---
 In this post, I want to show you an example of how to apply an orchestration pattern in your system. 
 

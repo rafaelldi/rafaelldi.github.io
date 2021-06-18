@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Choreography"
-categories: misc
+categories: post
+author: Rival Abdrakhmanov
+date: 2021-03-01
 ---
 This post shows you an example of the choreography pattern to coordinate services in a system. 
 

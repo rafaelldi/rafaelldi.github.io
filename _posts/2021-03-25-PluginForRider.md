@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Making a plugin isn't so hard..."
-categories: misc
+categories: post
+author: Rival Abdrakhmanov
+date: 2021-03-25
 ---
 In this post, I describe my experience with plugin creation for JetBrains Rider
 
