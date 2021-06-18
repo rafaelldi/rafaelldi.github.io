@@ -90,4 +90,4 @@ In this post, I described a straightforward example of a functional web server. 
 
 [Link to GitHub Project](https://github.com/rafaelldi/SimpleGiraffeApplication)
 
-Image: Photo by Zdeněk Macháček on Unsplash
+*Image: Photo by Zdeněk Macháček on Unsplash*

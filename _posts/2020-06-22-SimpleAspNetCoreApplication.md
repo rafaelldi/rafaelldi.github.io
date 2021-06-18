@@ -143,4 +143,4 @@ namespace Temp
 # Conclusion
 In this article, I showed how to create your first elementary web server. I hope that was helpful :)
 
-Image: Photo by Dayne Topkin on Unsplash
+*Image: Photo by Dayne Topkin on Unsplash*

@@ -229,4 +229,4 @@ Here you can find a sample project.
 * https://github.com/Marfusios/websocket-client
 * https://www.websocket.org/echo.html
 
-Image: Photo by Brina Blum on Unsplash
+*Image: Photo by Brina Blum on Unsplash*

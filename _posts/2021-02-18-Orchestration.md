@@ -11,7 +11,7 @@ In this post, I want to show you an example of how to apply an orchestration pat
 
 The previous post was about two main patterns for coordinating services in a distributed system. So, today we'll take a look at the straightforward application for food delivery. Within this system, we'll try to connect different parts with orchestration pattern.
 
-[Coordination in the distributed systems](https://northern-dev.net/coordination-in-the-distributed-systems/)
+[Coordination in the distributed systems](/post/2021/01/31/CoordinationInTheDistributedSystems.html)
 
 _Spoiler: this post has a lot of code. If you want to look at the project yourself, I left a link to GitHub at the end of the post._
 
@@ -139,7 +139,7 @@ public static class Events
 
 After that, let's add consumers. Consumers are similar to controllers but used for messaging. Our consumers are straightforward; they just log some information. Of course, in the real application, logic is more complicated. Moreover, they might be located in different microservices, but I'll create them in our API project for simplicity. I recently showed the approach with multiple containers connected via RabbitMQ.
 
-[Distributed application with Project Tye](https://northern-dev.net/distributed-application-with-project-tye/)
+[Distributed application with Project Tye](/post/2020/10/18/DistributedApplicationWithProjectTye.html)
 
 ```c#
 public class OrderPlacedConsumer : IConsumer<OrderPlaced>
@@ -431,8 +431,8 @@ In the next post, I will show how to modify this solution towards the choreograp
 
 # References
 
-* https://northern-dev.net/coordination-in-the-distributed-systems/
+* [Coordination in the distributed systems](/post/2021/01/31/CoordinationInTheDistributedSystems.html)
 * https://masstransit-project.com/
 * https://masstransit-project.com/usage/sagas/automatonymous.html
 
-Image: Photo by Andrey Konstantinov on Unsplash
+*Image: Photo by Andrey Konstantinov on Unsplash*

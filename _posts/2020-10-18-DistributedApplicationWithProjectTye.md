@@ -404,4 +404,4 @@ Example you can find here:
 * https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/communication-in-microservice-architecture
 * https://docs.microsoft.com/en-us/azure/architecture/patterns/competing-consumers
 
-Image: Photo by Regine Tholen on Unsplash
+*Image: Photo by Regine Tholen on Unsplash*
