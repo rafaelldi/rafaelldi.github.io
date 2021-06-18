@@ -36,7 +36,7 @@ info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
       Request finished in 657.7785ms 200 application/json; charset=utf-8
 ```
 
-```json lines
+```
 {"@t":"2019-07-13T14:28:14.0957104Z","@mt":"{HostingRequestStartingLog:l}","@r":["Request starting HTTP/1.1 GET http://localhost:5000/api/values/1  "],"Protocol":"HTTP/1.1","Method":"GET","ContentType":null,"ContentLength":null,"Scheme":"http","Host":"localhost:5000","PathBase":"","Path":"/api/values/1","QueryString":"","HostingRequestStartingLog":"Request starting HTTP/1.1 GET http://localhost:5000/api/values/1  ","EventId":{"Id":1},"SourceContext":"Microsoft.AspNetCore.Hosting.Internal.WebHost","RequestId":"0HLO7JPBE4OS4:00000001","RequestPath":"/api/values/1","CorrelationId":null,"ConnectionId":"0HLO7JPBE4OS4"}
 {"@t":"2019-07-13T14:28:14.1233725Z","@mt":"Executing endpoint '{EndpointName}'","EndpointName":"AspNetCoreAppLogging.Controllers.ValuesController.Get (AspNetCoreAppLogging)","EventId":{"Name":"ExecutingEndpoint"},"SourceContext":"Microsoft.AspNetCore.Routing.EndpointMiddleware","RequestId":"0HLO7JPBE4OS4:00000001","RequestPath":"/api/values/1","CorrelationId":null,"ConnectionId":"0HLO7JPBE4OS4"}
 {"@t":"2019-07-13T14:28:14.1625562Z","@mt":"Route matched with {RouteData}. Executing controller action with signature {MethodInfo} on controller {Controller} ({AssemblyName}).","RouteData":"{action = \"Get\", controller = \"Values\"}","MethodInfo":"Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Get(Int32)","Controller":"AspNetCoreAppLogging.Controllers.ValuesController","AssemblyName":"AspNetCoreAppLogging","EventId":{"Id":3},"SourceContext":"Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker","ActionId":"6855c1f5-6601-4386-94ed-2c056336e313","ActionName":"AspNetCoreAppLogging.Controllers.ValuesController.Get (AspNetCoreAppLogging)","RequestId":"0HLO7JPBE4OS4:00000001","RequestPath":"/api/values/1","CorrelationId":null,"ConnectionId":"0HLO7JPBE4OS4"}
@@ -177,7 +177,7 @@ Take a look at the logging form: `“Id value is {@id}”`, id.  It allows Seril
   ]
 }
 ```
-```json lines
+```
 {"@t":"2019-07-14T09:44:50.5953439Z","@mt":"Id value is {@id}","id":1,"SourceContext":"AspNetCoreAppLogging.Controllers.ValuesController","ActionId":"06ed54d2-f0d4-4586-b545-52f3d7c2b95b","ActionName":"AspNetCoreAppLogging.Controllers.ValuesController.Get (AspNetCoreAppLogging)","RequestId":"0HLO87VL5R9O1:00000001","RequestPath":"/api/values/1","CorrelationId":null,"ConnectionId":"0HLO87VL5R9O1"}
 {"@t":"2019-07-14T09:44:50.5954389Z","@mt":"CurrentDate {@currentDate}","currentDate":"2019-07-14T12:44:50.5951098+03:00","SourceContext":"AspNetCoreAppLogging.Controllers.ValuesController","ActionId":"06ed54d2-f0d4-4586-b545-52f3d7c2b95b","ActionName":"AspNetCoreAppLogging.Controllers.ValuesController.Get (AspNetCoreAppLogging)","RequestId":"0HLO87VL5R9O1:00000001","RequestPath":"/api/values/1","CorrelationId":null,"ConnectionId":"0HLO87VL5R9O1"}
 ```
