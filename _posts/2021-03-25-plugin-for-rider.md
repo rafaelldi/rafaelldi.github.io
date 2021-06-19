@@ -4,11 +4,10 @@ categories: post
 author: Rival Abdrakhmanov
 date: 2021-03-25
 tags: ["Distributed application", "Project Tye", "Plugin", "JetBrains Rider", "ASP.NET Core"]
-header:
-  image: /images/2021-03-25-plugin-for-rider/cover_plugin_for_rider.jpg
-  caption: "Photo by Johanneke Kroesbergen-Kamps on Unsplash"
 ---
 In this post, I describe my experience with plugin creation for JetBrains Rider
+
+![Title image](/images/2021-03-25-plugin-for-rider/cover_plugin_for_rider.jpg)
 
 It was always interesting for me is it difficult to build your plugin for IDE. Recently, I've decided to try. It turns out it's not that complicated, and I would like to share my experience.
 
@@ -208,3 +207,5 @@ I hope I was able to motivate you to try creating your own plugin. My source cod
 * [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
 * [IntelliJ Platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html)
 * [IntelliJ Platform Explorer](https://plugins.jetbrains.com/intellij-platform-explorer/)
+
+*Image: Photo by Johanneke Kroesbergen-Kamps on Unsplash*
