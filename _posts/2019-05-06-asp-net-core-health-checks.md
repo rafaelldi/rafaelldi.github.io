@@ -4,15 +4,12 @@ categories: post
 author: Rival Abdrakhmanov
 date: 2019-05-06
 tags: ["Observability", "ASP.NET Core", "Health Checks"]
+excerpt: I'm starting a new series about application observability, and the first point is health checks. In this post, I describe how to add them to your ASP.NET Core application and monitor them.
 header:
   image: /images/2019-05-06-asp-net-core-health-checks/cover_asp_net_core_health_checks.jpg
   caption: "Photo by Annie Spratt on Unsplash"
 
 ---
-I'm starting a new series about application observability, and the first point is health checks. In this post, I describe how to add them to your ASP.NET Core application and monitor them.
-
-![Title image](/images/2019-05-06-asp-net-core-health-checks/cover_asp_net_core_health_checks.jpg)
-
 If you're using Kubernetes or load balancer, you need a tool, which can check that the application is still running. For these purposes, health checks provide an endpoint with the status of your application.
 
 I've created a [simple project](https://github.com/rafaelldi/AspNetCoreAppHealthCheck) on GitHub with examples of this post.
@@ -227,5 +224,3 @@ The status is `healthy`.
 
 # Conclusion
 Today we’ve looked at health checks. It’s a handy tool, especially if you are using multiple instances of your application. More information you can find in the [GitHub repository](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) and [official docs](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-2.2), for example, health checks for different services, tools for pushing results or sending failure notifications.
-
-*Image: Photo by Annie Spratt on Unsplash*
