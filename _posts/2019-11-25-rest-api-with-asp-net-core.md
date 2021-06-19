@@ -258,9 +258,6 @@ public class WorkerWithRefit : BackgroundService
 ```
 
 # Contracts
-
-Contracts
-
 When you create server and client simultaneously, you know all endpoints and can easily request them. But what if you don’t own server application and can’t see the source code. There is an [OpenAPI Specification (Swagger)](https://www.openapis.org/) which allows you to generate a contract for your API in a standard way and consume it when you’re creating a client. In this section, I’ll show you how to generate documentation from your server code and produce a client.
 
 There are two libraries in ASP.NET Core for it [NSwag](https://github.com/RicoSuter/NSwag) and [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore). I’m using the first one.
