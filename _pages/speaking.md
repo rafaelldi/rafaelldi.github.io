@@ -3,8 +3,9 @@ permalink: /speaking/
 title: "Speaking"
 ---
 
-# SpbDotNet meetup
-## HttpClient: common mistakes and ways to avoid them
+**SpbDotNet meetup**
+
+HttpClient: common mistakes and ways to avoid them
 
 Dates: October 3, 2019
 
@@ -18,8 +19,9 @@ My first speaking experience (in Russian) 🙂
 
 ---
 
-# DOTNEXT 2020
-## Patterns of distributed systems in the traditions of Russia's northern indigenous and minority peoples
+**DOTNEXT 2020**
+
+Patterns of distributed systems in the traditions of Russia's northern indigenous and minority peoples
 
 Dates: December 2-5, 2020
 
