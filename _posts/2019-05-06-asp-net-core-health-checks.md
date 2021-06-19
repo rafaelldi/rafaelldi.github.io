@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "ASP.NET Core: Health checks"
 categories: post
 author: Rival Abdrakhmanov
