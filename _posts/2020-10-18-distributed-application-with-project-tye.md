@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Distributed application with Project Tye"
 categories: post
 author: Rival Abdrakhmanov

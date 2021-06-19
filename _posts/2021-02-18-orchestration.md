@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Orchestration"
 categories: post
 author: Rival Abdrakhmanov

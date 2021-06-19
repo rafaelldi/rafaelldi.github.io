@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Coordination in the distributed systems"
 categories: post
 author: Rival Abdrakhmanov

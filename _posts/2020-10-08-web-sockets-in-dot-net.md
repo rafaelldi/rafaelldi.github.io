@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "WebSockets in .NET"
 categories: post
 author: Rival Abdrakhmanov

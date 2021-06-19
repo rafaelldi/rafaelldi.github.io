@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "REST API with ASP.NET Core"
 categories: post
 author: Rival Abdrakhmanov

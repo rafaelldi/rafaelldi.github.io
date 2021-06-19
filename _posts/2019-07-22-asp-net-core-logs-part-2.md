@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "ASP.NET Core: Logs (Part 2)"
 categories: post
 author: Rival Abdrakhmanov

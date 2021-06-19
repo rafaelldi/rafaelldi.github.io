@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Choreography"
 categories: post
 author: Rival Abdrakhmanov

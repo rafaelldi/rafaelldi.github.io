@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "GraphQL with ASP.NET Core"
 categories: post
 author: Rival Abdrakhmanov

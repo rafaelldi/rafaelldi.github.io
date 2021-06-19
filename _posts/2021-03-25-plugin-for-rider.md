@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Making a plugin isn't so hard..."
 categories: post
 author: Rival Abdrakhmanov

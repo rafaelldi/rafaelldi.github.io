@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "ASP.NET Core: Metrics"
 categories: post
 author: Rival Abdrakhmanov

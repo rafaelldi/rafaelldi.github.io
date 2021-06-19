@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Simple Giraffe Application"
 categories: post
 author: Rival Abdrakhmanov

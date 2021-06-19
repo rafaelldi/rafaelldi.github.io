@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Simple ASP.NET Core Application"
 categories: post
 author: Rival Abdrakhmanov
