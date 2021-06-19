@@ -20,12 +20,11 @@ url: "https://rafaelldi.github.io/"
 repository: "rafaelldi/rafaelldi.github.io"
 description: >- # this means to ignore newlines until "baseurl:"
   Hello and Welcome! My name is Rival, and I'm a .NET developer. In this blog, I describe my development experience and explore exciting technologies. I hope you'll find it useful.
-twitter_username: rafaelldi
-github_username: rafaelldi
 minimal_mistakes_skin: default
 search: true
 locale: "en-US"
 breadcrumbs: true
+logo: "/images/logo.png"
 
 social:
   type: Person
@@ -105,9 +104,8 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false
       share: true
-      related: false
+      show_date: true
   # _pages
   - scope:
       path: "_pages"
