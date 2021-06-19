@@ -13,16 +13,27 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: rafaelldi.github.io
+title: "Northern Dev"
+name: "Rival Abdrakhmanov"
 email:
+url: "https://rafaelldi.github.io/"
+repository: "rafaelldi/rafaelldi.github.io"
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
+  Hello and Welcome! My name is Rival, and I'm a .NET developer. In this blog, I describe my development experience and explore exciting technologies. I hope you'll find it useful.
+twitter_username: rafaelldi
+github_username: rafaelldi
 minimal_mistakes_skin: default
 search: true
+locale: "en-US"
+breadcrumbs: true
+
+social:
+  type: Person
+  name: Rival Abdrakhmanov
+  links:
+    - "https://twitter.com/rafaelldi"
+    - "https://github.com/rafaelldi"
+    - "https://linkedin.com/in/rivalabdrakhmanov"
 
 # Build settings
 markdown: kramdown
@@ -31,7 +42,7 @@ remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Moscow
 
 include:
   - _pages
@@ -59,33 +70,31 @@ plugins:
 
 author:
   name   : "Rival Abdrakhmanov"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  avatar : "/images/bio-photo.jpg"
+  bio    : "Hello and Welcome! My name is Rival, and I'm a .NET developer. In this blog, I describe my development experience and explore exciting technologies. I hope you'll find it useful."
+  location: "Saint Petersburg, Russia"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/rafaelldi"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/rafaelldi"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/rivalabdrakhmanov"
 
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/rafaelldi"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/rafaelldi"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/rivalabdrakhmanov"
 
 defaults:
   # _posts
@@ -96,9 +105,9 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
-      related: true
+      related: false
   # _pages
   - scope:
       path: "_pages"
