@@ -9,7 +9,6 @@ minimal_mistakes_skin: default
 search: true
 locale: "en-US"
 logo: "/images/logo.png"
-google_site_verification: Kn8uqfuGSFtUD_JUa-tPpRE0ELZCfZHkKceWHrCVW-8
 
 social:
   type: Person
