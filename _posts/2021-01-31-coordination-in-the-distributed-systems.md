@@ -1,6 +1,6 @@
 ---
 title: "Coordination in the distributed systems"
-categories: post
+categories: posts
 author: Rival Abdrakhmanov
 date: 2021-01-31
 tags: ["Distributed application", "Choreography", "Orchestration", "Saga"]
@@ -67,8 +67,8 @@ The solution here is to attach the list of steps and compensations to the messag
 # Conclusion
 Today, I've shown you how to coordinate services in the distributed system. Mainly, we have two options: choreography and orchestration. Also, we've considered an analogue of transaction in the distributed world - pattern Saga. In the next posts, I will demonstrate to you some examples of these pattern's implementation.
 
-* [Orchestration](/post/2021/02/18/orchestration.html)
-* [Choreography](/post/2021/03/01/choreography.html)
+* [Orchestration](/posts/orchestration.html)
+* [Choreography](/posts/choreography.html)
 
 # References
 * https://docs.microsoft.com/en-us/azure/architecture/patterns/choreography

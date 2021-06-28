@@ -1,6 +1,6 @@
 ---
 title: "GraphQL with ASP.NET Core"
-categories: post
+categories: posts
 author: Rival Abdrakhmanov
 date: 2020-02-23
 tags: ["Connection", "ASP.NET Core", "GraphQL"]

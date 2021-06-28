@@ -1,6 +1,6 @@
 ---
 title: "Simple ASP.NET Core Application"
-categories: post
+categories: posts
 author: Rival Abdrakhmanov
 date: 2020-06-22
 tags: ["ASP.NET Core", "Tutorial", "Beginning", "Web Server"]

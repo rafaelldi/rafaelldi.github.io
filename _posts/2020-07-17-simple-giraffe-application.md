@@ -1,6 +1,6 @@
 ---
 title: "Simple Giraffe Application"
-categories: post
+categories: posts
 author: Rival Abdrakhmanov
 date: 2020-07-17
 tags: ["Giraffe", "Tutorial", "Beginning", "Web Server", "F#", "Functional Programming"]

@@ -1,6 +1,6 @@
 ---
 title: "Distributed application with Project Tye"
-categories: post
+categories: posts
 author: Rival Abdrakhmanov
 date: 2020-10-18
 tags: ["ASP.NET Core", "Project Tye", "MassTransit", "Distributed application"]

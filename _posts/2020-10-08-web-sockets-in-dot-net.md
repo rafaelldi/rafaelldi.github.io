@@ -1,6 +1,6 @@
 ---
 title: "WebSockets in .NET"
-categories: post
+categories: posts
 author: Rival Abdrakhmanov
 date: 2020-10-08
 tags: ["ASP.NET Core", "WebSocket"]

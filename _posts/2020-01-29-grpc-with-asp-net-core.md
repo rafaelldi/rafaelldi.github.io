@@ -1,6 +1,6 @@
 ---
 title: "gRPC with ASP.NET Core"
-categories: post
+categories: posts
 author: Rival Abdrakhmanov
 date: 2020-01-29
 tags: ["Connection", "ASP.NET Core", "gRPC", "Protobuf"]
@@ -195,7 +195,7 @@ That’s all we need, let’s test our server. There is a handy tool for doing t
 ![Get items with BloomRPC](/images/2020-01-29-grpc-with-asp-net-core/bloom-rpc-get.png)
 
 # Client
-It’s time to build a client. I used the same worker template as in the [previous post](/post/2019/11/25/rest-api-with-asp-net-core.html). To continue with, I added some nuget libraries and proto file to the client project.
+It’s time to build a client. I used the same worker template as in the [previous post](/posts/rest-api-with-asp-net-core.html). To continue with, I added some nuget libraries and proto file to the client project.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Worker">
