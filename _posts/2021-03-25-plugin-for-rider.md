@@ -27,7 +27,7 @@ After that, you'll have a new repository for your plugin. Let's clone it and add
 
 Lately, I published a post about [Project Tye](https://github.com/dotnet/tye). It's an experimental tool from Microsoft to develop distributed applications locally and deploy them to the Kubernetes cluster. So, I want to add support for this tool to the Rider.
 
-[Distributed application with Project Tye](/posts/distributed-application-with-project-tye)
+[Distributed application with Project Tye](2020-10-18-distributed-application-with-project-tye.md)
 
 I'll briefly remind you how this tool works. First of all, let's create a test solution for our experiments.
 
