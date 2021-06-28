@@ -67,8 +67,8 @@ The solution here is to attach the list of steps and compensations to the messag
 # Conclusion
 Today, I've shown you how to coordinate services in the distributed system. Mainly, we have two options: choreography and orchestration. Also, we've considered an analogue of transaction in the distributed world - pattern Saga. In the next posts, I will demonstrate to you some examples of these pattern's implementation.
 
-* [Orchestration](/posts/orchestration.html)
-* [Choreography](/posts/choreography.html)
+* [Orchestration](/posts/orchestration)
+* [Choreography](/posts/choreography)
 
 # References
 * https://docs.microsoft.com/en-us/azure/architecture/patterns/choreography
