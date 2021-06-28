@@ -22,8 +22,8 @@ social:
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+permalink: /:title/
+paginate: 8
 paginate_path: /page:num/
 timezone: Europe/Moscow
 
