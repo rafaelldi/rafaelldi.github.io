@@ -46,7 +46,7 @@ If you run your application as it is, use this [sink to the Elasticsearch](https
 
 > A twelve-factor app never concerns itself with routing or storage of its output stream. It should not attempt to write to or manage logfiles. Instead, each running process writes its event stream, unbuffered, to stdout.
 
-Ok, we’ve already done this in a [previous part](/posts/asp-net-core-logs-part-1), but now we need a [special formatter](https://github.com/serilog/serilog-sinks-elasticsearch), which is compatible with Elasticsearch (`Serilog.Formatting.Elasticsearch`). Install this nuget and change the config file.
+Ok, we’ve already done this in a [previous part](2019-07-14-asp-net-core-logs-part-1.md), but now we need a [special formatter](https://github.com/serilog/serilog-sinks-elasticsearch), which is compatible with Elasticsearch (`Serilog.Formatting.Elasticsearch`). Install this nuget and change the config file.
 
 ```json
 "Serilog":{
