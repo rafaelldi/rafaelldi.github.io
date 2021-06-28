@@ -1,6 +1,6 @@
 ---
 title: "Making a plugin isn't so hard..."
-categories: post
+categories: posts
 author: Rival Abdrakhmanov
 date: 2021-03-25
 tags: ["Distributed application", "Project Tye", "Plugin", "JetBrains Rider", "ASP.NET Core"]
