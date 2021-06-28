@@ -50,6 +50,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-relative-links
 
 author:
   name   : "Rival Abdrakhmanov"
