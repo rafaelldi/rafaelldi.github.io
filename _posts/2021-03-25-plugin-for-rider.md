@@ -201,7 +201,7 @@ I hope I was able to motivate you to try creating your own plugin. My source cod
 [Tye Plugin](https://github.com/rafaelldi/tye-plugin)
 
 # References
-    
+
 * [Project Tye on GitHub](https://github.com/dotnet/tye)
 * [Introducing Project Tye](https://devblogs.microsoft.com/aspnet/introducing-project-tye/)
 * [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
