@@ -4,7 +4,7 @@ email:
 url: "https://northern-dev.net/"
 repository: "rafaelldi/rafaelldi.github.io"
 description: >- # this means to ignore newlines until "baseurl:"
-  Hello and Welcome!  My name is Rival, and I'm a .NET developer. In this blog, I describe my development experience and explore exciting technologies. I hope you'll find it useful.
+  Hello and Welcome! My name is Rival, and I'm a .NET developer. In this blog, I describe my development experience and explore exciting technologies. I hope you'll find it useful.
 minimal_mistakes_skin: default
 search: true
 locale: "en-US"
