@@ -42,7 +42,6 @@ include:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# Plugins (previously gems:)
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -50,11 +49,6 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-
-analytics:
-  provider: "google-gtag"
-  google:
-    tracking_id: "G-CNZGT3R3MH"
 
 author:
   name   : "Rival Abdrakhmanov"
