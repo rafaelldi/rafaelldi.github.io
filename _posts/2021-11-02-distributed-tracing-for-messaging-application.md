@@ -147,7 +147,7 @@ Everything is working as expected; let's go towards distributed tracing.
 
 # Initial Distributed Tracing
 
-First of all, we have to install `[OpenTelemetry](https://www.nuget.org/packages/OpenTelemetry)`, `[OpenTelemetry.Instrumentation.AspNetCore](https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AspNetCore)`, `[OpenTelemetry.Extensions.Hosting](https://www.nuget.org/packages/OpenTelemetry.Extensions.Hosting)`, `[OpenTelemetry.Exporter.Jaeger](https://www.nuget.org/packages/OpenTelemetry.Exporter.Jaeger)` nuget-packages to our projects.
+First of all, we have to install [`OpenTelemetry`](https://www.nuget.org/packages/OpenTelemetry), [`OpenTelemetry.Instrumentation.AspNetCore`](https://www.nuget.org/packages/OpenTelemetry.Instrumentation.AspNetCore), [`OpenTelemetry.Extensions.Hosting`](https://www.nuget.org/packages/OpenTelemetry.Extensions.Hosting), [`OpenTelemetry.Exporter.Jaeger`](https://www.nuget.org/packages/OpenTelemetry.Exporter.Jaeger) nuget-packages to our projects.
 
 Add some code to the `api` project.
 
@@ -325,7 +325,7 @@ As we expected, now we have spans from both our projects, and they form a sequen
 
 # Diagnostic Source
 
-If you remember my [previous post]({% post_url 2021-09-22-tracing-for-messaging-application %}), you know that MassTransit emits some diagnostic events with its `[DiagnosticSource](https://masstransit-project.com/advanced/monitoring/diagnostic-source.html)`. It appears that MassTransit [uses](https://github.com/MassTransit/MassTransit/blob/develop/src/MassTransit/Logging/EnabledDiagnosticSource.cs) the same `Activity` class for this purpose but creates them directly via the constructor rather than from `ActivitySource`. These activities are called "legacy Activities", and there is a [particular method](https://github.com/open-telemetry/opentelemetry-dotnet/blob/main/docs/trace/extending-the-sdk/README.md#special-case--instrumentation-for-libraries-producing-legacy-activity) to register them. Now, let's modify our projects to include [relevant events](https://masstransit-project.com/advanced/monitoring/diagnostic-source.html#available-diagnostic-events).
+If you remember my [previous post]({% post_url 2021-09-22-tracing-for-messaging-application %}), you know that MassTransit emits some diagnostic events with its [`DiagnosticSource`](https://masstransit-project.com/advanced/monitoring/diagnostic-source.html). It appears that MassTransit [uses](https://github.com/MassTransit/MassTransit/blob/develop/src/MassTransit/Logging/EnabledDiagnosticSource.cs) the same `Activity` class for this purpose but creates them directly via the constructor rather than from `ActivitySource`. These activities are called "legacy Activities", and there is a [particular method](https://github.com/open-telemetry/opentelemetry-dotnet/blob/main/docs/trace/extending-the-sdk/README.md#special-case--instrumentation-for-libraries-producing-legacy-activity) to register them. Now, let's modify our projects to include [relevant events](https://masstransit-project.com/advanced/monitoring/diagnostic-source.html#available-diagnostic-events).
 
 ```c#
 services.AddOpenTelemetryTracing(x => x
