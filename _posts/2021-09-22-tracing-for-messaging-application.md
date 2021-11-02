@@ -48,3 +48,5 @@ In this short post, I've briefly touched on tracing and showed how to consume ev
 - [DiagnosticSourceEventSource](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/DiagnosticSourceEventSource.cs)
 - [MassTransit DiagnosticSource](https://masstransit-project.com/advanced/monitoring/diagnostic-source.html)
 - [.NET Core logging and tracing](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/logging-tracing)
+
+*Image: Photo by Anne Nygård on Unsplash*
