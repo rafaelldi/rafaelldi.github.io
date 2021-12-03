@@ -50,6 +50,8 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
+google_site_verification: Kn8uqfuGSFtUD_JUa-tPpRE0ELZCfZHkKceWHrCVW-8
+
 author:
   name   : "Rival Abdrakhmanov"
   avatar : "/images/bio-photo.jpg"
