@@ -102,6 +102,7 @@ defaults:
       read_time: true
       share: true
       show_date: true
+      comments: true
   # _pages
   - scope:
       path: "_pages"
