@@ -1,11 +1,11 @@
 ---
 title: "Coordination in the distributed systems"
+excerpt: "Recently, I had a talk about distributed systems. This type of architecture is popular nowadays. In this post, I want to discuss one of such systems' main problems: how to coordinate different parts."
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-01-31
 tags: ["Distributed application", "Choreography", "Orchestration", "Saga"]
 ---
-Recently, I had a talk about distributed systems. This type of architecture is popular nowadays. In this post, I want to discuss one of such systems' main problems: how to coordinate different parts. 
 
 ![Title image](/images/2021-01-31-coordination-in-the-distributed-systems/cover_coordination_in_the_distributed_systems.jpg)
 

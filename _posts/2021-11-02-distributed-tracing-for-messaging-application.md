@@ -1,12 +1,11 @@
 ---
 title: "Distributed tracing for messaging application"
+excerpt: "In the previous post, I've talked about tracing. Today I want to take a look at the distributed tracing."
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-11-02
 tags: ["Distributed application", "MassTransit", "Messaging", "ASP.NET Core", "Diagnostics", "Distributed Tracing", "OpenTelemetry"]
 ---
-
-In the previous post, I've talked about tracing. Today I want to take a look at the distributed tracing.
 
 ![Title image](/images/2021-11-02-distributed-tracing-for-messaging-application/cover_distributed_tracing_for_messaging_app.jpg)
 

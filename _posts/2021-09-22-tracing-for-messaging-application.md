@@ -1,12 +1,11 @@
 ---
 title: "Tracing for messaging application"
+excerpt: "In the last post, we discussed a dotnet-counters tool. This one is continuing that diagnostics conversation with a dotnet-trace tool."
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-09-22
 tags: ["Distributed application", "MassTransit", "Messaging", "ASP.NET Core", "Diagnostics", "Tracing"]
 ---
-
-In the last post, we discussed a dotnet-counters tool. This one is continuing that diagnostics conversation with a dotnet-trace tool.
 
 ![Title image](/images/2021-09-22-tracing-for-messaging-application/cover_tracing_for_messaging_app.jpg)
 

@@ -1,11 +1,11 @@
 ---
 title: "Making a plugin isn't so hard..."
+excerpt: "In this post, I describe my experience with plugin creation for JetBrains Rider."
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-03-25
 tags: ["Distributed application", "Project Tye", "Plugin", "JetBrains Rider", "ASP.NET Core"]
 ---
-In this post, I describe my experience with plugin creation for JetBrains Rider
 
 ![Title image](/images/2021-03-25-plugin-for-rider/cover_plugin_for_rider.jpg)
 

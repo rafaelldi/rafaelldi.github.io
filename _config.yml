@@ -9,7 +9,6 @@ minimal_mistakes_skin: default
 search: true
 locale: "en-US"
 logo: "/images/logo.png"
-breadcrumbs: true
 
 comments:
   provider: "giscus"

@@ -1,11 +1,11 @@
 ---
 title: "Orchestration"
+excerpt: "In this post, I want to show you an example of how to apply an orchestration pattern in your system."
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-02-18
 tags: ["Distributed application", "Orchestration", "MassTransit", "Messaging", "ASP.NET Core"]
 ---
-In this post, I want to show you an example of how to apply an orchestration pattern in your system. 
 
 ![Title image](/images/2021-02-18-orchestration/cover_orchestration.jpg)
 
