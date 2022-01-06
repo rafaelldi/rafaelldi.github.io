@@ -15,7 +15,7 @@ In this post, we continue our talk about communication between services. Today w
 The best part here is that you can add gRPC to your ASP.NET Core application in a very natural way, and everything will be the same (logging, DI, authentication). I show you in the next parts how to deal with it.
 
 # Server
-Now, let’s build a server. We’ll create the same blog service, as we did in the [REST post](https://northern-dev.net/rest-api-with-asp-net-core/), so that we can compare these two solutions.
+Now, let’s build a server. We’ll create the same blog service, as we did in the [REST post](https://rafaelldi.blog/rest-api-with-asp-net-core/), so that we can compare these two solutions.
 
 ```protobuf
 syntax = "proto3";

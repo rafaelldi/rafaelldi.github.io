@@ -1,7 +1,7 @@
-title: "Northern Dev"
+title: "rafaelldi blog"
 name: "Rival Abdrakhmanov"
 email:
-url: "https://northern-dev.net/"
+url: "https://rafaelldi.blog/"
 repository: "rafaelldi/rafaelldi.github.io"
 description: >- # this means to ignore newlines until "baseurl:"
   Hello and Welcome! My name is Rival, and I'm a .NET developer. In this blog, I describe my development experience and explore exciting technologies. I hope you'll find it useful.
@@ -50,7 +50,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-google_site_verification: Kn8uqfuGSFtUD_JUa-tPpRE0ELZCfZHkKceWHrCVW-8
+google_site_verification: WVD7YBlqUKlZ3xN61_3hUFa55txulqFvV8R8QFcEcPQ
 
 author:
   name   : "Rival Abdrakhmanov"
