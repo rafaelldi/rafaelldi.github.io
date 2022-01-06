@@ -1,12 +1,11 @@
 ---
 title: "Async request processing"
+excerpt: "Recently, I've talked about state machines and routing slips. In this post, I am going to show how to combine these approaches."
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-06-29
 tags: ["Distributed application", "MassTransit", "Messaging", "ASP.NET Core", "State Machine", "Routing Slip"]
 ---
-
-Recently, I've talked about [state machines]({% post_url 2021-02-18-orchestration %}) and [routing slips]({% post_url 2021-03-01-choreography %}). In this post, I am going to show how to combine these approaches.
 
 ![Title image](/images/2021-06-29-async-request-processing/cover_async_request_processing.jpg)
 

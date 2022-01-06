@@ -1,12 +1,11 @@
 ---
 title: "Monitoring background task"
+excerpt: "I'm continuing my previous post about asynchronous processing. I want to show how to add some metrics to monitor background tasks."
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-07-21
 tags: ["Distributed application", "MassTransit", "Messaging", "ASP.NET Core", "EventCounters", "Diagnostics", "Performance"]
 ---
-
-I'm continuing my [previous post]({% post_url 2021-06-29-async-request-processing %}) about asynchronous processing. I want to show how to add some metrics to monitor background tasks.
 
 ![Title image](/images/2021-07-21-monitoring-background-task/cover_monitoring_task.jpg)
 
