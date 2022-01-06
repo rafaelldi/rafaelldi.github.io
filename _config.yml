@@ -9,6 +9,17 @@ minimal_mistakes_skin: default
 search: true
 locale: "en-US"
 logo: "/images/logo.png"
+breadcrumbs: true
+
+comments:
+  provider: "giscus"
+  giscus:
+    repo_id              : "MDEwOlJlcG9zaXRvcnkyODU4Mzg4NjE="
+    category_name        : "Announcements"
+    category_id          : "MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMzMDQwMjc0"
+    discussion_term      : "title"
+    reactions_enabled    : '1'
+    theme                : "light"
 
 social:
   type: Person
@@ -23,7 +34,7 @@ markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
-paginate: 8
+paginate: 10
 paginate_path: /page:num/
 timezone: Europe/Moscow
 
