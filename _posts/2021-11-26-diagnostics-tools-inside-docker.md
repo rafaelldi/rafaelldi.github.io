@@ -1,8 +1,6 @@
 ---
 title: "Diagnostics tools inside Docker container"
 excerpt: "This post is a collection of recipes on how to run diagnostics tools inside a docker container."
-header:
-  overlay_image: /images/2021-11-26-diagnostics-tools-inside-docker/cover_diagnostics_tools.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-11-26
