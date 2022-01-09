@@ -1,13 +1,15 @@
 ---
 title: "WebSockets in .NET"
+excerpt: "In this article, I want to discuss a WebSocket protocol. I'm going to tell you the purposes of this protocol, the differences between HTTP. Finally, we'll create a basic example in .NET to demonstrate how it works."
+header:
+  og_image: /images/2020-10-08-web-sockets-in-dot-net/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2020-10-08
 tags: ["ASP.NET Core", "WebSocket"]
 ---
-In this article, I want to discuss a WebSocket protocol. I'm going to tell you the purposes of this protocol, the differences between HTTP. Finally, we'll create a basic example in .NET to demonstrate how it works. 
 
-![Title image](/images/2020-10-08-web-sockets-in-dot-net/cover_web_sockets_in_dot_net.jpg)
+![Title image](/images/2020-10-08-web-sockets-in-dot-net/cover.jpg)
 
 # Overview
 

@@ -1,13 +1,15 @@
 ---
 title: "ASP.NET Core: Metrics"
+excerpt: "In this post, I add some metrics to ASP.NET Core application. We’ll discuss why monitoring is so important and how we can deal with it."
+header:
+  og_image: /images/2019-11-02-asp-net-core-metrics/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2019-11-02
 tags: ["Observability", "ASP.NET Core", "Metrics", "Monitoring", "Prometheus", "Grafana"]
 ---
-In this post, I add some metrics to ASP.NET Core application. We’ll discuss why monitoring is so important and how we can deal with it. 
 
-![Title image](/images/2019-11-02-asp-net-core-metrics/cover_asp_net_core_metrics.jpg)
+![Title image](/images/2019-11-02-asp-net-core-metrics/cover.jpg)
 
 # Monitoring
 Monitoring is one of the methods to understand what is happening with your application in production. As I said in the [previous post]({% post_url 2019-07-14-asp-net-core-logs-part-1 %}), we use logging for similar purposes. What is the difference between monitoring and logging? Metrics are all almost about numbers, on the other hand, logs are all almost about a text. With the monitoring, you collect a lot of data, but you don’t read it, you just control that the measurements are within acceptable limits. Logging, contrariwise, is very useful in situations when you need to know what exactly happened,  you can read stack trace, some useful messages, variable values. Of  course, you can understand, for example, the amount of exceptions with  your logs, but monitoring is more essential for these purposes.

@@ -1,13 +1,15 @@
 ---
 title: "Tracing for messaging application"
 excerpt: "In the last post, we discussed a dotnet-counters tool. This one is continuing that diagnostics conversation with a dotnet-trace tool."
+header:
+  og_image: /images/2021-09-22-tracing-for-messaging-application/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-09-22
 tags: ["Distributed application", "MassTransit", "Messaging", "ASP.NET Core", "Diagnostics", "Tracing"]
 ---
 
-![Title image](/images/2021-09-22-tracing-for-messaging-application/cover_tracing_for_messaging_app.jpg)
+![Title image](/images/2021-09-22-tracing-for-messaging-application/cover.jpg)
 
 Tracing can be very powerful to debug problems in production. I won't go deeper into the tracing details today, but I want to demonstrate one particular issue I encountered during development.
 

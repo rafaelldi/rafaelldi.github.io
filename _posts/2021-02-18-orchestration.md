@@ -1,13 +1,15 @@
 ---
 title: "Orchestration"
 excerpt: "In this post, I want to show you an example of how to apply an orchestration pattern in your system."
+header:
+  og_image: /images/2021-02-18-orchestration/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-02-18
 tags: ["Distributed application", "Orchestration", "MassTransit", "Messaging", "ASP.NET Core"]
 ---
 
-![Title image](/images/2021-02-18-orchestration/cover_orchestration.jpg)
+![Title image](/images/2021-02-18-orchestration/cover.jpg)
 
 The previous post was about two main patterns for coordinating services in a distributed system. So, today we'll take a look at the straightforward application for food delivery. Within this system, we'll try to connect different parts with orchestration pattern.
 

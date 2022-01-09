@@ -1,13 +1,15 @@
 ---
 title: "Distributed application with Project Tye"
+excerpt: "In this post, I want to take a look at the new tool from the ASP team called Project Tye. It helps you to create and manage distributed applications locally. I'm going to show you an example of such applications."
+header:
+  og_image: /images/2020-10-18-distributed-application-with-project-tye/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2020-10-18
 tags: ["ASP.NET Core", "Project Tye", "MassTransit", "Distributed application"]
 ---
-In this post, I want to take a look at the new tool from the ASP team called Project Tye. It helps you to create and manage distributed applications locally. I'm going to show you an example of such applications.
 
-![Title image](/images/2020-10-18-distributed-application-with-project-tye/cover_distributed_app_with_project_tye.jpg)
+![Title image](/images/2020-10-18-distributed-application-with-project-tye/cover.jpg)
 
 # Application
 

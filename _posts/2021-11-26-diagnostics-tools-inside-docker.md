@@ -1,13 +1,15 @@
 ---
 title: "Diagnostics tools inside Docker container"
 excerpt: "This post is a collection of recipes on how to run diagnostics tools inside a docker container."
+header:
+  og_image: /images/2021-11-26-diagnostics-tools-inside-docker/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-11-26
 tags: ["Diagnostics", ".NET", "ASP.NET Core", "Docker"]
 ---
 
-![Title image](/images/2021-11-26-diagnostics-tools-inside-docker/cover_diagnostics_tools.jpg)
+![Title image](/images/2021-11-26-diagnostics-tools-inside-docker/cover.jpg)
 
 When you're trying to resolve a bug, you often want as much information as possible to understand the root cause of the problem. .NET provides us with valuable [diagnostics tools.](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/#net-core-diagnostic-global-tools) This post will show some scenarios of running these tools for service inside a docker container.
 

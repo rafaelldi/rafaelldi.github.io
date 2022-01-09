@@ -1,13 +1,15 @@
 ---
 title: "GraphQL with ASP.NET Core"
+excerpt: "I’m continuing my services communication series with GraphQL."
+header:
+  og_image: /images/2020-02-23-graphql-with-asp-net-core/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2020-02-23
 tags: ["Connection", "ASP.NET Core", "GraphQL"]
 ---
-I’m continuing my services communication series with GraphQL. 
 
-![Title image](/images/2020-02-23-graphql-with-asp-net-core/cover_graphql_with_asp_net_core.jpg)
+![Title image](/images/2020-02-23-graphql-with-asp-net-core/cover.jpg)
 
 I’ve created a [repository](https://github.com/rafaelldi/GraphQLWithAspNetCore) with an example project.
 

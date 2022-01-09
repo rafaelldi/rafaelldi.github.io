@@ -1,13 +1,15 @@
 ---
 title: "Choreography"
 excerpt: "This post shows you an example of the choreography pattern to coordinate services in a system."
+header:
+  og_image: /images/2021-03-01-choreography/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-03-01
 tags: ["Distributed application", "Choreography", "MassTransit", "Messaging", "ASP.NET Core"]
 ---
 
-![Title image](/images/2021-03-01-choreography/cover_choreography.jpg)
+![Title image](/images/2021-03-01-choreography/cover.jpg)
 
 In the previous post, we created a food delivery application and applied the orchestration pattern. In this one, I'm going to modify that solution to follow the choreography pattern.
 

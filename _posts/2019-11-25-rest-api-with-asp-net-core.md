@@ -1,13 +1,15 @@
 ---
 title: "REST API with ASP.NET Core"
+excerpt: "In this article I’ll show you how to create REST client-server communication in ASP.NET Core."
+header:
+  og_image: /images/2019-11-25-rest-api-with-asp-net-core/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2019-11-25
 tags: ["Connection", "ASP.NET Core", "REST", "OpenAPI", "NSwag", "HttpClient", "Json"]
 ---
-In this article I’ll show you how to create REST client-server communication in ASP.NET Core. 
 
-![Title image](/images/2019-11-25-rest-api-with-asp-net-core/cover_rest_api_with_asp_net_core.jpg)
+![Title image](/images/2019-11-25-rest-api-with-asp-net-core/cover.jpg)
 
 When you are creating a web application, you need to organize communication between different parts of the app (frontend and backend or between microservices or something else). There are some new exciting mechanism to do that: GraphQL, gRPC. I want to dive into these technologies in the future posts, but today let’s start with basics!
 

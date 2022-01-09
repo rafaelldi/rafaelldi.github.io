@@ -1,13 +1,15 @@
 ---
 title: "Coordination in the distributed systems"
 excerpt: "Recently, I had a talk about distributed systems. This type of architecture is popular nowadays. In this post, I want to discuss one of such systems' main problems: how to coordinate different parts."
+header:
+  og_image: /images/2021-01-31-coordination-in-the-distributed-systems/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-01-31
 tags: ["Distributed application", "Choreography", "Orchestration", "Saga"]
 ---
 
-![Title image](/images/2021-01-31-coordination-in-the-distributed-systems/cover_coordination_in_the_distributed_systems.jpg)
+![Title image](/images/2021-01-31-coordination-in-the-distributed-systems/cover.jpg)
 
 Some user requests might be handled by a group of services in your system. For example, you take an order, process payment and ship that order. And these steps might be located in different parts of your application because each service is responsible for a small piece of the domain. Of course, these services must process the order in a certain sequence. Let's take a look at how to organize this interservice communication.
 

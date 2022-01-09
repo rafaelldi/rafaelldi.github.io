@@ -1,13 +1,15 @@
 ---
 title: "ASP.NET Core: Logs (Part 2)"
+excerpt: "In the first part, we were looking at a simple console logging with Serilog. Today we’ll go deeper and will deal with a more complicated example."
+header:
+  og_image: /images/2019-07-22-asp-net-core-logs-part-2/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2019-07-22
 tags: ["Observability", "ASP.NET Core", "ELK", "Logging", "Serilog", "Fluentd", "Structured Logging"]
 ---
-In the first part, we were looking at a simple console logging with Serilog. Today we’ll go deeper and will deal with a more complicated example. 
 
-![Title image](/images/2019-07-22-asp-net-core-logs-part-2/cover_asp_net_core_logs_part_2.jpg)
+![Title image](/images/2019-07-22-asp-net-core-logs-part-2/cover.jpg)
 
 # Logging to Elasticsearch
 When you’re creating a real application, you want to use some storage for your logs to keep them for a long time and analyze them in the future. Of course, in this case console logging isn’t enough for you. Nowadays the most common solution is the ELK. This abbreviation means Elasticsearch, Logstash, Kibana.
