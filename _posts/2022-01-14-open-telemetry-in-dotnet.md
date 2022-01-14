@@ -352,5 +352,3 @@ Observability is one of the first things to keep in mind when building a modern 
 - [.NET metrics](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/metrics)
 - [Logging in .NET](https://docs.microsoft.com/en-us/dotnet/core/extensions/logging?tabs=command-line)
 - [Grafana](https://grafana.com/)
-
-*Image: Photo by Daniel Lerman on Unsplash*
