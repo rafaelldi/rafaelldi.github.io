@@ -315,7 +315,7 @@ services:
 ```
 The overall scheme looks like:
 
-![Scheme](/images/2022-01-14-open-telemetry-in-dotnet/scheme.svg)
+![Scheme](/images/2022-01-14-open-telemetry-in-dotnet/scheme.png)
 
 Run the following command and go to the Grafana UI [`http://localhost:3000/`](http://localhost:3000/).
 
