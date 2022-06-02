@@ -33,7 +33,7 @@ Console.WriteLine("EventCounters sample application");
 Console.ReadKey();
 ```
 
-We can monitor `EventCounters` with `[dotnet-counters](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-counters)` tool. Install it and start monitoring your application.
+We can monitor `EventCounters` with [`dotnet-counters`](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-counters) tool. Install it and start monitoring your application.
 
 ```
 $ dotnet tool install --global dotnet-counters
@@ -212,13 +212,13 @@ async Task StartCounterProducingTask()
 
 ### `DiagnosticsClient`
 
-To consume our counters from another application, we’ll use `[Microsoft.Diagnostics.NETCore.Client](https://www.nuget.org/packages/Microsoft.Diagnostics.NETCore.Client/)` nuget package. Let’s create another console application:
+To consume our counters from another application, we’ll use [`Microsoft.Diagnostics.NETCore.Client`](https://www.nuget.org/packages/Microsoft.Diagnostics.NETCore.Client/) nuget package. Let’s create another console application:
 
 ```
 $ dotnet new console -n counters-listener
 ```
 
-Also, we’ll parse vents with help of `[Microsoft.Diagnostics.Tracing.TraceEvent](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent/)` library. So, install both of these packages:
+Also, we’ll parse vents with help of [`Microsoft.Diagnostics.Tracing.TraceEvent`](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent/) library. So, install both of these packages:
 
 ```
 $ dotnet add package Microsoft.Diagnostics.NETCore.Client
@@ -313,18 +313,18 @@ async Task StartMetricProducingTask()
 
 To observe your application metrics, there are [some exporters](https://www.nuget.org/packages?q=OpenTelemetry.Exporter), but I want to show you, how to use the same `dotnet-counters` tool. Of course, this approach is suitable only for special cases. In production, you are likely to collect your metrics in a dedicated service (Prometheus or something else).
 
-```csharp
+```
 $ dotnet-counters monitor -n simple-console --counters Example.MyMeter
 ```
 
-```csharp
+```
 [Example.MyMeter]
     my-counter (Count / 1 sec)                         5
 ```
 
 Also, there are [some libraries](https://www.nuget.org/packages?q=OpenTelemetry.Instrumentation) with standard metrics. Add two nuget packages to our project.
 
-```csharp
+```
 $ dotnet add package OpenTelemetry
 $ dotnet add package OpenTelemetry.Instrumentation.Runtime
 ```
@@ -358,11 +358,11 @@ async Task StartMetricProducingTask()
 
 After that, we can consume some pre-built runtime metrics.
 
-```csharp
+```
 $ dotnet-counters monitor -n simple-console --counters OpenTelemetry.Instrumentation.Runtime
 ```
 
-```csharp
+```
 [OpenTelemetry.Instrumentation.Runtime]
     process.cpu.count                                                       16
     process.cpu.time (s / 1 sec)
