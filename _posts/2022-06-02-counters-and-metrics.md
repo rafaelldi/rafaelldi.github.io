@@ -460,10 +460,10 @@ In this post, I’ve shown how to use two different metrics API. I would like to
 
 *The source code is available [here](https://github.com/rafaelldi/dotnet-diagnostics-events)*
 
-- [https://docs.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-counters](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-counters)
-- [https://docs.microsoft.com/en-us/dotnet/core/diagnostics/event-counters](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/event-counters)
-- [https://docs.microsoft.com/en-us/dotnet/core/diagnostics/available-counters](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/available-counters)
-- [https://docs.microsoft.com/en-us/dotnet/core/diagnostics/diagnostics-client-library](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/diagnostics-client-library)
-- [https://docs.microsoft.com/en-us/dotnet/core/diagnostics/metrics](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/metrics)
-- [https://docs.microsoft.com/en-us/dotnet/core/diagnostics/compare-metric-apis](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/compare-metric-apis)
-- [https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/Metrics/MetricsEventSource.cs](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/Metrics/MetricsEventSource.cs)
+- [dotnet-counters](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-counters)
+- [EventCounters in .NET](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/event-counters)
+- [Well-known EventCounters in .NET](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/available-counters)
+- [Diagnostics client library](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/diagnostics-client-library)
+- [.NET metrics](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/metrics)
+- [Metric APIs comparison](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/compare-metric-apis)
+- [MetricsEventSource](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/Metrics/MetricsEventSource.cs)
