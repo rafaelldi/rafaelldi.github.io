@@ -11,13 +11,15 @@ tags: ["Connection", "ASP.NET Core", "gRPC", "Protobuf"]
 
 ![Title image](/images/2020-01-29-grpc-with-asp-net-core/cover.jpg)
 
+In this post, we continue our talk about communication between services. Today we’re going to create gRPC server and a client for it. Also, we’ll talk about the differences between gRPC and REST.
+
 # gRPC
 [gRPC](https://grpc.io/) (gRPC Remote Procedure Call) is a modern RPC framework. It works over [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) only and uses [proto format](https://developers.google.com/protocol-buffers/docs/overview) by default for describing an interface and messages. gRPC is a contract-first approach, so you need to create a .proto file and generate your server and client from it. All modern languages support gRPC so that you can use it in a multilanguage environment.
 
 The best part here is that you can add gRPC to your ASP.NET Core application in a very natural way, and everything will be the same (logging, DI, authentication). I show you in the next parts how to deal with it.
 
 # Server
-Now, let’s build a server. We’ll create the same blog service, as we did in the [REST post](https://rafaelldi.blog/rest-api-with-asp-net-core/), so that we can compare these two solutions.
+Now, let’s build a server. We’ll create the same blog service, as we did in the [REST post]({% post_url 2019-11-25-rest-api-with-asp-net-core %}), so that we can compare these two solutions.
 
 ```protobuf
 syntax = "proto3";

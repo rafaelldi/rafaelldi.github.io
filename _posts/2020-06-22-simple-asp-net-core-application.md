@@ -11,6 +11,8 @@ tags: ["ASP.NET Core", "Tutorial", "Beginning", "Web Server"]
 
 ![Title image](/images/2020-06-22-simple-asp-net-core-application/cover.jpg)
 
+Hello! I recently wondered what the simple ASP.NET Core application should look like. What if I'm a beginner and I want to write my first Hello world application. What is the first step?
+
 In this article, I want to demonstrate a web server with a few lines of code and one file. If you have any experience with ASP.NET Core, this article, probably, will not be of any use to you.
 
 # Web Server 

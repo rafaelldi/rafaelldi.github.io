@@ -11,6 +11,8 @@ tags: ["Observability", "ASP.NET Core", "Logging", "Serilog", "Structured Loggin
 
 ![Title image](/images/2019-07-14-asp-net-core-logs-part-1/cover.jpg)
 
+Logging is one of the most important things in your application because it helps you to understand what happens in production, to find the roots of exceptions and to trace some behaviors. Today we’ll take a look at logging in ASP.NET Core.
+
 # Structured logging
 You may think that logging is highly inconvenient: your application writes something in a file, then you have to find this information in a tremendous volume of text. It doesn’t sound cool. But we can add some useful structures instead of logging only message. The following examples show the difference.
 

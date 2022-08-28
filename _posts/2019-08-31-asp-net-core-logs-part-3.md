@@ -11,6 +11,8 @@ tags: ["Observability", "ASP.NET Core", "SEQ", "Logging", "Serilog", "Structured
 
 ![Title image](/images/2019-08-31-asp-net-core-logs-part-3/cover.jpg)
 
+Today we’ll discuss a quite convenient tool for logging called Seq. It’s the last post about logging in ASP.NET Core application.
+
 Seq was developed especially for logging, and it does its work great. [It’s not free](https://datalust.co/pricing) in general, but you can use it in your pet-projects by free as individual developer.
 
 This is the script for starting Seq in a container.
@@ -59,7 +61,7 @@ As you probably guessed, Serilog also allows us to log into Seq. We can do it by
 
 With Serilog you can change your log storage without any modification in the code, it’s wonderful.
 
-Fluentd doesn’t have a plugin for the Seq ([we discussed such plugin for ELK](https://rafaelldi.blog/asp-net-core-logs-part-2/)), so we will send our logs directly. Start your application along with Seq.
+Fluentd doesn’t have a plugin for the Seq ([we discussed such plugin for ELK]({% post_url 2019-07-22-asp-net-core-logs-part-2 %})), so we will send our logs directly. Start your application along with Seq.
 
 ```yaml
 version: '3.4'

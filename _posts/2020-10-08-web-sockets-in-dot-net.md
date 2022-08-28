@@ -11,6 +11,8 @@ tags: ["ASP.NET Core", "WebSocket"]
 
 ![Title image](/images/2020-10-08-web-sockets-in-dot-net/cover.jpg)
 
+In this article, I want to discuss a WebSocket protocol. I'm going to tell you the purposes of this protocol, the differences between HTTP. Finally, we'll create a basic example in .NET to demonstrate how it works.
+
 # Overview
 
 The WebSocket protocol provides full-duplex communication over a TCP connection. Thus, this protocol is used for real-time asynchronous data transfer.

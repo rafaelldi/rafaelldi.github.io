@@ -57,7 +57,7 @@ app.Run();
 
 # Distributed traces
 
-We’ll start with more familiar distributed traces. They appeared in .NET [some time ago](https://devblogs.microsoft.com/dotnet/improvements-in-net-core-3-0-for-troubleshooting-and-monitoring-distributed-apps/), and you may see many posts about introducing traces to your application. I have such a [post](https://rafaelldi.blog/posts/distributed-tracing-for-messaging-application/) too 🙂. But now, I want to compare them with metrics API, so let’s look at a basic example.
+We’ll start with more familiar distributed traces. They appeared in .NET [some time ago](https://devblogs.microsoft.com/dotnet/improvements-in-net-core-3-0-for-troubleshooting-and-monitoring-distributed-apps/), and you may see many posts about introducing traces to your application. I have such a [post]({% post_url 2021-11-02-distributed-tracing-for-messaging-application %}) too 🙂. But now, I want to compare them with metrics API, so let’s look at a basic example.
 
 First of all, we need to install some nuget-packages.
 

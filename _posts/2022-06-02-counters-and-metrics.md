@@ -16,7 +16,7 @@ This post mainly focus on counters and metrics, in the next one I’m going to d
 
 # `EventCounters`
 
-Let’s start with counters. I've already [written about them](https://rafaelldi.blog/posts/monitoring-background-task/) in the past. This mechanism allows you to track your application metrics. These counters can be emitted by .NET, libraries or your own code.
+Let’s start with counters. I've already [written about them]({% post_url 2021-07-21-monitoring-background-task %}) in the past. This mechanism allows you to track your application metrics. These counters can be emitted by .NET, libraries or your own code.
 
 ## Default counters
 
@@ -283,7 +283,7 @@ In my next post, I will talk about the `EventPipe` in more detail.
 
 # Metrics
 
-With .NET 6 there is a new `System.Diagnostics.Metrics` API to support metrics. This API is connected to the [OpenTelemetry](https://opentelemetry.io/) project (I have another [post](https://rafaelldi.blog/posts/open-telemetry-in-dotnet/) about OpenTelemetry in .NET). And for new applications, this is the preferred way to handle metrics.
+With .NET 6 there is a new `System.Diagnostics.Metrics` API to support metrics. This API is connected to the [OpenTelemetry](https://opentelemetry.io/) project (I have another [post]({% post_url 2022-01-14-open-telemetry-in-dotnet %}) about OpenTelemetry in .NET). And for new applications, this is the preferred way to handle metrics.
 
 Let’s again start with a simple console application.
 
