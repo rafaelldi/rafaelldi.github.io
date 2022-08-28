@@ -434,7 +434,7 @@ In the next post, I will show how to modify this solution towards the choreograp
 # References
 
 * [Coordination in the distributed systems]({% post_url 2021-01-31-coordination-in-the-distributed-systems %})
-* https://masstransit-project.com/
-* https://masstransit-project.com/usage/sagas/automatonymous.html
+* [MassTransit](https://masstransit-project.com/)
+* [MassTransit Automatonymous](https://masstransit-project.com/usage/sagas/automatonymous.html)
 
 *Image: Photo by Andrey Konstantinov on Unsplash*

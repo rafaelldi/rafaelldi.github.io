@@ -402,10 +402,10 @@ Example you can find here:
 [Link to GitHub Project](https://github.com/rafaelldi/DistributedLibrary)
 
 # References
-* https://github.com/dotnet/tye
-* https://masstransit-project.com/
-* https://masstransit-project.com/platform/
-* https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/communication-in-microservice-architecture
-* https://docs.microsoft.com/en-us/azure/architecture/patterns/competing-consumers
+* [Project Tye](https://github.com/dotnet/tye)
+* [MassTransit](https://masstransit-project.com/)
+* [MassTransit Platform](https://masstransit-project.com/platform/)
+* [Communication in a microservice architecture](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/communication-in-microservice-architecture)
+* [Competing Consumers pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/competing-consumers)
 
 *Image: Photo by Regine Tholen on Unsplash*

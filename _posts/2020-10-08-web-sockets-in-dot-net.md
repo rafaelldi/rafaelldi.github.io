@@ -228,9 +228,9 @@ Here you can find a sample project.
 
 # References
 
-* https://docs.microsoft.com/en-us/aspnet/core/fundamentals/websockets?view=aspnetcore-3.1
-* https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
-* https://github.com/Marfusios/websocket-client
-* https://www.websocket.org/echo.html
+* [WebSockets support in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/websockets?view=aspnetcore-3.1)
+* [Writing WebSocket servers](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+* [Websocket .NET client](https://github.com/Marfusios/websocket-client)
+* [WebSockets Echo](https://www.websocket.org/echo.html)
 
 *Image: Photo by Brina Blum on Unsplash*

@@ -53,7 +53,7 @@ To add this package to the project let's modify `.fsproj` file. It's similar to 
 
 Now, alter a code from the `Program.fs`. 
 
-```f#
+```fsharp
 namespace SimpleGiraffeApplication
 
 open Giraffe

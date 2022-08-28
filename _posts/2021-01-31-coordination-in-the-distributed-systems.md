@@ -73,11 +73,11 @@ Today, I've shown you how to coordinate services in the distributed system. Main
 * [Choreography]({% post_url 2021-03-01-choreography %})
 
 # References
-* https://docs.microsoft.com/en-us/azure/architecture/patterns/choreography
-* https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga
-* https://docs.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction
-* https://www.enterpriseintegrationpatterns.com/ramblings/18_starbucks.html
-* https://www.enterpriseintegrationpatterns.com/patterns/messaging/ProcessManager.html
-* https://www.enterpriseintegrationpatterns.com/patterns/messaging/RoutingTable.html
+* [Choreography pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/choreography)
+* [Saga distributed transactions pattern](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga)
+* [Compensating Transaction pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction)
+* [Starbucks Does Not Use Two-Phase Commit](https://www.enterpriseintegrationpatterns.com/ramblings/18_starbucks.html)
+* [Process Manager](https://www.enterpriseintegrationpatterns.com/patterns/messaging/ProcessManager.html)
+* [Routing Slip](https://www.enterpriseintegrationpatterns.com/patterns/messaging/RoutingTable.html)
 
 *Image: Photo by Daria Nepriakhina on Unsplash*

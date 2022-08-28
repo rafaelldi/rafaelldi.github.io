@@ -204,7 +204,7 @@ Today, we've transformed the application with a choreography approach to reduce 
 # References
 
 * [Coordination in the distributed systems]({% post_url 2021-01-31-coordination-in-the-distributed-systems %})
-* https://masstransit-project.com/
-* https://masstransit-project.com/advanced/courier/
+* [MassTransit](https://masstransit-project.com/)
+* [MassTransit - Using Courier](https://masstransit-project.com/advanced/courier/)
 
 *Image: Photo by Gaelle Marcel on Unsplash*
