@@ -23,7 +23,7 @@ Before we start, I need to mention that there is a [library](https://github.com/
 
 To start with, create simple `api` and `worker` projects. I won't go deep into configuring simple messaging communication via MassTransit because I have multiple posts about it (for example, [Distributed application with Project Tye]({% post_url 2020-10-18-distributed-application-with-project-tye %})) or check out the [documentation](https://masstransit-project.com/). The source code you can find in my [repository](https://github.com/rafaelldi/distributed-tracing-for-messaging).
 
-```c#
+```csharp
 public class Program
 {
     public static void Main(string[] args)
@@ -55,7 +55,7 @@ public class Program
 }
 ```
 
-```c#
+```csharp
 [ApiController]
 [Route("[controller]")]
 public class GreetingController : ControllerBase
@@ -79,7 +79,7 @@ public class GreetingController : ControllerBase
 
 `GreetingController` accepts a request and sends its own request to the consumer.
 
-```c#
+```csharp
 public class Program
 {
     public static void Main(string[] args)
@@ -105,7 +105,7 @@ public class Program
 }
 ```
 
-```c#
+```csharp
 public class GreetingConsumer : IConsumer<GreetingRequest>
 {
     public async Task Consume(ConsumeContext<GreetingRequest> context)
@@ -152,7 +152,7 @@ First of all, we have to install [`OpenTelemetry`](https://www.nuget.org/package
 
 Add some code to the `api` project.
 
-```c#
+```csharp
 services.AddOpenTelemetryTracing(x => x
     .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("api"))
     .AddAspNetCoreInstrumentation()
@@ -161,7 +161,7 @@ services.AddOpenTelemetryTracing(x => x
 
 And to the `worker` project.
 
-```c#
+```csharp
 services.AddOpenTelemetryTracing(x => x
     .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService("worker"))
     .AddJaegerExporter());
@@ -198,7 +198,7 @@ The first idea is to accomplish this behaviour via MassTransit [filters](https:/
 
 To instrument our code, [we should start](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/distributed-tracing-instrumentation-walkthroughs#add-basic-instrumentation) with a new `ActivitySource`.
 
-```c#
+```csharp
 public static class MassTransitInstrumentationActivitySource
 {
     public const string ActivitySourceName = "MassTransitInstrumentation";
@@ -208,7 +208,7 @@ public static class MassTransitInstrumentationActivitySource
 
 Next, we'll need three types of filters.
 
-```c#
+```csharp
 public class SendActivityFilter<T> : IFilter<SendContext<T>> where T : class
 {
     public Task Send(SendContext<T> context, IPipe<SendContext<T>> next)
@@ -229,7 +229,7 @@ public class SendActivityFilter<T> : IFilter<SendContext<T>> where T : class
 }
 ```
 
-```c#
+```csharp
 public class PublishActivityFilter<T> : IFilter<PublishContext<T>> where T : class
 {
     public Task Send(PublishContext<T> context, IPipe<PublishContext<T>> next)
@@ -250,7 +250,7 @@ public class PublishActivityFilter<T> : IFilter<PublishContext<T>> where T : cla
 }
 ```
 
-```c#
+```csharp
 public class ConsumeActivityFilter<T> : IFilter<ConsumeContext<T>> where T : class
 {
     public Task Send(ConsumeContext<T> context, IPipe<ConsumeContext<T>> next)
@@ -272,7 +272,7 @@ public class ConsumeActivityFilter<T> : IFilter<ConsumeContext<T>> where T : cla
 }
 ```
 
-```c#
+```csharp
 public static class Headers
 {
     public const string TraceParent = "traceparent";
@@ -283,14 +283,14 @@ As you can see, they create a new activity from our `ActivitySource`, set a new 
 
 Lastly, we need to register our new components.
 
-```c#
+```csharp
 services.AddOpenTelemetryTracing(x => x
     ...
     .AddSource(MassTransitInstrumentationActivitySource.ActivitySourceName)
     ...
 ```
 
-```c#
+```csharp
 services.AddMassTransit(x =>
     {
         ...
@@ -302,7 +302,7 @@ services.AddMassTransit(x =>
     })
 ```
 
-```c#
+```csharp
 services.AddMassTransit(x =>
     {
         ...
@@ -328,7 +328,7 @@ As we expected, now we have spans from both our projects, and they form a sequen
 
 If you remember my [previous post]({% post_url 2021-09-22-tracing-for-messaging-application %}), you know that MassTransit emits some diagnostic events with its [`DiagnosticSource`](https://masstransit-project.com/advanced/monitoring/diagnostic-source.html). It appears that MassTransit [uses](https://github.com/MassTransit/MassTransit/blob/develop/src/MassTransit/Logging/EnabledDiagnosticSource.cs) the same `Activity` class for this purpose but creates them directly via the constructor rather than from `ActivitySource`. These activities are called "legacy Activities", and there is a [particular method](https://github.com/open-telemetry/opentelemetry-dotnet/blob/main/docs/trace/extending-the-sdk/README.md#special-case--instrumentation-for-libraries-producing-legacy-activity) to register them. Now, let's modify our projects to include [relevant events](https://masstransit-project.com/advanced/monitoring/diagnostic-source.html#available-diagnostic-events).
 
-```c#
+```csharp
 services.AddOpenTelemetryTracing(x => x
     ...
     .AddLegacySource("MassTransit.Consumer.Consume")
@@ -340,7 +340,7 @@ services.AddOpenTelemetryTracing(x => x
 
 After these changes, you won't see any differences, because for now, events are unavailable. To activate them, we have to subscribe to the `DiagnosticSource`. It's an optimization that without any subscription, this source doesn't produce events. I've created a simple hosted service to add a new subscription.
 
-```c#
+```csharp
 public class MassTransitDiagnosticsHostedService : IHostedService
 {
     private IDisposable _subscription;

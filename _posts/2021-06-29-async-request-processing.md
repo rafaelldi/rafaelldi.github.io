@@ -27,7 +27,7 @@ I don't go much into details about implementing routing slip (and saga) in MassT
 
 I've created a simple activity that logs some information and pauses for a random amount of time. After the delay, it publishes a message about completed item processing.
 
-```c#
+```csharp
 public record ProcessItemArgument(Guid ItemId);
 public record ItemProcessed(Guid Id, Guid TrackingNumber);
 
@@ -58,7 +58,7 @@ public class ProcessItemActivity : IExecuteActivity<ProcessItemArgument>
 
 The next step is to build the routing slip with these activities. I will use a state machine to save the status of the process and check it via http request. When a command to process items arrives, we need to create the routing slip, go to the `Processing` state and respond that we accepted the request. Also, we save into the state all ids that we need to process.
 
-```c#
+```csharp
 Initially(
     When(ProcessRequestCommand)
         .Then(context =>
@@ -71,7 +71,7 @@ Initially(
         .TransitionTo(Processing)
         .Respond(context => new RequestAccepted(context.Instance.RequestId)));
 ```
-```c#
+```csharp
 public static EventActivityBinder<RequestProcessingState, ProcessRequestCommand> CreateRoutingSlip(
     this EventActivityBinder<RequestProcessingState, ProcessRequestCommand> binder)
 {
@@ -95,7 +95,7 @@ public static EventActivityBinder<RequestProcessingState, ProcessRequestCommand>
 
 After an item has been processed, we need to update the state.
 
-```c#
+```csharp
 During(Processing,
     When(ItemProcessed)
         .Then(context =>
@@ -108,7 +108,7 @@ During(Processing,
 
 Finally, after the routing slip is completed, the state machine goes to the Completed state.
 
-```c#
+```csharp
 During(Processing,
     When(RequestProcessingCompleted)
         .Then(context =>
@@ -121,7 +121,7 @@ During(Processing,
 
 Our command side is ready; let's take a look at query one. How to monitor the process? I'm going to add a new message and handle it within the state machine.
 
-```c#
+```csharp
 public record RequestStatusQuery(Guid RequestId);
 public record RequestStatus(string Status, List<Guid> ToProcess, List<Guid> Processed);
 
@@ -144,7 +144,7 @@ During(Completed,
 
 As you can see, we answer with a state and a number of the completed items. So, now let's create a controller to send messages to the state machine.
 
-```c#
+```csharp
 public record Request(Guid Id, List<Guid> Items);
 
 [ApiController]

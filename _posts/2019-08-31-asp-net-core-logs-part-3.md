@@ -31,7 +31,7 @@ datalust/seq:latest
 # Logging from the ASP.NET Core
 Logging to the Seq is able by [Seq.Extensions.Logging nuget package](https://github.com/datalust/seq-extensions-logging). So, you need to add these lines and some configs.
 
-```c#
+```csharp
 services.AddLogging(loggingBuilder =>
 {
     loggingBuilder.AddSeq();

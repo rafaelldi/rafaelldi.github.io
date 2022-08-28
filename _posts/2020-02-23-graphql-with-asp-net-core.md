@@ -42,7 +42,7 @@ To use GraphQL, we need to describe all types, queries, mutations and schema in 
 
 At first, add our type.
 
-```c#
+```csharp
 public class ArticleType : ObjectGraphType<Article>
 {
     public ArticleType()
@@ -56,7 +56,7 @@ public class ArticleType : ObjectGraphType<Article>
 
 If you want to request your objects, you need to add a query.
 
-```c#
+```csharp
 public class BlogQuery : ObjectGraphType
 {
     public BlogQuery(ArticleService articleService)
@@ -68,7 +68,7 @@ public class BlogQuery : ObjectGraphType
 
 If you want to add or update some objects, you need to create a mutation and describe an input type.
 
-```c#
+```csharp
 public class BlogMutation : ObjectGraphType
 {
     public BlogMutation(ArticleService articleService)
@@ -89,7 +89,7 @@ public class BlogMutation : ObjectGraphType
 }
 ```
 
-```c#
+```csharp
 public class ArticleInputType : InputObjectGraphType<Article>
 {
     public ArticleInputType()
@@ -103,7 +103,7 @@ public class ArticleInputType : InputObjectGraphType<Article>
 
 Eventually, put it all together in a schema.
 
-```c#
+```csharp
 public class BlogSchema : Schema
 {
     public BlogSchema(ArticleService articleService)
@@ -116,7 +116,7 @@ public class BlogSchema : Schema
 
 Ok, it’s time to deal with `Startup` class. Because there is only one endpoint, we don’t need any controllers. Every request will be handled by a single middleware. As always, I use an `ArticleService` to imitate a database.
 
-```c#
+```csharp
 public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
@@ -146,7 +146,7 @@ How can we test our solution? The great news that [Postman](https://www.postman.
 
 Another way is to use specific tools for GraphQL, for example, GraphiQL. For this purpose, we need to install a new package `GraphQL.Server.Ui.GraphiQL` and add the following line to the `Startup`.
 
-```c#
+```csharp
 app.UseGraphiQLServer(new GraphiQLOptions());
 ```
 
@@ -183,7 +183,7 @@ query {
 # Client
 Now, let’s create a GraphQL client. I use [GraphQL.Client library](https://github.com/graphql-dotnet/graphql-client) and the same worker template as in the previous posts. You have to put ordinary HttpClient in the GraphQL wrapper with .AsGraphQLClient() extension method. After that, you can use this client for sending requests. Here is the code.
 
-```c#
+```csharp
 public class Worker : BackgroundService
 {
     private readonly IHttpClientFactory _factory;
@@ -277,7 +277,7 @@ We have to modify a little query, and the server responds to us with the require
 
 Further, let’s consider filtration. Create a second query with a title parameter and choose appropriate values with LINQ expression.
 
-```c#
+```csharp
 Field<ListGraphType<ArticleType>>(
     "filtered_list", 
     arguments: new QueryArguments

@@ -67,7 +67,7 @@ The good part is that we can quickly introduce our own metric. Let's imagine tha
 
 There are two main types of metrics: `EventCounter` and `IncrementingEventCounter`. The first one is to calculate a statistical summary for a set of values in the interval. The second type of metric is to calculate the total in the interval. So, the `EventCounter` type is appropriate for our scenario.
 
-```c#
+```csharp
 [EventSource(Name = "AsyncRequestProcessing.ActivityEventCounters")]
 public sealed class ActivityEventCountersSource : EventSource
 {
@@ -100,7 +100,7 @@ public sealed class ActivityEventCountersSource : EventSource
 
 To implement our metric, we need to create a new `EventSource` type. With `Log(long elapsedMilliseconds)` method, we'll write down each measurement. The next question is how to calculate the duration of the execution. MassTransit has [middlewares](https://masstransit-project.com/advanced/middleware/), like ASP.NET Core, so it's a perfect candidate for our purpose. Let's implement a straightforward filter.
 
-```c#
+```csharp
 public class EventCountersFilter<T> : IFilter<ExecuteContext<T>> where T : class
 {
     private readonly Stopwatch _stopwatch = new();
@@ -120,7 +120,7 @@ public class EventCountersFilter<T> : IFilter<ExecuteContext<T>> where T : class
 }
 ```
 
-```c#
+```csharp
 services.AddMassTransit(x =>
     {
         ...

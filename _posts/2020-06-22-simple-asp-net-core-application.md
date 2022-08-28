@@ -34,7 +34,7 @@ After that, remove everything except `Server.csproj` and `Program.cs`. I've crea
 
 Now, you need to modify `Program.cs` file. 
 
-```c#
+```csharp
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -124,7 +124,7 @@ We need to add a new `nuget.config` file and modify `Server.csproj` to include t
 
 After that, we are possible to improve our `Program.cs` file. In the next code block, you'll see that we reduce the amount of code to three lines. Moreover, it's more descriptive with these changes. 
 
-```c#
+```csharp
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;

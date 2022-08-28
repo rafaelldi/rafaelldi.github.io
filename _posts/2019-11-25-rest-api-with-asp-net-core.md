@@ -35,7 +35,7 @@ Ok, let’s do some code. To start with, we’ll create a simple server. I’ve 
 
 Begin a new project with `dotnet new web`. After that, add `ArticleController` and modify `Startup`. Also, you can create an `ArticleService` to keep articles between requests.
 
-```c#
+```csharp
 [ApiController]
 [Route("api/[controller]")]
 public class ArticleController : ControllerBase
@@ -61,7 +61,7 @@ public class ArticleController : ControllerBase
 }
 ```
 
-```c#
+```csharp
 public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
@@ -82,7 +82,7 @@ public class Startup
 }
 ```
 
-```c#
+```csharp
 public class ArticleService
 {
     public readonly List<Article> Articles;
@@ -111,7 +111,7 @@ Now, we’ll create our own client for API. You can use `HttpClient` for these p
 
 Start a new project with `dotnet new worker`. Firstly, we need to add to the service collection `HttpClientFactory`, which allows us to create `HttpClient`. You should add `Microsoft.Extensions.Http` package to your project and modify `Program.cs`.
 
-```c#
+```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
     Host.CreateDefaultBuilder(args)
         .ConfigureServices((hostContext, services) =>
@@ -127,7 +127,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 After that, add logic to your worker service. I’ve made a naive console   application, for more complicated logic you can use, for example, `System.CommandLine`. Our goal is to consume server API in an elementary form.
 
-```c#
+```csharp
 public class Worker : BackgroundService
 {
     private readonly IHttpClientFactory _factory;
@@ -189,7 +189,7 @@ Ok, maybe we need to hide information level logs.
 
 We can improve our client with a magnificent library [Refit](https://github.com/reactiveui/refit). It helps you to create REST clients easily. Add this nuget package `Refit.HttpClientFactory`, describe our API with `IArticlesApi` interface and register Refit in the service collection.
 
-```c#
+```csharp
 public interface IArticlesApi
 {
     [Get("/api/article/list")]
@@ -210,7 +210,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 There is a modified code for the worker service. As you can see, now we don’t have to serialize or deserialize json manually, we use methods of the declared interface. As for me, it’s a more precise approach.
 
-```c#
+```csharp
 public class WorkerWithRefit : BackgroundService
 {
     private readonly IArticlesApi _articlesApi;
@@ -266,7 +266,7 @@ There are two libraries in ASP.NET Core for it [NSwag](https://github.com/RicoSu
 
 Install `NSwag.AspNetCore` package to your project and add new lines to `Startup.cs`.
 
-```c#
+```csharp
 public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
@@ -410,7 +410,7 @@ dotnet openapi add url -p ./GeneratedWithGlobalTool.csproj --output-file BlogApi
 
 Create an empty BlogApiClient class.
 
-```c#
+```csharp
 public partial class BlogApiClient
 {
 }
@@ -418,7 +418,7 @@ public partial class BlogApiClient
 
 Now you can use methods from the API. I show you a simple example.
 
-```c#
+```csharp
 public class Program
 {
     public static async Task Main(string[] args)

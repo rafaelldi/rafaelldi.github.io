@@ -18,7 +18,7 @@ I've created a [simple project](https://github.com/rafaelldi/AspNetCoreAppHealth
 # Health checks in ASP.NET Core 2.2
 In this version of the framework, we have a built-in middleware provided health checks functionality. You need to put some lines in your Startup class:
 
-```c#
+```csharp
 public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
@@ -42,7 +42,7 @@ We see our application is `Healthy` and response code is `200(OK)`.
 # Health checks UI
 You can see application status not only by http-request, but it is also simple to add UI. You need to install [this nuget-package](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) and make some changes in the code:
 
-```c#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddHealthChecks();
@@ -76,7 +76,7 @@ After that, we will have this mini dashboard on `http://localhost:5000/healthche
 
 **Update**: There are some changes in .NET Core 3.0, which are caused by new routing system. You can find more details in the [official documentation](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-3.0#use-health-checks-routing).
 
-```c#
+```csharp
 public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
@@ -102,7 +102,7 @@ public class Startup
 # Database health check
 Let's assume that your application has a reference to a third-party resource, for example, MongoDB and you want to know the status of this connection. Add [this package](https://www.nuget.org/packages/AspNetCore.HealthChecks.MongoDb/) to the project and add a method `AddMongoDb(...)`:
 
-```c#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddHealthChecks()
@@ -129,7 +129,7 @@ In [this repository](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChe
 # Create your own health check
 What if you have a specific logic for a health check? Then you need to realize the `IHealthCheck` interface. Let's consider the [example](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-2.2#create-health-checks) from Microsoft documentation:
 
-```c#
+```csharp
 public class ExampleHealthCheck : IHealthCheck
 {
     public ExampleHealthCheck()
@@ -146,7 +146,7 @@ public class ExampleHealthCheck : IHealthCheck
     }
 }
 ```
-```c#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddHealthChecks()
@@ -172,7 +172,7 @@ As you can see, it's straightforward to add a health check with custom logic.
 # Health checks by middleware
 If you have a framework version smaller than 2.2, you can create a health check with the help of middleware.
 
-```c#
+```csharp
 public class HealthCheckMiddleware
 {
     private const string Path = "/healthcheck";
@@ -202,7 +202,7 @@ public class HealthCheckMiddleware
 
 Add this middleware to the `Startup` class of your project.
 
-```c#
+```csharp
 app.UseMiddleware<HealthCheckMiddleware>();
 ```
 

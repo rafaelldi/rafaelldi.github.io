@@ -23,7 +23,7 @@ I’ve created a [github repository](https://github.com/rafaelldi/AspNetCoreAppM
 # Prometheus-net
 To start with, let’s collect some metrics. You need to add [this library](https://github.com/prometheus-net/prometheus-net) and modify your Startup class.
 
-```c#
+```csharp
 public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
@@ -198,7 +198,7 @@ First  of all, there are four metric types in Prometheus: counter, gauge, histog
 
 Let’s modify the default weather controller.
 
-```c#
+```csharp
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase

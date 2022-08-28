@@ -25,7 +25,7 @@ $ dotnet new web --name Library.Api
 
 Add a controller and a `BookDto`.
 
-```c#
+```csharp
 [ApiController]
 [Route("api/[controller]")]
 public class LibraryController : ControllerBase
@@ -42,7 +42,7 @@ public class LibraryController : ControllerBase
 }
 ```
 
-```c#
+```csharp
 public class BookDto
 {
     public string Title { get; set; }
@@ -61,7 +61,7 @@ $ dotnet new worker --name Library.Worker
 
 Add to this project a library service.
 
-```c#
+```csharp
 public class LibraryService
 {
     private readonly ILogger<LibraryService> _logger;
@@ -78,7 +78,7 @@ public class LibraryService
 }
 ```
 
-```c#
+```csharp
 public class Book
 {
     public string Title { get; }
@@ -96,7 +96,7 @@ public class Book
 
 And register it in the DI system.
 
-```c#
+```csharp
 Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
@@ -125,7 +125,7 @@ MassTransit.RabbitMQ
 
 Secondly, add MassTransit to the DI container. Modify the `Startup` class in the API project:
 
-```c#
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddControllers();
@@ -140,7 +140,7 @@ public void ConfigureServices(IServiceCollection services)
 
 And add some lines to the `Program` class in the Worker project.
 
-```c#
+```csharp
 Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
@@ -164,7 +164,7 @@ We've configured MassTransit in our projects; now we're going to set up the inte
 $ dotnet new classlib --name Library.Contracts
 ```
 
-```c#
+```csharp
 public interface BorrowBook   
 {
     string Title { get; }
@@ -175,7 +175,7 @@ public interface BorrowBook
 
 After that, we need to handle this message in the Worker project. Let's add a consumer.
 
-```c#
+```csharp
 public class BorrowBookConsumer : IConsumer<BorrowBook>
 {
     private readonly LibraryService _libraryService;
@@ -199,7 +199,7 @@ It catches the `BorrowBook` message and forwards the content from this message t
 
 The last step is to send this message from the `LibraryController`. To do this, we have to add a send endpoint provider.
 
-```c#
+```csharp
 private readonly ISendEndpointProvider _sendEndpointProvider;
 public LibraryController(ISendEndpointProvider sendEndpointProvider)
 {
@@ -209,7 +209,7 @@ public LibraryController(ISendEndpointProvider sendEndpointProvider)
 
 Next, obtain an endpoint for our message and send it.
 
-```c#
+```csharp
 [HttpPost]
 public async Task<IActionResult> Borrow(BookDto book)
 {
@@ -357,7 +357,7 @@ $ dotnet new classlib --name Library.OnPlatform
 
 Install a nuget package `MassTransit.Platform.Abstractions`. Next, create a startup class:
 
-```c#
+```csharp
 public class LibraryStartup : IPlatformStartup
 {
     public void ConfigureMassTransit(IServiceCollectionBusConfigurator configurator, IServiceCollection services)

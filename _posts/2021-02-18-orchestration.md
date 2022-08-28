@@ -47,7 +47,7 @@ $ dotnet add package MassTransit.AspNetCore
 
 First of all, I'm going to add a new controller with two methods `PlaceOrder` and `AcceptOrder`. The first one will be used by customers and the second one by managers. Also, we need to register the controller in the `Startup` class.
 
-```c#
+```csharp
 [ApiController]
 [Route("[controller]")]
 public class OrdersController : ControllerBase
@@ -65,10 +65,10 @@ public class OrdersController : ControllerBase
     }
 }
 ```
-```c#
+```csharp
 public record OrderDto(string OrderDetails, string Address);
 ```
-```c#
+```csharp
 public class Startup
  {
      public void ConfigureServices(IServiceCollection services)
@@ -90,7 +90,7 @@ public class Startup
 
 Now, create commands and events. We'll use them to trigger steps from our pipeline. You can easily relate them to the diagram above. Commands are sent to perform some action, events to report that the action has happened.
 
-```c#
+```csharp
 public static class Commands
 {
     public record PlaceOrder
@@ -118,7 +118,7 @@ public static class Commands
     }
 }
 ```
-```c#
+```csharp
 public static class Events
 {
     public record OrderPlaced
@@ -143,7 +143,7 @@ After that, let's add consumers. Consumers are similar to controllers but used f
 
 [Distributed application with Project Tye]({% post_url 2020-10-18-distributed-application-with-project-tye %})
 
-```c#
+```csharp
 public class OrderPlacedConsumer : IConsumer<OrderPlaced>
 {
     private readonly ILogger<OrderPlacedConsumer> _logger;
@@ -165,7 +165,7 @@ public class OrderPlacedConsumer : IConsumer<OrderPlaced>
     }
 }
 ```
-```c#
+```csharp
 public class CookDishConsumer : IConsumer<CookDish>
 {
     private readonly ILogger<CookDishConsumer> _logger;
@@ -187,7 +187,7 @@ public class CookDishConsumer : IConsumer<CookDish>
     }
 }
 ```
-```c#
+```csharp
 public class DeliverOrderConsumer : IConsumer<DeliverOrder>
 {
     private readonly ILogger<DeliverOrderConsumer> _logger;
@@ -218,7 +218,7 @@ Possible implementations of consumers in different services are shown in the dia
 
 Next, register the consumers and the library itself. For testing purposes, I'm using in-memory message bus.
 
-```c#
+```csharp
 services.AddMassTransit(x =>
     {
         x.AddConsumer<CookDishConsumer>();
@@ -240,7 +240,7 @@ The heart of our system is an orchestrator, which will be inside the API project
 
 Firstly, let's describe a state that we'll keep for each instance of the state machine.
 
-```c#
+```csharp
 public class OrderState : SagaStateMachineInstance
 {
     public Guid CorrelationId { get; set; }
@@ -260,7 +260,7 @@ public class OrderState : SagaStateMachineInstance
 
 Next, create a state machine, add possible states and events.
 
-```c#
+```csharp
 public class OrderStateMachine : MassTransitStateMachine<OrderState>
 {
     public OrderStateMachine()
@@ -281,7 +281,7 @@ public class OrderStateMachine : MassTransitStateMachine<OrderState>
 
 After that, we should specify the fields to correlate our messages. It tells a state machine which instance should be chosen to apply incoming event.
 
-```c#
+```csharp
 public OrderStateMachine()
 {
     // ...
@@ -295,7 +295,7 @@ public OrderStateMachine()
 
 Then, add reactions to the incoming messages. You can see that I describe how to change states, publish other messages and save something to the instance of the state machine.
 
-```c#
+```csharp
 public OrderStateMachine()
 {
     // ...
@@ -353,7 +353,7 @@ public static EventActivityBinder<OrderState, PlaceOrder> PublishOrderPlaced(
 
 Eventually, modify controllers to send corresponding commands and register state machine in the `Startup` class.
 
-```c#
+```csharp
 // ...
 private readonly IPublishEndpoint _publishEndpoint;
 
@@ -384,7 +384,7 @@ public async Task<IActionResult> AcceptOrder(Guid id)
     return Ok();
 }
 ```
-```c#
+```csharp
 x.AddSagaStateMachine<OrderStateMachine, OrderState>()
     .InMemoryRepository();
 ```

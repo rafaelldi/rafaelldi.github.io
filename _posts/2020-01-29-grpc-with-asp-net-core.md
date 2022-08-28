@@ -121,7 +121,7 @@ I removed default service and proto file, add my `Blog.proto` and generate servi
 </Project>
 ```
 
-```c#
+```csharp
 public class BlogService : Blog.BlogBase
 {
     private readonly ArticleService _articleService;
@@ -148,7 +148,7 @@ public class BlogService : Blog.BlogBase
 
 Next, register `BlogService` in the service collection.
 
-```c#
+```csharp
 public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
@@ -171,7 +171,7 @@ public class Startup
 
 Also, I modified my `Program.cs`, because gRPC template uses TLS by default, but I don’t want it in my development environment. Here is the [article about configuring HTTP in ASP.NET Core across different platforms](https://devblogs.microsoft.com/aspnet/configuring-https-in-asp-net-core-across-different-platforms/).
 
-```c#
+```csharp
 public class Program
 {
     public static void Main(string[] args)
@@ -226,7 +226,7 @@ It’s time to build a client. I used the same worker template as in the [previo
 
 After that, I registered `BlogClient` and added this line `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);` to call insecure gRPC services.
 
-```c#
+```csharp
 public class Program
 {
     public static void Main(string[] args)
@@ -250,7 +250,7 @@ public class Program
 
 And there is our worker.
 
-```c#
+```csharp
 public class Worker : BackgroundService
 {
     private const string CreateCommand = "create";
@@ -330,7 +330,7 @@ message Article {
 
 Secondly, modify `BlogService` and put a delay to simulate some work.
 
-```c#
+```csharp
 public class BlogService : BlogServer.BlogServerBase
 {
     private readonly ArticleService _articleService;
@@ -366,7 +366,7 @@ public class BlogService : BlogServer.BlogServerBase
 
 Finally, change the client. I use new async streams to receive articles from the server.
 
-```c#
+```csharp
 public class Worker : BackgroundService
 {
     private const string CreateCommand = "create";

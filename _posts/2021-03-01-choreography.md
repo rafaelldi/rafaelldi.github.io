@@ -35,7 +35,7 @@ Notice that after the `Place Order` step, our pipeline stops and waits for the m
 
 Let's modify the `PlaceOrder` method in the `OrdersController`. We need to send `OrderPlaced` event to reuse the corresponding consumer, which will send a notification to the manager. Also, we save order details and address to cash because we'll need them in the `AcceptOrder` method.
 
-```c#
+```csharp
 [ApiController]
 [Route("[controller]")]
 public class OrdersController : ControllerBase
@@ -72,7 +72,7 @@ That's all with the first step.
 
 Next, to build a routing slip, we need to create an activity for each step in the pipeline. So, we end with `CookDishActivity` and `DeliverOrderActivity`. They will send messages to the consumers (again, to reuse functionality from the previous part) and wait for the responses from them. After the activity is done, we call `context.Completed()` method to advance the routing slip to the next one. Each activity is located in the related service.
 
-```c#
+```csharp
 public class CookDishActivity : IExecuteActivity<CookDishArgument>
 {
     private readonly IBus _bus;
@@ -94,7 +94,7 @@ public class CookDishActivity : IExecuteActivity<CookDishArgument>
     }
 }
 ```
-```c#
+```csharp
 public class DeliverOrderActivity : IExecuteActivity<DeliverOrderArgument>
 {
     private readonly IBus _bus;
@@ -119,7 +119,7 @@ public class DeliverOrderActivity : IExecuteActivity<DeliverOrderArgument>
 
 After that, register them in the `Startup`.
 
-```c#
+```csharp
 services.AddMassTransit(x =>
     {
         // ...
@@ -133,7 +133,7 @@ services.AddMassTransit(x =>
 
 Finally, build the routing slip. As you see, we don't include any message types or consumer details. All we need are the addresses of activities. Therefore, we reduce coupling between components in the system. As I said early, this routing slip will be attached to the message, and each service will know where to send it next.
 
-```c#
+```csharp
 [HttpPost("{id}/accept")]
 public async Task<IActionResult> AcceptOrder(Guid id)
 {

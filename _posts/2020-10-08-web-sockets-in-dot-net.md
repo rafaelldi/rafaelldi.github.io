@@ -91,13 +91,13 @@ Remove everything except project file, `Program.cs` and `Startup.cs`.
 
 To use a WebSocket connection, we need to add a particular middleware to the pipeline.
 
-```c#
+```csharp
 app.UseWebSockets();
 ```
 
 After that, let's configure an endpoint.
 
-```c#
+```csharp
 app.UseRouting();
 
 app.UseEndpoints(endpoints =>
@@ -115,7 +115,7 @@ app.UseEndpoints(endpoints =>
 
 We'll handle an incoming message in the `Echo(webSocket)` method. It's going to be a straightforward echo server, so all we have to do is read the message and send it back.
 
-```c#
+```csharp
 private async Task Echo(WebSocket webSocket)
 {
     var buffer = new byte[1024 * 4];
@@ -132,7 +132,7 @@ private async Task Echo(WebSocket webSocket)
 
 And we're done. Here is the complete `Startup` class.
 
-```c#
+```csharp
 public class Startup
 {
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -195,7 +195,7 @@ $ dotnet add package Websocket.Client --version 4.3.21
 
 And modify the Program class.
 
-```c#
+```csharp
 class Program
 {
     static void Main()

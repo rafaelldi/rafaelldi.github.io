@@ -81,7 +81,7 @@ After that, write your config file where specify console destination.
 
 Initialize logger in `Program.cs` file and set up it with your config.
 
-```c#
+```csharp
 public class Program
 {
     public static void Main(string[] args)
@@ -120,7 +120,7 @@ public class Program
 
 Although it is a recommended approach, you can do it in a [shorter way](https://github.com/serilog/serilog-aspnetcore#inline-initialization).
 
-```c#
+```csharp
 public class Program
 {
     public static void Main(string[] args)
@@ -140,7 +140,7 @@ public class Program
 
 That’s all for the setting up, and now you can pass logger through standard DI and write your logs with it.
 
-```c#
+```csharp
 private readonly ILogger<ValuesController> _logger;
 
 public ValuesController(ILogger<ValuesController> logger)
@@ -149,7 +149,7 @@ public ValuesController(ILogger<ValuesController> logger)
 }
 ```
 
-```c#
+```csharp
 public ActionResult<string> Get(int id)
 {
     var currentDate = DateTime.Now;
@@ -205,7 +205,7 @@ Application started. Press Ctrl+C to shut down.
 
 We can deal with it by adding this line to our `Program.cs` file.
 
-```c#
+```csharp
 public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
     WebHost.CreateDefaultBuilder(args)
         .SuppressStatusMessages(true)
@@ -223,7 +223,7 @@ Serilog allows you to add some additional information to your logs which may be 
 3. [Serilog.Enrichers.Environment](https://github.com/serilog/serilog-enrichers-environment);
 4. [Serilog.Exceptions](https://github.com/RehanSaeed/Serilog.Exceptions).
 
-```c#
+```csharp
 {
   "Serilog": {
     "MinimumLevel": {
