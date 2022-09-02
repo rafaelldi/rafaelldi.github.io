@@ -4,7 +4,7 @@ excerpt: "This is a small proof of concept to export OpenTelemetry data to Rider
 header:
   overlay_image: /images/2022-09-01-export-otel-data-to-rider/cover.jpg
   show_overlay_excerpt: false
-  caption: "Photo by [Marco Bicca](https://unsplash.com/@mbicca) on [Unsplash](https://unsplash.com)"
+  caption: "Photo by [Shalev Cohen](https://unsplash.com/@shalevcohen) on [Unsplash](https://unsplash.com)"
 categories: posts
 author: Rival Abdrakhmanov
 date: 2022-09-01
