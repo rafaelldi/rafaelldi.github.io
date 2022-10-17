@@ -43,7 +43,7 @@ Thread from the Pend method: 6
 
 Thus, it could be said that default `SynchronizationContext` groups threads from the `ThreadPool` and schedules asynchronous jobs on them.
 
-[*Next note*](% post_url 2022-10-17-synchronization-context-note-2 %)
+[*Next note*]({% post_url 2022-10-17-synchronization-context-note-2 %})
 
 # References
 
