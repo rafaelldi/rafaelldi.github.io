@@ -43,6 +43,8 @@ Thread from the Pend method: 6
 
 Thus, it could be said that default `SynchronizationContext` groups threads from the `ThreadPool` and schedules asynchronous jobs on them.
 
+[*Next note*](% post_url 2022-10-17-synchronization-context-note-2 %)
+
 # References
 
 - [Parallel Computing - It's All About the SynchronizationContext](https://learn.microsoft.com/en-us/archive/msdn-magazine/2011/february/msdn-magazine-parallel-computing-it-s-all-about-the-synchronizationcontext)
