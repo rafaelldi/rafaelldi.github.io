@@ -24,9 +24,7 @@ social:
   type: Person
   name: Rival Abdrakhmanov
   links:
-    - "https://twitter.com/rafaelldi"
     - "https://github.com/rafaelldi"
-    - "https://linkedin.com/in/rivalabdrakhmanov"
 
 # Build settings
 markdown: kramdown
@@ -66,27 +64,15 @@ author:
   bio    : "Hello and Welcome! My name is Rival, and I'm a .NET developer. In this blog, I describe my development experience and explore exciting technologies. I hope you'll find it useful."
   location: "Munich, Germany"
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/rafaelldi"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rafaelldi"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/rivalabdrakhmanov"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/rafaelldi"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rafaelldi"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/rivalabdrakhmanov"
 
 defaults:
   # _posts

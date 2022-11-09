@@ -7,11 +7,8 @@ title: "Speaking"
 
 *HttpClient: common mistakes and ways to avoid them*
 
-Dates: October 3, 2019
-
-[Link to the talk](https://spbdotnet.timepad.ru/event/1071638/)
-
-My first speaking experience (in Russian) 🙂
+* Dates: October 3, 2019
+* [Link to the talk](https://spbdotnet.timepad.ru/event/1071638/)
 
 {% include video id="r16Zx591LJs" provider="youtube" %}
 
@@ -23,9 +20,8 @@ My first speaking experience (in Russian) 🙂
 
 *Patterns of distributed systems in the traditions of Russia's northern indigenous and minority peoples*
 
-Dates: December 2-5, 2020
-
-[Link to the talk](https://dotnext-moscow.ru/en/2020/msk/talks/4vyzt8uye82o7qmldxrxyy/)
+* Dates: December 2-5, 2020
+* [Link to the talk](https://dotnext-moscow.ru/en/2020/msk/talks/4vyzt8uye82o7qmldxrxyy/)
 
 {% include video id="TuKNdm4XBp4" provider="youtube" %}
 
