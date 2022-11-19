@@ -2,9 +2,9 @@
 title: "SynchronizationContext — Note 1"
 excerpt: "In this post, I start to explore SynchronizationContext."
 header:
-overlay_image: /images/2022-10-16-synchronization-context-note-1/cover.jpg
-show_overlay_excerpt: false
-caption: "Photo by [Ashley Richards](https://unsplash.com/@docaah59) on [Unsplash](https://unsplash.com)"
+  overlay_image: /images/2022-10-16-synchronization-context-note-1/cover.jpg
+  show_overlay_excerpt: false
+  caption: "Photo by [Ashley Richards](https://unsplash.com/@docaah59) on [Unsplash](https://unsplash.com)"
 categories: posts
 author: Rival Abdrakhmanov
 date: 2022-10-16

@@ -2,9 +2,9 @@
 title: "SynchronizationContext — Note 3"
 excerpt: "In this post, I’m creating a simple example of SynchronizationContext."
 header:
-overlay_image: /images/2022-11-19-synchronization-context-note-3/cover.jpg
-show_overlay_excerpt: false
-caption: "Photo by [Jack Anstey](https://unsplash.com/@jack_anstey) on [Unsplash](https://unsplash.com)"
+  overlay_image: /images/2022-11-19-synchronization-context-note-3/cover.jpg
+  show_overlay_excerpt: false
+  caption: "Photo by [Jack Anstey](https://unsplash.com/@jack_anstey) on [Unsplash](https://unsplash.com)"
 categories: posts
 author: Rival Abdrakhmanov
 date: 2022-11-19
