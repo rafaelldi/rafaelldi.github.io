@@ -55,4 +55,6 @@ asynchronous jobs on them.
 
 # References
 
+*The source code is available [here](https://github.com/rafaelldi/asynchronous-playground/tree/main/synchronization-context-app)*
+
 - [Parallel Computing - It's All About the SynchronizationContext](https://learn.microsoft.com/en-us/archive/msdn-magazine/2011/february/msdn-magazine-parallel-computing-it-s-all-about-the-synchronizationcontext)

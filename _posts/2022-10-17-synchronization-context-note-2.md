@@ -206,6 +206,8 @@ It seems like it's time to try to create my own context.
 
 # References
 
+*The source code is available [here](https://github.com/rafaelldi/asynchronous-playground/tree/main/synchronization-context-app)*
+
 - [`WindowsFormsSynchronizationContext`](https://github.com/dotnet/winforms/blob/main/src/System.Windows.Forms/src/System/Windows/Forms/WindowsFormsSynchronizationContext.cs)
 - [`DispatcherSynchronizationContext`](https://github.com/dotnet/wpf/blob/main/src/Microsoft.DotNet.Wpf/src/WindowsBase/System/Windows/Threading/DispatcherSynchronizationContext.cs)
 - [WPF - Threading Model](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/advanced/threading-model)

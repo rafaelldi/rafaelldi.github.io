@@ -186,3 +186,7 @@ static void RunWithAffinityContext()
 If you open a system monitor, you’ll see that only one of the cores is busy.
 
 ![System monitor](/images/2022-11-19-synchronization-context-note-3/sysmon.png)
+
+# References
+
+*The source code is available [here](https://github.com/rafaelldi/asynchronous-playground/tree/main/synchronization-context-app)*
