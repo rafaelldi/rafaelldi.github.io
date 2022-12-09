@@ -7,6 +7,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2019-11-02
 tags: ["Observability", "ASP.NET Core", "Metrics", "Monitoring", "Prometheus", "Grafana"]
+sidebar:
+  nav: "observability"
 ---
 
 ![Title image](/assets/images/2019-11-02-asp-net-core-metrics/cover.jpg)

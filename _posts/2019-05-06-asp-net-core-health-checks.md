@@ -7,6 +7,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2019-05-06
 tags: ["Observability", "ASP.NET Core", "Health Checks"]
+sidebar:
+  nav: "observability"
 ---
 
 ![Title image](/assets/images/2019-05-06-asp-net-core-health-checks/cover.jpg)

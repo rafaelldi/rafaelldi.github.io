@@ -23,3 +23,39 @@ diagnostics:
         url: /posts/counters-and-metrics/
       - title: "Logs and Traces"
         url: /posts/logs-and-traces/
+
+distributedSystems:
+  - title: "Distributed systems"
+    children:
+      - title: "Coordination"
+        url: /posts/coordination-in-the-distributed-systems/
+      - title: "Orchestration"
+        url: /posts/orchestration/
+      - title: "Choreography"
+        url: /posts/choreography/
+
+communication:
+  - title: "Service communication"
+    children:
+      - title: "REST"
+        url: /posts/rest-api-with-asp-net-core/
+      - title: "gRPC"
+        url: /posts/grpc-with-asp-net-core/
+      - title: "GraphQL"
+        url: /posts/graphql-with-asp-net-core/
+
+observability:
+  - title: "Observability"
+    children:
+      - title: "Health checks"
+        url: /posts/asp-net-core-health-checks/
+      - title: "Logs (Part 1)"
+        url: /posts/asp-net-core-logs-part-1/
+      - title: "Logs (Part 2)"
+        url: /posts/asp-net-core-logs-part-2/
+      - title: "Logs (Part 3)"
+        url: /posts/asp-net-core-logs-part-3/
+      - title: "Metrics"
+        url: /posts/asp-net-core-metrics/
+      - title: "OpenTelemetry"
+        url: /posts/open-telemetry-in-dotnet/

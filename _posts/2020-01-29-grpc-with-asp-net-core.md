@@ -7,6 +7,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2020-01-29
 tags: ["Connection", "ASP.NET Core", "gRPC", "Protobuf"]
+sidebar:
+  nav: "communication"
 ---
 
 ![Title image](/assets/images/2020-01-29-grpc-with-asp-net-core/cover.jpg)

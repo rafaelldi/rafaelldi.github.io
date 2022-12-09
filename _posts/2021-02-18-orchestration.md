@@ -7,6 +7,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2021-02-18
 tags: ["Distributed application", "Orchestration", "MassTransit", "Messaging", "ASP.NET Core"]
+sidebar:
+  nav: "distributedSystems"
 ---
 
 ![Title image](/assets/images/2021-02-18-orchestration/cover.jpg)

@@ -7,6 +7,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2019-07-22
 tags: ["Observability", "ASP.NET Core", "ELK", "Logging", "Serilog", "Fluentd", "Structured Logging"]
+sidebar:
+  nav: "observability"
 ---
 
 ![Title image](/assets/images/2019-07-22-asp-net-core-logs-part-2/cover.jpg)

@@ -7,6 +7,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2021-01-31
 tags: ["Distributed application", "Choreography", "Orchestration", "Saga"]
+sidebar:
+  nav: "distributedSystems"
 ---
 
 ![Title image](/assets/images/2021-01-31-coordination-in-the-distributed-systems/cover.jpg)

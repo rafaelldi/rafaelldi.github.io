@@ -7,6 +7,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2019-08-31
 tags: ["Observability", "ASP.NET Core", "SEQ", "Logging", "Serilog", "Structured Logging"]
+sidebar:
+  nav: "observability"
 ---
 
 ![Title image](/assets/images/2019-08-31-asp-net-core-logs-part-3/cover.jpg)
