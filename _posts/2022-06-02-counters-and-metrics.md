@@ -9,6 +9,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2022-06-02
 tags: ["EventCounters", "Metrics", ".NET"]
+sidebar:
+  nav: "diagnostics"
 ---
 Do you know that .NET sends you a lot of useful information, even if you didn't do anything for it? Moreover, you can publish your own diagnostics events and somehow handle them later in a production. I’ve faced with the need to monitor various events inside my application and correlate them. In this case, diagnostics events helped me a lot.
 

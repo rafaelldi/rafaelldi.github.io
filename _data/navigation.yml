@@ -7,11 +7,19 @@ main:
     url: /about/
 
 synchronizationContext:
-  - title: "SynchronizationContext"
+  - title: "Synchronization Context"
     children:
       - title: "Note 1"
-        url: /synchronization-context-note-1/
+        url: /posts/synchronization-context-note-1/
       - title: "Note 2"
-        url: /synchronization-context-note-2/
+        url: /posts/synchronization-context-note-2/
       - title: "Note 3"
-        url: /synchronization-context-note-3/
+        url: /posts/synchronization-context-note-3/
+
+diagnostics:
+  - title: "Diagnostics"
+    children:
+      - title: "Counters and Metrics"
+        url: /posts/counters-and-metrics/
+      - title: "Logs and Traces"
+        url: /posts/logs-and-traces/

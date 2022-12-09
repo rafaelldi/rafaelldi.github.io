@@ -9,6 +9,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2022-08-28
 tags: ["Logs", "Traces", "DiagnosticSource", "EventSource", ".NET"]
+sidebar:
+  nav: "diagnostics"
 ---
 I think that the [logging](https://docs.microsoft.com/en-us/dotnet/core/extensions/logging) isn’t a new concept for .NET users. Many of us use `ILogger` interface in the application to save some diagnostic information. I’ve solved so many bugs with the help of logs. But every so often you can’t or don’t want to use `ILogger`, or you may need to obtain logs from .NET itself. In this post, we’ll discuss `DiagnosticSource` and `EventSource`, which information you can receive from them, how to use these classes for your scenarios.
 
