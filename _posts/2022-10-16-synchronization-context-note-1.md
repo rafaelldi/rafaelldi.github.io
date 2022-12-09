@@ -9,6 +9,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2022-10-16
 tags: ["SynchronizationContext", "Task", "Thread", "TPL", "Async and Await"]
+sidebar:
+  nav: "synchronizationContext"
 ---
 I’ve decided to learn and take a closer look at some not-so-famous things in C#. I have knowledge about different
 aspects of the language, and I want to recall them, systematize them, make little notes and of course, learn something

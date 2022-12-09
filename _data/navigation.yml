@@ -5,3 +5,13 @@ main:
     url: /speaking/
   - title: "About"
     url: /about/
+
+synchronizationContext:
+  - title: "SynchronizationContext"
+    children:
+      - title: "Note 1"
+        url: /synchronization-context-note-1/
+      - title: "Note 2"
+        url: /synchronization-context-note-2/
+      - title: "Note 3"
+        url: /synchronization-context-note-3/
