@@ -86,6 +86,7 @@ defaults:
       share: true
       show_date: true
       comments: true
+      toc: true
   # _pages
   - scope:
       path: "_pages"
