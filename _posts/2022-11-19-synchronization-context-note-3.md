@@ -9,6 +9,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2022-11-19
 tags: ["SynchronizationContext", "Task", "Thread", "TPL", "Async and Await"]
+sidebar:
+  nav: "synchronizationContext"
 ---
 
 # `SimpleSynchronizationContext`
