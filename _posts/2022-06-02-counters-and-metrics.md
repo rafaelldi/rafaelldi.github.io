@@ -2,7 +2,7 @@
 title: "What does the .NET application say - Counters and Metrics"
 excerpt: "In this post, I want to talk about different diagnostics information that .NET application sends you, because it may help you find problems in your code."
 header:
-  overlay_image: /images/2022-06-02-counters-and-metrics/cover.jpg
+  overlay_image: /assets/images/2022-06-02-counters-and-metrics/cover.jpg
   show_overlay_excerpt: false
   caption: "Photo by [Amanda Frank](https://unsplash.com/@aewild) on [Unsplash](https://unsplash.com)"
 categories: posts
@@ -75,7 +75,7 @@ Also, this tool can save your counters to a file, for example in CSV format. Aft
 
 Here is an example plot for our simple application.
 
-![Counters plot](/images/2022-06-02-counters-and-metrics/counters-plot.png)
+![Counters plot](/assets/images/2022-06-02-counters-and-metrics/counters-plot.png)
 
 I think that `dotnet-counters` is a handy tool to quickly analyse what's going on with your application. Of course, more sophisticated solutions as Prometheus or OpenTelemetry should be used in production. But if you don’t have them or in your local development, `dotnet-counters` could be the right choice.
 

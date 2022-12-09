@@ -2,14 +2,14 @@
 title: "ASP.NET Core: Health checks"
 excerpt: "I'm starting a new series about application observability, and the first point is health checks. In this post, I describe how to add them to your ASP.NET Core application and monitor them."
 header:
-  og_image: /images/2019-05-06-asp-net-core-health-checks/cover.jpg
+  og_image: /assets/images/2019-05-06-asp-net-core-health-checks/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2019-05-06
 tags: ["Observability", "ASP.NET Core", "Health Checks"]
 ---
 
-![Title image](/images/2019-05-06-asp-net-core-health-checks/cover.jpg)
+![Title image](/assets/images/2019-05-06-asp-net-core-health-checks/cover.jpg)
 
 If you're using Kubernetes or load balancer, you need a tool, which can check that the application is still running. For these purposes, health checks provide an endpoint with the status of your application.
 
@@ -35,7 +35,7 @@ public class Startup
 
 Let's make a [simple request](https://github.com/rafaelldi/AspNetCoreAppHealthCheck/blob/master/requests.http) to `http://localhost:5000/healthcheck` and check the result:
 
-![Health check request](/images/2019-05-06-asp-net-core-health-checks/health-check-request.png)
+![Health check request](/assets/images/2019-05-06-asp-net-core-health-checks/health-check-request.png)
 
 We see our application is `Healthy` and response code is `200(OK)`.
 
@@ -72,7 +72,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 ```
 After that, we will have this mini dashboard on `http://localhost:5000/healthchecks-ui`:
 
-![Health dashboard](/images/2019-05-06-asp-net-core-health-checks/health-dashboard.png)
+![Health dashboard](/assets/images/2019-05-06-asp-net-core-health-checks/health-dashboard.png)
 
 **Update**: There are some changes in .NET Core 3.0, which are caused by new routing system. You can find more details in the [official documentation](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-3.0#use-health-checks-routing).
 
@@ -122,7 +122,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 Now you can see a new item in the dashboard.
 
-![Health dashboard with database](/images/2019-05-06-asp-net-core-health-checks/db-health-dashboard.png)
+![Health dashboard with database](/assets/images/2019-05-06-asp-net-core-health-checks/db-health-dashboard.png)
 
 In [this repository](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks), you can find more packages for different databases and services. Furthermore, there is a [package](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore/) for the EF Core.
 
@@ -165,7 +165,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 }
 ```
 
-![Custom health check in database](/images/2019-05-06-asp-net-core-health-checks/custom-health-dashboard.png)
+![Custom health check in database](/assets/images/2019-05-06-asp-net-core-health-checks/custom-health-dashboard.png)
 
 As you can see, it's straightforward to add a health check with custom logic.
 
@@ -219,7 +219,7 @@ HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost:80/healthche
 
 Now you can check the status of your container by command `docker container ls`.
 
-![Console with docker command](/images/2019-05-06-asp-net-core-health-checks/docker-command-console.png)
+![Console with docker command](/assets/images/2019-05-06-asp-net-core-health-checks/docker-command-console.png)
 
 The status is `healthy`.
 

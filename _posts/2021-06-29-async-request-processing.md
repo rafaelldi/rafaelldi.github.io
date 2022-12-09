@@ -9,7 +9,7 @@ date: 2021-06-29
 tags: ["Distributed application", "MassTransit", "Messaging", "ASP.NET Core", "State Machine", "Routing Slip"]
 ---
 
-![Title image](/images/2021-06-29-async-request-processing/cover.jpg)
+![Title image](/assets/images/2021-06-29-async-request-processing/cover.jpg)
 
 This post came out of a real-life scenario. Imagine that you have a list of items, and you can somehow process each of them. For example, a list of pull requests on GitHub, every one of them you can automatically review. Another key feature is that each operation can take a long time. So, you don't want to perform them synchronously.
 

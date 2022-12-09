@@ -26,7 +26,7 @@ metrics, and logs. ([OpenTelemetry](https://opentelemetry.io/docs/concepts/what-
 
 It is an open-source vendor-agnostic way to generate and export your telemetry data to different backends. So, you only once instrument your code and then change monitoring tools as you want.
 
-![OpenTelemetry reference architecture](/images/2022-01-14-open-telemetry-in-dotnet/reference-architecture.svg "https://opentelemetry.io/docs/")
+![OpenTelemetry reference architecture](/assets/images/2022-01-14-open-telemetry-in-dotnet/reference-architecture.svg "https://opentelemetry.io/docs/")
 
 I should note that for now, different components have [different statuses](https://opentelemetry.io/status/).
 
@@ -217,7 +217,7 @@ As you have seen, we’re using this endpoint `http://collector:4317` to export 
 
 [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/) receives telemetry data from your application, somehow processes it and sends it to the final destinations.
 
-![OpenTelemetry Collector](/images/2022-01-14-open-telemetry-in-dotnet/otel-collector.svg "https://opentelemetry.io/docs/collector/")
+![OpenTelemetry Collector](/assets/images/2022-01-14-open-telemetry-in-dotnet/otel-collector.svg "https://opentelemetry.io/docs/collector/")
 
 Before that, we used various agents for logs, metrics and traces in our production system. Each of them you need to configure, deploy, maintain. With OTel Collector, data collection becomes more convenient. Moreover, it has a lot of [extensions](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter), so you could connect it with almost any backend as you would like.
 
@@ -315,7 +315,7 @@ services:
 ```
 The overall scheme looks like:
 
-![Scheme](/images/2022-01-14-open-telemetry-in-dotnet/scheme.png)
+![Scheme](/assets/images/2022-01-14-open-telemetry-in-dotnet/scheme.png)
 
 Run the following command and go to the Grafana UI [`http://localhost:3000/`](http://localhost:3000/).
 
@@ -325,19 +325,19 @@ docker-compose up -d
 
 Firstly, let’s take a look at logs. Choose Loki and search for query `{service_name="MyService"}`. You’ll see all items for the service.
 
-![Loki UI](/images/2022-01-14-open-telemetry-in-dotnet/loki-ui.png)
+![Loki UI](/assets/images/2022-01-14-open-telemetry-in-dotnet/loki-ui.png)
 
 Next, open one of them, and there will be additional fields in a nice format. Next to the `TraceID` field, you notice a link. Let’s follow it.
 
-![Loki log](/images/2022-01-14-open-telemetry-in-dotnet/loki-log.png)
+![Loki log](/assets/images/2022-01-14-open-telemetry-in-dotnet/loki-log.png)
 
 You’ll see a trace for that call. In my opinion, it’s very handy and will save you a lot of time.
 
-![Tempo UI](/images/2022-01-14-open-telemetry-in-dotnet/tempo-ui.png)
+![Tempo UI](/assets/images/2022-01-14-open-telemetry-in-dotnet/tempo-ui.png)
 
 In the end, we may create dashboards for our metrics.
 
-![Dashboards](/images/2022-01-14-open-telemetry-in-dotnet/dashboards.png)
+![Dashboards](/assets/images/2022-01-14-open-telemetry-in-dotnet/dashboards.png)
 
 Of course, there are much more features in these tools; I’ve shown just basic ones. As always, you may find them in the [documentation](https://grafana.com/docs/) 😉.
 

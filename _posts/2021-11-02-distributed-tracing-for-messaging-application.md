@@ -2,14 +2,14 @@
 title: "Distributed tracing for messaging application"
 excerpt: "In the previous post, I've talked about tracing. Today I want to take a look at the distributed tracing."
 header:
-  og_image: /images/2021-11-02-distributed-tracing-for-messaging-application/cover.jpg
+  og_image: /assets/images/2021-11-02-distributed-tracing-for-messaging-application/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-11-02
 tags: ["Distributed application", "MassTransit", "Messaging", "ASP.NET Core", "Diagnostics", "Distributed Tracing", "OpenTelemetry"]
 ---
 
-![Title image](/images/2021-11-02-distributed-tracing-for-messaging-application/cover.jpg)
+![Title image](/assets/images/2021-11-02-distributed-tracing-for-messaging-application/cover.jpg)
 
 # Distributed Tracing
 
@@ -186,9 +186,9 @@ jaeger:
 
 Now, make another call to the controller and go to the `http://localhost:16686/search` page.
 
-![Jaeger traces list](/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-traces-1-attempt.png)
+![Jaeger traces list](/assets/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-traces-1-attempt.png)
 
-![Jaeger spans timeline](/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-spans-1-attempt.png)
+![Jaeger spans timeline](/assets/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-spans-1-attempt.png)
 
 You will see a trace with a single span (only from `GreetingController`). So the rest is up to us to implement on our own.
 
@@ -318,9 +318,9 @@ services.AddMassTransit(x =>
 
 Send a new request and look at Jaeger dashboard.
 
-![Jaeger traces list](/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-traces-2-attempt.png)
+![Jaeger traces list](/assets/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-traces-2-attempt.png)
 
-![Jaeger spans timeline](/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-spans-2-attempt.png)
+![Jaeger spans timeline](/assets/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-spans-2-attempt.png)
 
 As we expected, now we have spans from both our projects, and they form a sequence of calls. You can easily understand where the request starts and finishes, see the duration of each operation. But it's not convenient to write a filter for each action and do not forget to register them. Sometimes this is the only option. But with MassTransit, we can do better.
 
@@ -369,9 +369,9 @@ public class MassTransitDiagnosticsHostedService : IHostedService
 
 Eventually, you'll see new spans in the Jaeger.
 
-![Jaeger traces list](/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-traces-3-attempt.png)
+![Jaeger traces list](/assets/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-traces-3-attempt.png)
 
-![Jaeger spans timeline](/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-spans-3-attempt.png)
+![Jaeger spans timeline](/assets/images/2021-11-02-distributed-tracing-for-messaging-application/jaeger-spans-3-attempt.png)
 
 # Conclusion
 

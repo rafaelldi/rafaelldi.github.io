@@ -2,14 +2,14 @@
 title: "REST API with ASP.NET Core"
 excerpt: "In this article I’ll show you how to create REST client-server communication in ASP.NET Core."
 header:
-  og_image: /images/2019-11-25-rest-api-with-asp-net-core/cover.jpg
+  og_image: /assets/images/2019-11-25-rest-api-with-asp-net-core/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2019-11-25
 tags: ["Connection", "ASP.NET Core", "REST", "OpenAPI", "NSwag", "HttpClient", "Json"]
 ---
 
-![Title image](/images/2019-11-25-rest-api-with-asp-net-core/cover.jpg)
+![Title image](/assets/images/2019-11-25-rest-api-with-asp-net-core/cover.jpg)
 
 When you are creating a web application, you need to organize communication between different parts of the app (frontend and backend or between microservices or something else). There are some new exciting mechanism to do that: GraphQL, gRPC. I want to dive into these technologies in the future posts, but today let’s start with basics!
 
@@ -98,11 +98,11 @@ Our server is ready, start it with a command `dotnet run`. For testing purposes,
 
 There is a great powerful tool to work with API called [Postman](https://www.getpostman.com/). Post a new article to `localhost:5000/api/article/create`.
 
-![Post request in Postman](/images/2019-11-25-rest-api-with-asp-net-core/postman.png)
+![Post request in Postman](/assets/images/2019-11-25-rest-api-with-asp-net-core/postman.png)
 
 And get the list of articles from `localhost:5000/api/article/list`.
 
-![Get request in Postman](/images/2019-11-25-rest-api-with-asp-net-core/postman-get.png)
+![Get request in Postman](/assets/images/2019-11-25-rest-api-with-asp-net-core/postman-get.png)
 
 Great, everything is working. Let’s go to the next stage.
 
@@ -183,7 +183,7 @@ public class Worker : BackgroundService
 
 I use `Console.ReadLine()` to read commands from a user and create `GET` or `POST` request based on his choice.
 
-![Start program in console](/images/2019-11-25-rest-api-with-asp-net-core/console.png)
+![Start program in console](/assets/images/2019-11-25-rest-api-with-asp-net-core/console.png)
 
 Ok, maybe we need to hide information level logs.
 
@@ -382,9 +382,9 @@ And that’s all. Go to `http://localhost:5000/swagger/v1/swagger.json` and chec
 
 The best part is that NSwag also generates an interface that allows you to see all your endpoints and interact with them. If you have a public API, you can give to your consumers this page instead of extended text documentation. Go to `http://localhost:5000/swagger/index.html` to see it.
 
-![Swagger dashboard](/images/2019-11-25-rest-api-with-asp-net-core/swagger-dashboard.png)
+![Swagger dashboard](/assets/images/2019-11-25-rest-api-with-asp-net-core/swagger-dashboard.png)
 
-![Swagger request](/images/2019-11-25-rest-api-with-asp-net-core/swagger-request.png)
+![Swagger request](/assets/images/2019-11-25-rest-api-with-asp-net-core/swagger-request.png)
 
 Next step is to develop a client for this API, but there is a better option. Let’s generate it!
 
