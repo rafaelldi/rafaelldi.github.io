@@ -2,14 +2,14 @@
 title: "Choreography"
 excerpt: "This post shows you an example of the choreography pattern to coordinate services in a system."
 header:
-  og_image: /images/2021-03-01-choreography/cover.jpg
+  og_image: /assets/images/2021-03-01-choreography/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-03-01
 tags: ["Distributed application", "Choreography", "MassTransit", "Messaging", "ASP.NET Core"]
 ---
 
-![Title image](/images/2021-03-01-choreography/cover.jpg)
+![Title image](/assets/images/2021-03-01-choreography/cover.jpg)
 
 In the previous post, we created a food delivery application and applied the orchestration pattern. In this one, I'm going to modify that solution to follow the choreography pattern.
 
@@ -21,7 +21,7 @@ Let me remind the process:
 3. The kitchen gets the order details and starts cooking;
 4. The courier delivers food to the user's address.
 
-![Food delivery schema](/images/2021-03-01-choreography/food-delivery.png)
+![Food delivery schema](/assets/images/2021-03-01-choreography/food-delivery.png)
 
 # Routing slip
 

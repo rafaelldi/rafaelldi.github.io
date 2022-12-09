@@ -2,7 +2,7 @@
 title: "SynchronizationContext — Note 2"
 excerpt: "In this post, I want to take a look at some existing examples of SynchronizationContext."
 header:
-  overlay_image: /images/2022-10-17-synchronization-context-note-2/cover.jpg
+  overlay_image: /assets/images/2022-10-17-synchronization-context-note-2/cover.jpg
   show_overlay_excerpt: false
   caption: "Photo by [Robert Katzki](https://unsplash.com/@ro_ka) on [Unsplash](https://unsplash.com)"
 categories: posts

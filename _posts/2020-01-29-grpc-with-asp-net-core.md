@@ -2,14 +2,14 @@
 title: "gRPC with ASP.NET Core"
 excerpt: "In this post, we continue our talk about communication between services. Today we’re going to create gRPC server and a client for it. Also, we’ll talk about the differences between gRPC and REST."
 header:
-  og_image: /images/2020-01-29-grpc-with-asp-net-core/cover.jpg
+  og_image: /assets/images/2020-01-29-grpc-with-asp-net-core/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2020-01-29
 tags: ["Connection", "ASP.NET Core", "gRPC", "Protobuf"]
 ---
 
-![Title image](/images/2020-01-29-grpc-with-asp-net-core/cover.jpg)
+![Title image](/assets/images/2020-01-29-grpc-with-asp-net-core/cover.jpg)
 
 In this post, we continue our talk about communication between services. Today we’re going to create gRPC server and a client for it. Also, we’ll talk about the differences between gRPC and REST.
 
@@ -194,9 +194,9 @@ public class Program
 
 That’s all we need, let’s test our server. There is a handy tool for doing that called [BloomRPC](https://github.com/uw-labs/bloomrpc). If you are familiar to Postman, this tool is similar to it in the gRPC world.
 
-![Create item with BloomRPC](/images/2020-01-29-grpc-with-asp-net-core/bloom-rpc.png)
+![Create item with BloomRPC](/assets/images/2020-01-29-grpc-with-asp-net-core/bloom-rpc.png)
 
-![Get items with BloomRPC](/images/2020-01-29-grpc-with-asp-net-core/bloom-rpc-get.png)
+![Get items with BloomRPC](/assets/images/2020-01-29-grpc-with-asp-net-core/bloom-rpc-get.png)
 
 # Client
 It’s time to build a client. I used the same worker template as in the [previous post]({% post_url 2019-11-25-rest-api-with-asp-net-core %}). To continue with, I added some nuget libraries and proto file to the client project.
@@ -302,7 +302,7 @@ public class Worker : BackgroundService
 
 Let’s make some calls.
 
-![Console](/images/2020-01-29-grpc-with-asp-net-core/console.png)
+![Console](/assets/images/2020-01-29-grpc-with-asp-net-core/console.png)
 
 Our server and client are done. As you can see, the creation of grpc communication is relatively simple. And this is great because you don’t need to make great efforts to learn a new approach. Everything will seem very similar.
 
@@ -418,7 +418,7 @@ public class Worker : BackgroundService
 
 With the following screenshot, you can see that messages arrive at the client with a delay.
 
-![Console with results](/images/2020-01-29-grpc-with-asp-net-core/console-results.png)
+![Console with results](/assets/images/2020-01-29-grpc-with-asp-net-core/console-results.png)
 
 # Summary
 In this post, I showed how to implement communication through gRPC in ASP.NET Core application. gRPC was designed for services calling, and it does its work pretty well. There are some fascinating features like streaming, backward compatibility, deadlines, error status codes, and they help you to be more productive. I didn’t tell you about most of them, because it is a basic post and they are well described in the [documentation](https://grpc.io/docs/guides/concepts/). There are also some drawbacks. For example, gRPS isn’t fully supported by browsers, and all messages are binary, so you need a tool to understand them while debugging.

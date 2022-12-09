@@ -2,14 +2,14 @@
 title: "Orchestration"
 excerpt: "In this post, I want to show you an example of how to apply an orchestration pattern in your system."
 header:
-  og_image: /images/2021-02-18-orchestration/cover.jpg
+  og_image: /assets/images/2021-02-18-orchestration/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-02-18
 tags: ["Distributed application", "Orchestration", "MassTransit", "Messaging", "ASP.NET Core"]
 ---
 
-![Title image](/images/2021-02-18-orchestration/cover.jpg)
+![Title image](/assets/images/2021-02-18-orchestration/cover.jpg)
 
 The previous post was about two main patterns for coordinating services in a distributed system. So, today we'll take a look at the straightforward application for food delivery. Within this system, we'll try to connect different parts with orchestration pattern.
 
@@ -19,7 +19,7 @@ _Spoiler: this post has a lot of code. If you want to look at the project yourse
 
 Let's pretend we're developing an application for the restaurant. As you may notice, food delivery is popular nowadays, so we want to implement this functionality in the app.
 
-![Food delivery schema](/images/2021-02-18-orchestration/food-delivery.png)
+![Food delivery schema](/assets/images/2021-02-18-orchestration/food-delivery.png)
 
 The whole process will be consists of four steps:
 1. A user places online order from the website; 
@@ -214,7 +214,7 @@ Notice that consumers perform their actions in response to the messages they rec
 
 Possible implementations of consumers in different services are shown in the diagram below.
 
-![Multiple services schema](/images/2021-02-18-orchestration/food-delivery-services.png)
+![Multiple services schema](/assets/images/2021-02-18-orchestration/food-delivery-services.png)
 
 Next, register the consumers and the library itself. For testing purposes, I'm using in-memory message bus.
 

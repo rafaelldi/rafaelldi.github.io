@@ -2,7 +2,7 @@
 title: "Export OpenTelemetry data to Rider"
 excerpt: "This is a small proof of concept to export OpenTelemetry data to Rider."
 header:
-  overlay_image: /images/2022-09-01-export-otel-data-to-rider/cover.jpg
+  overlay_image: /assets/images/2022-09-01-export-otel-data-to-rider/cover.jpg
   show_overlay_excerpt: false
   caption: "Photo by [Shalev Cohen](https://unsplash.com/@shalevcohen) on [Unsplash](https://unsplash.com)"
 categories: posts
@@ -33,11 +33,11 @@ app.Run();
 
 Another part is a [plugin](https://github.com/rafaelldi/lens-plugin) for Rider. After you install it, there will be a new `OpenTelemetry` tab in the `Endpoints` tool window.
 
-![OpenTelemetry tab](/images/2022-09-01-export-otel-data-to-rider/open-telemetry-tab.png)
+![OpenTelemetry tab](/assets/images/2022-09-01-export-otel-data-to-rider/open-telemetry-tab.png)
 
 After a few requests, a small statistic will appear for the endpoint.
 
-![OpenTelemetry stats](/images/2022-09-01-export-otel-data-to-rider/open-telemetry-stats.png)
+![OpenTelemetry stats](/assets/images/2022-09-01-export-otel-data-to-rider/open-telemetry-stats.png)
 
 I agree that it doesn't look outstanding right now. But in theory, with this data the IDE will be able to show in the editor the execution time of each controller, http-request, database query. Highlight what might need your attention, show all the metrics right in the code. And most importantly, it will not require you to use any additional tools. What do you think about it?
 

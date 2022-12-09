@@ -2,14 +2,14 @@
 title: "Simple ASP.NET Core Application"
 excerpt: "Hello! I recently wondered what the simple ASP.NET Core application should look like. What if I'm a beginner and I want to write my first Hello world application. What is the first step?"
 header:
-  og_image: /images/2020-06-22-simple-asp-net-core-application/cover.jpg
+  og_image: /assets/images/2020-06-22-simple-asp-net-core-application/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2020-06-22
 tags: ["ASP.NET Core", "Tutorial", "Beginning", "Web Server"]
 ---
 
-![Title image](/images/2020-06-22-simple-asp-net-core-application/cover.jpg)
+![Title image](/assets/images/2020-06-22-simple-asp-net-core-application/cover.jpg)
 
 Hello! I recently wondered what the simple ASP.NET Core application should look like. What if I'm a beginner and I want to write my first Hello world application. What is the first step?
 
@@ -77,7 +77,7 @@ $ dotnet run
 
 To see, that your server is working, go to `http://localhost:5000` from your browser, and you'll see this text.
 
-![Hello world from a browser](/images/2020-06-22-simple-asp-net-core-application/hello-world-app.png)
+![Hello world from a browser](/assets/images/2020-06-22-simple-asp-net-core-application/hello-world-app.png)
 
 Congratulations, you've created a web server.
 

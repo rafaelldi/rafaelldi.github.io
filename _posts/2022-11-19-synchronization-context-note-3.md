@@ -2,7 +2,7 @@
 title: "SynchronizationContext — Note 3"
 excerpt: "In this post, I’m creating a simple example of SynchronizationContext."
 header:
-  overlay_image: /images/2022-11-19-synchronization-context-note-3/cover.jpg
+  overlay_image: /assets/images/2022-11-19-synchronization-context-note-3/cover.jpg
   show_overlay_excerpt: false
   caption: "Photo by [Jack Anstey](https://unsplash.com/@jack_anstey) on [Unsplash](https://unsplash.com)"
 categories: posts
@@ -185,7 +185,7 @@ static void RunWithAffinityContext()
 
 If you open a system monitor, you’ll see that only one of the cores is busy.
 
-![System monitor](/images/2022-11-19-synchronization-context-note-3/sysmon.png)
+![System monitor](/assets/images/2022-11-19-synchronization-context-note-3/sysmon.png)
 
 # References
 

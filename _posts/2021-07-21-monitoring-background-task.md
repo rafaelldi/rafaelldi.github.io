@@ -2,14 +2,14 @@
 title: "Monitoring background task"
 excerpt: "I'm continuing my previous post about asynchronous processing. I want to show how to add some metrics to monitor background tasks."
 header:
-  og_image: /images/2021-07-21-monitoring-background-task/cover.jpg
+  og_image: /assets/images/2021-07-21-monitoring-background-task/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-07-21
 tags: ["Distributed application", "MassTransit", "Messaging", "ASP.NET Core", "EventCounters", "Diagnostics", "Performance"]
 ---
 
-![Title image](/images/2021-07-21-monitoring-background-task/cover.jpg)
+![Title image](/assets/images/2021-07-21-monitoring-background-task/cover.jpg)
 
 When you have async processing, it may be good to know how this task is performing. Is this process quick enough, or how many times was it executed? In this post, I'm going to add simple metrics with [EventCounters](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/event-counters).
 

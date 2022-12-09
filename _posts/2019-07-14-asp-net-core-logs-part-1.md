@@ -2,7 +2,7 @@
 title: "ASP.NET Core: Logs (Part 1)"
 excerpt: "Logging is one of the most important things in your application because it helps you to understand what happens in production, to find the roots of exceptions and to trace some behaviors. Today we’ll take a look at logging in ASP.NET Core."
 header:
-  og_image: /images/2019-07-14-asp-net-core-logs-part-1/cover.jpg
+  og_image: /assets/images/2019-07-14-asp-net-core-logs-part-1/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2019-07-14

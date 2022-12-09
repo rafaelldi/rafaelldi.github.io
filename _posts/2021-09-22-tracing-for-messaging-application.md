@@ -2,14 +2,14 @@
 title: "Tracing for messaging application"
 excerpt: "In the last post, we discussed a dotnet-counters tool. This one is continuing that diagnostics conversation with a dotnet-trace tool."
 header:
-  og_image: /images/2021-09-22-tracing-for-messaging-application/cover.jpg
+  og_image: /assets/images/2021-09-22-tracing-for-messaging-application/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-09-22
 tags: ["Distributed application", "MassTransit", "Messaging", "ASP.NET Core", "Diagnostics", "Tracing"]
 ---
 
-![Title image](/images/2021-09-22-tracing-for-messaging-application/cover.jpg)
+![Title image](/assets/images/2021-09-22-tracing-for-messaging-application/cover.jpg)
 
 Tracing can be very powerful to debug problems in production. I won't go deeper into the tracing details today, but I want to demonstrate one particular issue I encountered during development.
 
@@ -36,7 +36,7 @@ $ dotnet-trace collect --process-id 184530 --providers=Microsoft-Diagnostics-Dia
 
 Finally, open the result in [PerfView](https://github.com/microsoft/perfview). The events are available for analysis.
 
-![PerfView](/images/2021-09-22-tracing-for-messaging-application/perfview.jpg)
+![PerfView](/assets/images/2021-09-22-tracing-for-messaging-application/perfview.jpg)
 
 # Conclusion
 In this short post, I've briefly touched on tracing and showed how to consume events with the `dotnet-trace` tool from `DiagnosticSource` class.

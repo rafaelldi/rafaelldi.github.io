@@ -2,14 +2,14 @@
 title: "ASP.NET Core: Logs (Part 3)"
 excerpt: "Today we’ll discuss a quite convenient tool for logging called Seq. It’s the last post about logging in ASP.NET Core application."
 header:
-  og_image: /images/2019-08-31-asp-net-core-logs-part-3/cover.jpg
+  og_image: /assets/images/2019-08-31-asp-net-core-logs-part-3/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2019-08-31
 tags: ["Observability", "ASP.NET Core", "SEQ", "Logging", "Serilog", "Structured Logging"]
 ---
 
-![Title image](/images/2019-08-31-asp-net-core-logs-part-3/cover.jpg)
+![Title image](/assets/images/2019-08-31-asp-net-core-logs-part-3/cover.jpg)
 
 Today we’ll discuss a quite convenient tool for logging called Seq. It’s the last post about logging in ASP.NET Core application.
 
@@ -86,17 +86,17 @@ services:
 
 And now you can see the result in the Seq UI.
 
-![Seq logs](/images/2019-08-31-asp-net-core-logs-part-3/seq-logs.png)
+![Seq logs](/assets/images/2019-08-31-asp-net-core-logs-part-3/seq-logs.png)
 
-![Seq log details](/images/2019-08-31-asp-net-core-logs-part-3/seq-log-details.png)
+![Seq log details](/assets/images/2019-08-31-asp-net-core-logs-part-3/seq-log-details.png)
 
 All parameters of our query were saved, and you can easily search by them.
 
-![Search by params](/images/2019-08-31-asp-net-core-logs-part-3/params-search.png)
+![Search by params](/assets/images/2019-08-31-asp-net-core-logs-part-3/params-search.png)
 
 It’s a remarkably powerful tool, all its capabilities you can find in the [documentation](https://docs.datalust.co/docs).
 
-![Seq graphs](/images/2019-08-31-asp-net-core-logs-part-3/seq-graphs.png)
+![Seq graphs](/assets/images/2019-08-31-asp-net-core-logs-part-3/seq-graphs.png)
 
 # Dynamic logging level
 Another great feature of SEQ is a dynamic log level control. In some situations, you don’t want to collect detailed logs all the time because they take a lot of space. But when you’re testing some scenario, you may want as mush logs as it may be. You can change the log level with this feature for a small period and then return it.
@@ -123,9 +123,9 @@ Make some changes in the config file.
 
 After that, go to the section `Settings -> API Keys` and create a new one. You need to paste the same API key value in the `Token` field as you specify in your config file.
 
-![Api key](/images/2019-08-31-asp-net-core-logs-part-3/api-key.png)
+![Api key](/assets/images/2019-08-31-asp-net-core-logs-part-3/api-key.png)
 
-![Api token](/images/2019-08-31-asp-net-core-logs-part-3/api-token.png)
+![Api token](/assets/images/2019-08-31-asp-net-core-logs-part-3/api-token.png)
 
 Now you can control your logging level through the switching values in the `Minimum level` field of the API key.
 

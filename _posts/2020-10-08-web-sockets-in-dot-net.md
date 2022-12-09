@@ -2,14 +2,14 @@
 title: "WebSockets in .NET"
 excerpt: "In this article, I want to discuss a WebSocket protocol. I'm going to tell you the purposes of this protocol, the differences between HTTP. Finally, we'll create a basic example in .NET to demonstrate how it works."
 header:
-  og_image: /images/2020-10-08-web-sockets-in-dot-net/cover.jpg
+  og_image: /assets/images/2020-10-08-web-sockets-in-dot-net/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2020-10-08
 tags: ["ASP.NET Core", "WebSocket"]
 ---
 
-![Title image](/images/2020-10-08-web-sockets-in-dot-net/cover.jpg)
+![Title image](/assets/images/2020-10-08-web-sockets-in-dot-net/cover.jpg)
 
 In this article, I want to discuss a WebSocket protocol. I'm going to tell you the purposes of this protocol, the differences between HTTP. Finally, we'll create a basic example in .NET to demonstrate how it works.
 
@@ -27,7 +27,7 @@ Often, this protocol is used by browsers to interact with users in chat apps, on
 
 The communication consists of two parts: handshake and bidirectional messaging.
 
-![WebSocket schema](/images/2020-10-08-web-sockets-in-dot-net/websocket.png)
+![WebSocket schema](/assets/images/2020-10-08-web-sockets-in-dot-net/websocket.png)
 
 # WebSocket handshake
 
@@ -171,9 +171,9 @@ public class Startup
 
 Now, let's test our server with [echo tool](https://www.websocket.org/echo.html).
 
-![Echo tool](/images/2020-10-08-web-sockets-in-dot-net/echo-tool.png)
+![Echo tool](/assets/images/2020-10-08-web-sockets-in-dot-net/echo-tool.png)
 
-![Messages in WebSocket](/images/2020-10-08-web-sockets-in-dot-net/messages-in-websocket.png)
+![Messages in WebSocket](/assets/images/2020-10-08-web-sockets-in-dot-net/messages-in-websocket.png)
 
 ## Client
 

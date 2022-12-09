@@ -2,7 +2,7 @@
 title: "OpenTelemetry in .NET"
 excerpt: "In this post, I’m going to talk about the state of OpenTelemetry in .NET."
 header:
-  overlay_image: /images/2022-01-14-open-telemetry-in-dotnet/cover.jpg
+  overlay_image: /assets/images/2022-01-14-open-telemetry-in-dotnet/cover.jpg
   show_overlay_excerpt: false
   caption: "Photo by Daniel Lerman on [Unsplash](https://unsplash.com)"
 categories: posts

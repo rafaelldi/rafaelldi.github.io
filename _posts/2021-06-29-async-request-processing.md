@@ -2,7 +2,7 @@
 title: "Async request processing"
 excerpt: "Recently, I've talked about state machines and routing slips. In this post, I am going to show how to combine these approaches."
 header:
-  og_image: /images/2021-06-29-async-request-processing/cover.jpg
+  og_image: /assets/images/2021-06-29-async-request-processing/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-06-29

@@ -2,7 +2,7 @@
 title: "What does the .NET application say - Logs and Traces"
 excerpt: "In this post, we’ll talk about hot to log and receive some information with the help of DiagnosticSource and EventSource."
 header:
-  overlay_image: /images/2022-08-28-logs-and-traces/cover.jpg
+  overlay_image: /assets/images/2022-08-28-logs-and-traces/cover.jpg
   show_overlay_excerpt: false
   caption: "Photo by [Scott Walsh](https://unsplash.com/@outsighted) on [Unsplash](https://unsplash.com)"
 categories: posts

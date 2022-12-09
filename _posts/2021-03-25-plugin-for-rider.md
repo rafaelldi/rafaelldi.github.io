@@ -2,14 +2,14 @@
 title: "Making a plugin isn't so hard..."
 excerpt: "In this post, I describe my experience with plugin creation for JetBrains Rider."
 header:
-  og_image: /images/2021-03-25-plugin-for-rider/cover.jpg
+  og_image: /assets/images/2021-03-25-plugin-for-rider/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2021-03-25
 tags: ["Distributed application", "Project Tye", "Plugin", "JetBrains Rider", "ASP.NET Core"]
 ---
 
-![Title image](/images/2021-03-25-plugin-for-rider/cover.jpg)
+![Title image](/assets/images/2021-03-25-plugin-for-rider/cover.jpg)
 
 It was always interesting for me is it difficult to build your plugin for IDE. Recently, I've decided to try. It turns out it's not that complicated, and I would like to share my experience.
 
@@ -55,7 +55,7 @@ $ tye run
 
 Tye starts your projects, and you can find them on the dashboard `http://127.0.0.1:8000/`.
 
-![Tye dashboard](/images/2021-03-25-plugin-for-rider/tye-dashboard.png)
+![Tye dashboard](/assets/images/2021-03-25-plugin-for-rider/tye-dashboard.png)
 
 # Run Configuration
 
@@ -164,7 +164,7 @@ class TyeSettingsEditor : SettingsEditor<TyeRunConfiguration>() {
 
 Pretty straightforward implementation. I won't go into detail about each file. As I said before, you can find their description in the documentation. Eventually, if you run the plugin, you would see the new `Run Configuration` type. For now, it doesn't do anything; let's go to the next section and add some behaviour.
 
-![Tye run configuration](/images/2021-03-25-plugin-for-rider/tye-run-config.png)
+![Tye run configuration](/assets/images/2021-03-25-plugin-for-rider/tye-run-config.png)
 
 # Tye run command
 
@@ -190,7 +190,7 @@ override fun startProcess(): ProcessHandler {
 
 Start the plugin again, select `TyeExperiments` solution folder and run the new tye configuration type. You'll see the same logs as before when we ran tye independently.
 
-![Tye logs](/images/2021-03-25-plugin-for-rider/tye-logs.png)
+![Tye logs](/assets/images/2021-03-25-plugin-for-rider/tye-logs.png)
 
 # Conclusion
 

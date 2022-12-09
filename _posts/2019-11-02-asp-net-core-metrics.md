@@ -2,14 +2,14 @@
 title: "ASP.NET Core: Metrics"
 excerpt: "In this post, I add some metrics to ASP.NET Core application. We’ll discuss why monitoring is so important and how we can deal with it."
 header:
-  og_image: /images/2019-11-02-asp-net-core-metrics/cover.jpg
+  og_image: /assets/images/2019-11-02-asp-net-core-metrics/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2019-11-02
 tags: ["Observability", "ASP.NET Core", "Metrics", "Monitoring", "Prometheus", "Grafana"]
 ---
 
-![Title image](/images/2019-11-02-asp-net-core-metrics/cover.jpg)
+![Title image](/assets/images/2019-11-02-asp-net-core-metrics/cover.jpg)
 
 In this post, I add some metrics to ASP.NET Core application. We’ll discuss why monitoring is so important and how we can deal with it.
 
@@ -124,11 +124,11 @@ scrape_configs:
 
 When all preparations are finished, go to the `http://localhost:9090/`.
 
-![Prometheus ui](/images/2019-11-02-asp-net-core-metrics/prometheus-ui.png)
+![Prometheus ui](/assets/images/2019-11-02-asp-net-core-metrics/prometheus-ui.png)
 
 In this interface you can create different charts, but, for honest, it is not a super convenient interface.
 
-![Prometheus graph](/images/2019-11-02-asp-net-core-metrics/prometheus-graph.png)
+![Prometheus graph](/assets/images/2019-11-02-asp-net-core-metrics/prometheus-graph.png)
 
 # Grafana
 Grafana is a solution, that allows you to visualize metrics from various data storages. This is a docker-compose script to run them all.
@@ -163,31 +163,31 @@ services:
 
 Go to `http://localhost:3000/` and you’ll see the login page. The default username and password is `admin` and `admin`.
 
-![Grafana login](/images/2019-11-02-asp-net-core-metrics/grafana-login.png)
+![Grafana login](/assets/images/2019-11-02-asp-net-core-metrics/grafana-login.png)
 
 On the next page add a new data source.
 
-![Add dashboard](/images/2019-11-02-asp-net-core-metrics/add-dashboard.png)
+![Add dashboard](/assets/images/2019-11-02-asp-net-core-metrics/add-dashboard.png)
 
 Choose `Prometheus` and set url `http://prometheus:9090`.
 
-![Add prometheus data source](/images/2019-11-02-asp-net-core-metrics/add-data-source.png)
+![Add prometheus data source](/assets/images/2019-11-02-asp-net-core-metrics/add-data-source.png)
 
-![Configure prometheus data source](/images/2019-11-02-asp-net-core-metrics/configure-prometheus-source.png)
+![Configure prometheus data source](/assets/images/2019-11-02-asp-net-core-metrics/configure-prometheus-source.png)
 
 After that, you need to import dashboards for your data. You can create your own, but there are [two templates](https://github.com/prometheus-net/grafana-dashboards) for prometheus-net library. Click `+ -> Import` and paste dashboard id ([10427](https://grafana.com/grafana/dashboards/10427) or [10915](https://grafana.com/grafana/dashboards/10915)).
 
-![Add new dashboard](/images/2019-11-02-asp-net-core-metrics/add-dashboard.png)
+![Add new dashboard](/assets/images/2019-11-02-asp-net-core-metrics/add-dashboard.png)
 
 Set parameters and data source.
 
-![Configure new dashboard](/images/2019-11-02-asp-net-core-metrics/configure-dashboard.png)
+![Configure new dashboard](/assets/images/2019-11-02-asp-net-core-metrics/configure-dashboard.png)
 
 Now you have two dashboards and beautiful charts.
 
-![Two dashboards](/images/2019-11-02-asp-net-core-metrics/two-dashboards.png)
+![Two dashboards](/assets/images/2019-11-02-asp-net-core-metrics/two-dashboards.png)
 
-![Graphana charts](/images/2019-11-02-asp-net-core-metrics/graphana-charts.png)
+![Graphana charts](/assets/images/2019-11-02-asp-net-core-metrics/graphana-charts.png)
 
 # Business Metrics
 Sometimes you want to monitor your own metrics, for example, a number of visitors per hour. In this section, we’ll consider how to create a custom measurement.
@@ -248,11 +248,11 @@ I’ve created a histogram with the name `temperature_with_summary` and six buck
 
 Now, go to Grafana and create a new dashboard.
 
-![Custom empty dashboard](/images/2019-11-02-asp-net-core-metrics/custom-empty-dashboard.png)
+![Custom empty dashboard](/assets/images/2019-11-02-asp-net-core-metrics/custom-empty-dashboard.png)
 
 You can specify a query, different parameters, a graph. I’ve used a formula `temperature_with_summary_sum`/`temperature_with_summary_count` to calculate an average temperature for different weather types.
 
-![Custom dashboard](/images/2019-11-02-asp-net-core-metrics/custom-dashboard.png)
+![Custom dashboard](/assets/images/2019-11-02-asp-net-core-metrics/custom-dashboard.png)
 
 Of course, there are plenty of options to customize and compute your metrics. I’ve shown just a simple example.
 
@@ -268,7 +268,7 @@ In the last section, I’ll explain how to monitor docker engine itself. Firstly
 
 After that, go to `127.0.0.1:9323/metrics` and you’ll see different metrics from docker.
 
-![Docker metrics](/images/2019-11-02-asp-net-core-metrics/docker-metrics.png)
+![Docker metrics](/assets/images/2019-11-02-asp-net-core-metrics/docker-metrics.png)
 
 Next, specify a new job for Prometheus to grab these metrics.
 
@@ -297,7 +297,7 @@ One point here is how to find out ip address (`172.17.0.1` above). In Windows yo
 
 Finally, you’ll have a new target and metric in your Prometheus.
 
-![Docker metrics in Prometheus](/images/2019-11-02-asp-net-core-metrics/docker-metrics-prometheus.png)
+![Docker metrics in Prometheus](/assets/images/2019-11-02-asp-net-core-metrics/docker-metrics-prometheus.png)
 
 # Conclusion
 In this post we’ve discovered how to monitor web application. This is a pretty big topic, so a lot of things are left behind. We examined basic examples that help you take the first step in this area.

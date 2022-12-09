@@ -2,14 +2,14 @@
 title: "Distributed application with Project Tye"
 excerpt: "In this post, I want to take a look at the new tool from the ASP team called Project Tye. It helps you to create and manage distributed applications locally. I'm going to show you an example of such applications."
 header:
-  og_image: /images/2020-10-18-distributed-application-with-project-tye/cover.jpg
+  og_image: /assets/images/2020-10-18-distributed-application-with-project-tye/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2020-10-18
 tags: ["ASP.NET Core", "Project Tye", "MassTransit", "Distributed application"]
 ---
 
-![Title image](/images/2020-10-18-distributed-application-with-project-tye/cover.jpg)
+![Title image](/assets/images/2020-10-18-distributed-application-with-project-tye/cover.jpg)
 
 In this post, I want to take a look at the new tool from the ASP team called Project Tye. It helps you to create and manage distributed applications locally. I'm going to show you an example of such applications.
 
@@ -267,11 +267,11 @@ $ tye run
 
 After that, your entire distributed system will start. You can find a beautiful dashboard at this address `http://127.0.0.1:8000/`.
 
-![Tye services dashboard](/images/2020-10-18-distributed-application-with-project-tye/tye-dashboard.png)
+![Tye services dashboard](/assets/images/2020-10-18-distributed-application-with-project-tye/tye-dashboard.png)
 
 And four connections at the RabbitMQ dashboard `http://localhost:15672`.
 
-![RabbitMQ dashboard](/images/2020-10-18-distributed-application-with-project-tye/rabbit-dashboard.png)
+![RabbitMQ dashboard](/assets/images/2020-10-18-distributed-application-with-project-tye/rabbit-dashboard.png)
 
 Eventually, you can send a message and get the log.
 
@@ -286,7 +286,7 @@ Content-Type: application/json
 }
 ```
 
-![Message log](/images/2020-10-18-distributed-application-with-project-tye/message-log.png)
+![Message log](/assets/images/2020-10-18-distributed-application-with-project-tye/message-log.png)
 
 ## Competing consumers
 

@@ -2,14 +2,14 @@
 title: "ASP.NET Core: Logs (Part 2)"
 excerpt: "In the first part, we were looking at a simple console logging with Serilog. Today we’ll go deeper and will deal with a more complicated example."
 header:
-  og_image: /images/2019-07-22-asp-net-core-logs-part-2/cover.jpg
+  og_image: /assets/images/2019-07-22-asp-net-core-logs-part-2/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2019-07-22
 tags: ["Observability", "ASP.NET Core", "ELK", "Logging", "Serilog", "Fluentd", "Structured Logging"]
 ---
 
-![Title image](/images/2019-07-22-asp-net-core-logs-part-2/cover.jpg)
+![Title image](/assets/images/2019-07-22-asp-net-core-logs-part-2/cover.jpg)
 
 In the first part, we were looking at a simple console logging with Serilog. Today we’ll go deeper and will deal with a more complicated example.
 
@@ -182,29 +182,29 @@ Add this file to your solution directory and run it with a command `docker-compo
 
 Create some requests, and you’ll see a new index with our logs in the Elasticsearch (`http://localhost:9200/_cat/indices`). Note that all our indexes will have postfix with a date (we set up index name in the config file with a `logstash_prefix` and `logstash_dateformat` parameters).
 
-![Elasticsearch dashboard](/images/2019-07-22-asp-net-core-logs-part-2/elastic-dashboard.png)
+![Elasticsearch dashboard](/assets/images/2019-07-22-asp-net-core-logs-part-2/elastic-dashboard.png)
 
 Now let’s go to Kibana (`http://localhost:5601 -> Management -> Elasticsearch -> Index Management`). You’ll see the same index there.
 
-![Kibana UI](/images/2019-07-22-asp-net-core-logs-part-2/kibana-ui.png)
+![Kibana UI](/assets/images/2019-07-22-asp-net-core-logs-part-2/kibana-ui.png)
 
-![Index management](/images/2019-07-22-asp-net-core-logs-part-2/index-management.png)
+![Index management](/assets/images/2019-07-22-asp-net-core-logs-part-2/index-management.png)
 
 After that, we’ll add this index to Kibana dashboard. Go to `Management -> Kibana -> Index Patterns` and specify the index prefix (`applogging-*` in our case).
 
-![Create index pattern](/images/2019-07-22-asp-net-core-logs-part-2/create-index-pattern.png)
+![Create index pattern](/assets/images/2019-07-22-asp-net-core-logs-part-2/create-index-pattern.png)
 
 In the next step define `@timestamp` as a time filter field name.
 
-![Create index pattern step 2](/images/2019-07-22-asp-net-core-logs-part-2/create-index-pattern-step-2.png)
+![Create index pattern step 2](/assets/images/2019-07-22-asp-net-core-logs-part-2/create-index-pattern-step-2.png)
 
 And now in the `Overview` section, you can see a graph of your logs.
 
-![Logs in kibana](/images/2019-07-22-asp-net-core-logs-part-2/kibana-logs.png)
+![Logs in kibana](/assets/images/2019-07-22-asp-net-core-logs-part-2/kibana-logs.png)
 
 Every entry has details. Also, you can see the fields that we save in our application (`@id` field, for example).
 
-![Logs details](/images/2019-07-22-asp-net-core-logs-part-2/logs-details.png)
+![Logs details](/assets/images/2019-07-22-asp-net-core-logs-part-2/logs-details.png)
 
 Kibana allows you to create different types of search, build various graphs and dashboards. It’s a very powerful tool, so we won’t discuss here all its capabilities.
 

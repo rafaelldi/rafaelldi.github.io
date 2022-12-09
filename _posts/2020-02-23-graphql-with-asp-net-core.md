@@ -2,14 +2,14 @@
 title: "GraphQL with ASP.NET Core"
 excerpt: "I’m continuing my services communication series with GraphQL."
 header:
-  og_image: /images/2020-02-23-graphql-with-asp-net-core/cover.jpg
+  og_image: /assets/images/2020-02-23-graphql-with-asp-net-core/cover.jpg
 categories: posts
 author: Rival Abdrakhmanov
 date: 2020-02-23
 tags: ["Connection", "ASP.NET Core", "GraphQL"]
 ---
 
-![Title image](/images/2020-02-23-graphql-with-asp-net-core/cover.jpg)
+![Title image](/assets/images/2020-02-23-graphql-with-asp-net-core/cover.jpg)
 
 I’m continuing my services communication series with GraphQL.
 
@@ -140,9 +140,9 @@ Now, our simple server is complete. I think that there wasn’t anything challen
 
 How can we test our solution? The great news that [Postman](https://www.postman.com/) supports GrapQL. It’s very popular tool for REST API, so you won’t spend a lot of time to study it.
 
-![Mutation in graphql](/images/2020-02-23-graphql-with-asp-net-core/mutation-graphql.png)
+![Mutation in graphql](/assets/images/2020-02-23-graphql-with-asp-net-core/mutation-graphql.png)
 
-![Query in graphql](/images/2020-02-23-graphql-with-asp-net-core/query-graphql.png)
+![Query in graphql](/assets/images/2020-02-23-graphql-with-asp-net-core/query-graphql.png)
 
 Another way is to use specific tools for GraphQL, for example, GraphiQL. For this purpose, we need to install a new package `GraphQL.Server.Ui.GraphiQL` and add the following line to the `Startup`.
 
@@ -152,11 +152,11 @@ app.UseGraphiQLServer(new GraphiQLOptions());
 
 This adds a UI for requesting your API. Go to `http://localhost:5000/graphiql` and try it.
 
-![Query in GraphiQL](/images/2020-02-23-graphql-with-asp-net-core/query-graphiql.png)
+![Query in GraphiQL](/assets/images/2020-02-23-graphql-with-asp-net-core/query-graphiql.png)
 
 GraphiQL supports code completion and contains all queries and mutations from your project, so it’s a convenient tool.
 
-![Documentation explorer](/images/2020-02-23-graphql-with-asp-net-core/documentation-explorer.png)
+![Documentation explorer](/assets/images/2020-02-23-graphql-with-asp-net-core/documentation-explorer.png)
 
 As you see, I use these expressions for calling our API. GraphQL has its [query syntax](https://graphql.org/learn/queries/). I’ll show you some other examples later.
 
@@ -271,7 +271,7 @@ query{
 }
 ```
 
-![Request in GraphiQL](/images/2020-02-23-graphql-with-asp-net-core/request-graphiql.png)
+![Request in GraphiQL](/assets/images/2020-02-23-graphql-with-asp-net-core/request-graphiql.png)
 
 We have to modify a little query, and the server responds to us with the required information, without any changes in the server.
 
@@ -291,7 +291,7 @@ Field<ListGraphType<ArticleType>>(
     });
 ```
 
-![Filtered request in GraphiQL](/images/2020-02-23-graphql-with-asp-net-core/filtered-request-graphiql.png)
+![Filtered request in GraphiQL](/assets/images/2020-02-23-graphql-with-asp-net-core/filtered-request-graphiql.png)
 
 # Hot Chocolate
 There is another library to support GraphQL in your project called [Hot Chocolate](https://hotchocolate.io/). In my opinion, it has more complete documentation, handy tooling and better support. If you are going to deal with GraphQL, I advise you to take a look at this library.
