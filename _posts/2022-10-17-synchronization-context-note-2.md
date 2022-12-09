@@ -9,8 +9,6 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2022-10-17
 tags: ["SynchronizationContext", "Task", "Thread", "TPL", "Async and Await"]
-sidebar:
-  nav: "synchronizationContext"
 ---
 To get a better understanding, it’s always handy to look at a few examples.
 

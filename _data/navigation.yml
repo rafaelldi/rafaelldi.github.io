@@ -5,11 +5,3 @@ main:
     url: /speaking/
   - title: "About"
     url: /about/
-
-synchronizationContext:
-  - title: "Note 1"
-    url: /{% post_url 2022-11-19-synchronization-context-note-1 %}
-  - title: "Note 2"
-    url: /{% post_url 2022-11-19-synchronization-context-note-2 %}
-  - title: "Note 3"
-    url: /{% post_url 2022-11-19-synchronization-context-note-3 %}
