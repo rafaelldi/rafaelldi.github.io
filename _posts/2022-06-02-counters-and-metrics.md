@@ -469,3 +469,4 @@ In this post, I’ve shown how to use two different metrics API. I would like to
 - [.NET metrics](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/metrics)
 - [Metric APIs comparison](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/compare-metric-apis)
 - [MetricsEventSource](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/System/Diagnostics/Metrics/MetricsEventSource.cs)
+- [EventCounters in .NET Core 3.0](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/eventcounters.md)

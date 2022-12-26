@@ -507,3 +507,6 @@ Nonetheless, I’ve shown some code examples how to produce and consume logs via
 - [Logging in .NET Core and ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-6.0#event-source)
 - [.NET runtime events](https://docs.microsoft.com/en-us/dotnet/fundamentals/diagnostics/runtime-events)
 - [CLR ETW Events](https://docs.microsoft.com/en-us/dotnet/framework/performance/clr-etw-events)
+- [Diagnostics Client Library API DesignDiagnostics Client Library API Design](https://github.com/dotnet/diagnostics/blob/main/documentation/design-docs/diagnostics-client-library.md)
+- [DiagnosticSource User's Guide](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)
+- [The TraceEvent Library Programmers Guide](https://github.com/microsoft/perfview/blob/main/documentation/TraceEvent/TraceEventProgrammersGuide.md)
