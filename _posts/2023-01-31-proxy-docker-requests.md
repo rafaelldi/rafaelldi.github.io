@@ -18,7 +18,7 @@ Very often a situation arises where I have to send some “debug” requests to 
 First of all, let’s create a new plain project and add a `Dockerfile`.
 
 ```
-dotnet new web --name my-app
+dotnet new web --name my-app 
 ```
 
 ```docker
