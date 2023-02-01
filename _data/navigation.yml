@@ -59,3 +59,11 @@ observability:
         url: /posts/asp-net-core-metrics/
       - title: "OpenTelemetry"
         url: /posts/open-telemetry-in-dotnet/
+
+docker:
+  - title: "Docker Tricks"
+    children:
+      - title: "Diagnostics tools"
+        url: /posts/diagnostics-tools-inside-docker/
+      - title: "Proxy requests to the container"
+        url: /posts/proxy-docker-requests/

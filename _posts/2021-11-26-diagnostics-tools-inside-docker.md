@@ -7,6 +7,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2021-11-26
 tags: ["Diagnostics", ".NET", "ASP.NET Core", "Docker"]
+sidebar:
+  nav: "docker"
 ---
 
 ![Title image](/assets/images/2021-11-26-diagnostics-tools-inside-docker/cover.jpg)

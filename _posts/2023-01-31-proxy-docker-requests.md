@@ -9,6 +9,8 @@ categories: posts
 author: Rival Abdrakhmanov
 date: 2023-01-31
 tags: ["ASP.NET Core", "Docker", "YARP", "Ports"]
+sidebar:
+  nav: "docker"
 ---
 
 Very often a situation arises where I have to send some “debug” requests to a container, but it doesn’t have a published port. For example, I have noticed a suspicious service behavior (possibly a bug) in the test environment. To analyze the problem, I need to understand the state of the service, but it is a backend service, and it doesn’t accept any requests from outside, only from other services inside the `docker-compose` environment. Furthermore, I can’t restart the container with the published port, because I’ll lose service state. In such cases, there is a trick that has often worked for me.
