@@ -25,6 +25,7 @@ social:
   name: Rival Abdrakhmanov
   links:
     - "https://github.com/rafaelldi"
+    - "https://dotnet.social/@rafaelldi"
 
 # Build settings
 markdown: kramdown
@@ -67,6 +68,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rafaelldi"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://dotnet.social/@rafaelldi"
 
 footer:
   links:
