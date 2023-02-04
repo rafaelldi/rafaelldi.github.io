@@ -73,6 +73,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/rafaelldi"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://dotnet.social/@rafaelldi"
 
 defaults:
   # _posts
