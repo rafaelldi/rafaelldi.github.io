@@ -140,9 +140,11 @@ ENTRYPOINT ["dotnet", "proxy.dll"]
 
 The next step is to decide where this proxy should send received requests. We can use `docker inspect` command to find out the address of the `my-app` service.
 
+{% raw %}
 ```
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-app
 ```
+{% endraw %}
 
 ![Inspect container](/assets/images/2023-01-31-proxy-docker-requests/inspect-container-ip.png)
 
@@ -187,10 +189,12 @@ services:
 
 Let’s start it and find the network.
 
+{% raw %}
 ```
 docker compose up -d
-docker inspect -f '{{range $p, $conf := .NetworkSettings.Networks}}{{$p}}{{end}}'  my-app
+docker inspect -f '{{range $p, $conf := .NetworkSettings.Networks}}{{$p}}{{end}}' my-app
 ```
+{% endraw %}
 
 ![Inspect container network](/assets/images/2023-01-31-proxy-docker-requests/inspect-container-network.png)
 
@@ -202,7 +206,7 @@ docker run --name my-proxy -d -p 8080:80 --network my-app_default --env ReverseP
 
 # Conclusion
 
-In this post, we have discussed how to proxy a request to the container. I hope this will help you.
+In this post, I've shown how to proxy a request to the container. I hope this will help you.
 
 # References
 
