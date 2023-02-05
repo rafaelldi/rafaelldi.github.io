@@ -189,7 +189,7 @@ Let’s start it and find the network.
 
 ```
 docker compose up -d
-docker inspect -f '{{range $p, $conf := .NetworkSettings.Networks}}{{$p}}{{end}}' my-app
+docker inspect -f '{{range $p, $conf := .NetworkSettings.Networks}}{{$p}}{{end}}'  my-app
 ```
 
 ![Inspect container network](/assets/images/2023-01-31-proxy-docker-requests/inspect-container-network.png)
