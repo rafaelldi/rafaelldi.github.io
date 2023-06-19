@@ -458,31 +458,31 @@ Where to find available `EventSources`? Here are some useful links: [Well-known 
 
 Below, I want to give some cases on how to collect from different `EventSources`.
 
-1. Collect logs from `ILogger`:
+- Collect logs from `ILogger`:
 
 ```
 $ dotnet trace collect -p {PID} --providers Microsoft-Extensions-Logging:4:5
 ```
 
-2. Collect events about exception:
+- Collect events about exception:
 
 ```
 $ dotnet trace collect -p {PID} --providers Microsoft-Windows-DotNETRuntime:0x8000:4
 ```
 
-3. Collect events from Kestrel:
+- Collect events from Kestrel:
 
 ```
 $ dotnet trace collect -p {PID} --providers Microsoft-AspNetCore-Server-Kestrel::4
 ```
 
-4. Collect events about GC:
+- Collect events about GC:
 
 ```
 $ dotnet trace collect -p {PID} --providers Microsoft-Windows-DotNETRuntime:0x1:4
 ```
 
-5. Collect events from the thread pool:
+- Collect events from the thread pool:
 
 ```
 $ dotnet trace collect -p {PID} --providers Microsoft-Windows-DotNETRuntime:0x10000:4

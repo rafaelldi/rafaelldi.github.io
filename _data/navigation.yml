@@ -23,6 +23,8 @@ diagnostics:
         url: /posts/counters-and-metrics/
       - title: "Logs and Traces"
         url: /posts/logs-and-traces/
+      - title: "Trace your ASP.NET Core and EF Core application"
+        url: /posts/trace-asp-net-and-ef-app/
 
 distributedSystems:
   - title: "Distributed systems"
