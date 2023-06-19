@@ -205,6 +205,7 @@ when debugging a tricky problem.
 # References
 
 - [What does the .NET application say - Logs and Traces]({% post_url 2022-08-28-logs-and-traces %})
+- [DiagnosticSource and DiagnosticListener](https://learn.microsoft.com/en-us/dotnet/core/diagnostics/diagnosticsource-diagnosticlistener)
 - [Using Diagnostic Listeners in EF Core](https://learn.microsoft.com/en-us/ef/core/logging-events-diagnostics/diagnostic-listeners)
 - [CoreEventId Class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.diagnostics.coreeventid?view=efcore-7.0)
 - [RelationalEventId Class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.diagnostics.relationaleventid?view=efcore-7.0)
