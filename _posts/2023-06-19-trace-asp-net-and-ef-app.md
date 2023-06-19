@@ -11,7 +11,7 @@ author: Rival Abdrakhmanov
 date: 2023-06-19
 tags: ["ASP.NET Core", "EF Core", "Traces", "Diagnostics", "DiagnosticListener"]
 sidebar:
-nav: "diagnostics"
+  nav: "diagnostics"
 ---
 This post is more of a practical example of my [previous one about traces]({% post_url 2022-08-28-logs-and-traces %}).
 Let's look at where you can use them in your real-world projects and what superpowers they can give you.
