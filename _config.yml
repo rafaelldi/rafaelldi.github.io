@@ -25,18 +25,6 @@ paginate: 10
 paginate_path: /page:num/
 timezone: Europe/Berlin
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -46,7 +34,6 @@ plugins:
   - jekyll-include-cache
 
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -54,7 +41,7 @@ defaults:
       layout: single
       author_profile: false
       read_time: true
-      share: true
+      share: false
       show_date: true
       comments: true
       toc: true
